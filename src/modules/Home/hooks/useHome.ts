@@ -1,10 +1,15 @@
 import { Screens } from '../../../app/navigation/Screens';
 import { useNavigation } from '../../../app/navigation/useNavigation';
 
+type ScreenConfig = {
+  title: string;
+  navigationScreen?: Screens;
+};
+
 export const useHome = () => {
   const { navigate } = useNavigation();
 
-  const screensConfig = [
+  const screensConfig: ScreenConfig[] = [
     { title: 'Screen views', navigationScreen: Screens.SCREEN_VIEWS },
     { title: 'Privacy' },
     { title: 'Dynamic variables' },
@@ -12,8 +17,8 @@ export const useHome = () => {
     { title: 'Masking' },
   ];
 
-  const onListItemPress = (navigationScreen?: Screens) => {
-    navigationScreen && navigate(navigationScreen);
+  const onListItemPress = (screenConfig: ScreenConfig) => {
+    screenConfig.navigationScreen && navigate(screenConfig.navigationScreen);
   };
 
   return { screensConfig, onListItemPress };

@@ -13,10 +13,7 @@ export const Home: React.FunctionComponent = () => {
       <FlatList
         data={screensConfig}
         renderItem={({ item }) => (
-          <ListItem
-            label={item.title}
-            onPress={() => onListItemPress(item.navigationScreen)}
-          />
+          <ListItem label={item.title} onPress={() => onListItemPress(item)} />
         )}
         ItemSeparatorComponent={Separator}
       />
