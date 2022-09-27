@@ -3,7 +3,7 @@
  * https://reactnavigation.org/docs/typescript/
  */
 
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 export type RootStackParamList = {
   Home: undefined;

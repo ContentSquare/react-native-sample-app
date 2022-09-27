@@ -4,11 +4,11 @@
  *
  */
 
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import {Home} from '../../modules/Home/views/Home';
-import {RootStackParamList} from './types';
+import { Home } from '../../modules/Home/views/Home';
+import { RootStackParamList } from './types';
 
 export const Navigation = () => {
   return (

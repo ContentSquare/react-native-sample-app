@@ -8,14 +8,11 @@
  * @format
  */
 
-import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {Navigation} from './src/app/navigation';
+import { Navigation } from './src/app/navigation';
 
 const App = () => {
-  return (
-    <Navigation />
-  );
+  return <Navigation />;
 };
 
 export default App;
