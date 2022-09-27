@@ -8,6 +8,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { Home } from '../../modules/Home/views/Home';
+import { ScreenViews } from '../../modules/ScreenViews/views/ScreenViews';
+import { Screens } from './Screens';
 import { RootStackParamList } from './types';
 
 export const Navigation = () => {
@@ -28,9 +30,14 @@ const RootNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Home"
+        name={Screens.HOME}
         component={Home}
         options={{ title: 'Showcases' }}
+      />
+      <Stack.Screen
+        name={Screens.SCREEN_VIEWS}
+        component={ScreenViews}
+        options={{ title: 'Screen views' }}
       />
     </Stack.Navigator>
   );

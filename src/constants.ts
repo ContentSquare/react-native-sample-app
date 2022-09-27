@@ -1,6 +1,6 @@
 export const gridUnit = 8;
 
 export const colors = {
-  white: '#FFFFF',
+  white: '#FFFFFF',
   lightGrey: '#CECED0',
 };

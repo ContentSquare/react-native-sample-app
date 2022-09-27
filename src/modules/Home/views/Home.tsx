@@ -3,21 +3,18 @@ import { FlatList, StyleSheet, View } from 'react-native';
 import { colors } from '../../../constants';
 import { ListItem } from '../../../shared/ListItem';
 import { Separator } from '../../../shared/Separator';
-
-const screensTitle = [
-  'Screen views',
-  'Privacy',
-  'Dynamic variables',
-  'Transactions',
-  'Masking',
-];
+import { useHome } from '../hooks/useHome';
 
 export const Home: React.FunctionComponent = () => {
+  const { screensConfig, onListItemPress } = useHome();
+
   return (
     <View style={styles.container}>
       <FlatList
-        data={screensTitle}
-        renderItem={item => <ListItem label={item.item} />}
+        data={screensConfig}
+        renderItem={({ item }) => (
+          <ListItem label={item.title} onPress={() => onListItemPress(item)} />
+        )}
         ItemSeparatorComponent={Separator}
       />
     </View>
