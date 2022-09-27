@@ -1,5 +1,6 @@
 import React from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
+import { colors } from '../../../constants';
 import { ListItem } from '../../../shared/ListItem';
 import { Separator } from '../../../shared/Separator';
 
@@ -26,6 +27,6 @@ export const Home: React.FunctionComponent = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
   },
 });

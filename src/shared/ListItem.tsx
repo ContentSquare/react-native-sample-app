@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { Pressable, StyleSheet, Text } from 'react-native';
+import { colors, gridUnit } from '../constants';
 
 type Props = {
   label: string;
@@ -16,8 +17,8 @@ export const ListItem: FunctionComponent<Props> = ({ label, onPress }) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
-    paddingVertical: 16,
-    paddingHorizontal: 8,
+    backgroundColor: colors.white,
+    paddingVertical: gridUnit * 2,
+    paddingHorizontal: gridUnit,
   },
 });

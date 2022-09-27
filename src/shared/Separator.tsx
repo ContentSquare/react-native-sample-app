@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { StyleSheet, View } from 'react-native';
+import { colors } from '../constants';
 
 export const Separator: FunctionComponent = () => {
   return <View style={styles.container} />;
@@ -8,6 +9,6 @@ export const Separator: FunctionComponent = () => {
 const styles = StyleSheet.create({
   container: {
     height: 0.5,
-    backgroundColor: '#CECED0',
+    backgroundColor: colors.lightGrey,
   },
 });
