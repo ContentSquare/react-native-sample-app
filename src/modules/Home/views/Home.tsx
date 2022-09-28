@@ -1,5 +1,6 @@
+import Contentsquare from '@contentsquare/react-native-bridge';
 import React from 'react';
-import { FlatList, StyleSheet, View } from 'react-native';
+import { Button, FlatList, StyleSheet, View } from 'react-native';
 import { colors } from '../../../constants';
 import { ListItem } from '../../../shared/ListItem';
 import { Separator } from '../../../shared/Separator';
@@ -16,6 +17,12 @@ export const Home: React.FunctionComponent = () => {
           <ListItem label={item.title} onPress={() => onListItemPress(item)} />
         )}
         ItemSeparatorComponent={Separator}
+      />
+      <Button
+        title="optin"
+        onPress={() => {
+          Contentsquare.optIn();
+        }}
       />
     </View>
   );
