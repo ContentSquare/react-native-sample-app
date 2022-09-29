@@ -8,6 +8,9 @@
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:reactNativeSampleApp.xcodeproj">
+      location = "group:ReactNativeSampleapp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ReactNativeSampleApp.xcodeproj">
    </FileRef>
 </Workspace>
