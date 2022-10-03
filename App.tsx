@@ -10,8 +10,11 @@
 
 import React from 'react';
 import { Navigation } from './src/app/navigation';
+import { useAppInit } from './src/app/useAppInit';
 
 const App = () => {
+  useAppInit();
+
   return <Navigation />;
 };
 
