@@ -1,19 +1,21 @@
 import Contentsquare from '@contentsquare/react-native-bridge';
 import React, { useEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
-import { colors } from '../../constants';
+import {
+  NavigationList,
+  ScreenConfig,
+} from '../../shared/views/components/NavigationList/NavigationList';
+
+const screensConfig: ScreenConfig[] = [
+  { title: 'Default implementation' },
+  { title: 'Storyboard controllers' },
+  { title: 'Paged scroll views' },
+  { title: 'Modal dismissals' },
+];
 
 export const ScreenViews: React.FunctionComponent = () => {
   useEffect(() => {
     Contentsquare.send('Screenview');
   }, []);
 
-  return <View style={styles.container} />;
+  return <NavigationList screensConfig={screensConfig} />;
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: colors.white,
-  },
-});
