@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { colors } from '../constants';
+import { colors } from '../../../../constants';
 
 export const Separator: FunctionComponent = () => {
   return <View style={styles.container} />;
