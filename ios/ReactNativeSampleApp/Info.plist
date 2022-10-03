@@ -21,6 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
+	<!-- ContentSquare custom URL, see documentation https://docs.contentsquare.com/react-native/#1-add-the-custom-url-scheme-to-info-plist -->
 	<array>
 		<dict>
 			<key>CFBundleURLSchemes</key>
