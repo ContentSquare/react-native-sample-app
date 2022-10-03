@@ -9,6 +9,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { Home } from '../../modules/Home/views/Home';
 import { ScreenViews } from '../../modules/ScreenViews/views/ScreenViews';
+import { PrivacyManager } from '../../shared/views/PrivacyManager/PrivacyManager';
 import { Screens } from './Screens';
 import { RootStackParamList } from './types';
 
@@ -16,6 +17,7 @@ export const Navigation = () => {
   return (
     <NavigationContainer>
       <RootNavigator />
+      <PrivacyManager />
     </NavigationContainer>
   );
 };

@@ -11,11 +11,16 @@
 import React from 'react';
 import { Navigation } from './src/app/navigation';
 import { useAppInit } from './src/app/useAppInit';
+import { PrivacyManagerProvider } from './src/shared/views/PrivacyManager/usePrivacyManager';
 
 const App = () => {
   useAppInit();
 
-  return <Navigation />;
+  return (
+    <PrivacyManagerProvider>
+      <Navigation />
+    </PrivacyManagerProvider>
+  );
 };
 
 export default App;
