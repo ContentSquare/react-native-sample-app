@@ -9,8 +9,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { Home } from '../../modules/Home/views/Home';
 import { Privacy } from '../../modules/Privacy/views/Privacy';
-import { ScreenViews } from '../../modules/ScreenViews/views/ScreenViews';
 import { PrivacyManager } from '../../shared/views/PrivacyManager/PrivacyManager';
+import { ScreenViews } from '../../modules/ScreenViews/ScreenViews';
 import { Screens } from './Screens';
 import { RootStackParamList } from './types';
 
