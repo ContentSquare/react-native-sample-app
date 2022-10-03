@@ -15,6 +15,7 @@
 #import <ReactCommon/RCTTurboModuleManager.h>
 
 #import <react/config/ReactNativeConfig.h>
+#import <ContentsquareModule/Contentsquare-Swift.h>
 
 @interface AppDelegate () <RCTCxxBridgeDelegate, RCTTurboModuleManagerDelegate> {
   RCTTurboModuleManager *_turboModuleManager;
@@ -102,6 +103,14 @@
 {
   return RCTAppSetupDefaultModuleFromClass(moduleClass);
 }
+
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
+    [Contentsquare handleWithUrl:url];
+    return YES;
+}
+
 
 #endif
 
