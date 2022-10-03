@@ -11,6 +11,7 @@ import { Home } from '../../modules/Home/views/Home';
 import { Privacy } from '../../modules/Privacy/views/Privacy';
 import { PrivacyManager } from '../../shared/views/PrivacyManager/PrivacyManager';
 import { ScreenViews } from '../../modules/ScreenViews/ScreenViews';
+import { BasicScreenView } from '../../modules/ScreenViews/views/BasicScreenView';
 import { Screens } from './Screens';
 import { RootStackParamList } from './types';
 
@@ -46,6 +47,11 @@ const RootNavigator = () => {
         name={Screens.PRIVACY}
         component={Privacy}
         options={{ title: 'Privacy' }}
+      />
+      <Stack.Screen
+        name={Screens.BASIC_SCREEN_VIEW}
+        component={BasicScreenView}
+        options={{ title: 'Basic screen views' }}
       />
     </Stack.Navigator>
   );

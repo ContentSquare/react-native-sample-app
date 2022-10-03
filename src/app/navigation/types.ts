@@ -10,6 +10,7 @@ export type RootStackParamList = {
   [Screens.HOME]: undefined;
   [Screens.SCREEN_VIEWS]: undefined;
   [Screens.PRIVACY]: undefined;
+  [Screens.BASIC_SCREEN_VIEW]: undefined;
 };
 
 export type RootNavigatorNavigationProps =
