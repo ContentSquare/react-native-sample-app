@@ -1,18 +1,11 @@
 import Contentsquare from '@contentsquare/react-native-bridge';
 import React, { useEffect } from 'react';
-import {
-  NavigationList,
-  ScreenConfig,
-} from '../../shared/views/components/NavigationList/NavigationList';
-
-const screensConfig: ScreenConfig[] = [
-  { title: 'Default implementation' },
-  { title: 'Storyboard controllers' },
-  { title: 'Paged scroll views' },
-  { title: 'Modal dismissals' },
-];
+import { NavigationList } from '../../shared/views/components/NavigationList/NavigationList';
+import { useScreenViews } from './useScreenViews';
 
 export const ScreenViews: React.FunctionComponent = () => {
+  const { screensConfig } = useScreenViews();
+
   useEffect(() => {
     Contentsquare.send('Screenview');
   }, []);
