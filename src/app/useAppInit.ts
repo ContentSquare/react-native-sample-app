@@ -7,6 +7,7 @@ export const useAppInit = () => {
     Contentsquare.handleUrl(event.url);
   };
 
+  // ContentSquare in-app link listener, see documentation https://docs.contentsquare.com/react-native/#1-call-the-react-native-api
   useEffect(() => {
     Linking.getInitialURL()
       .then(ev => {
