@@ -14,13 +14,17 @@ import { useAppInit } from './src/app/useAppInit';
 import { PrivacyManagerProvider } from './src/shared/views/PrivacyManager/usePrivacyManager';
 
 const App = () => {
-  useAppInit();
+  const { isLoadingComplete } = useAppInit();
 
-  return (
-    <PrivacyManagerProvider>
-      <Navigation />
-    </PrivacyManagerProvider>
-  );
+  if (!isLoadingComplete) {
+    return null;
+  } else {
+    return (
+      <PrivacyManagerProvider>
+        <Navigation />
+      </PrivacyManagerProvider>
+    );
+  }
 };
 
 export default App;

@@ -2,6 +2,8 @@ import Contentsquare from '@contentsquare/react-native-bridge';
 import { useEffect } from 'react';
 import { Screens } from '../../../app/navigation/Screens';
 import { useNavigation } from '../../../app/navigation/useNavigation';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { usePrivacyManager } from '../../../shared/views/PrivacyManager/usePrivacyManager';
 
 type ScreenConfig = {
   title: string;
@@ -11,8 +13,18 @@ type ScreenConfig = {
 export const useHome = () => {
   const { navigate } = useNavigation();
 
+  const { setIsPrivacyManagerVisible } = usePrivacyManager();
+
   useEffect(() => {
+    (async () => {
+      const privacyConsent = await AsyncStorage.getItem('PRIVACY_CONSENT');
+
+      if (privacyConsent === null) {
+        setIsPrivacyManagerVisible(true);
+      }
+    })();
     Contentsquare.send('Home');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const screensConfig: ScreenConfig[] = [
