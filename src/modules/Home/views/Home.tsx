@@ -1,29 +1,9 @@
 import React from 'react';
-import { FlatList, StyleSheet, View } from 'react-native';
-import { colors } from '../../../constants';
-import { ListItem } from '../../../shared/views/NavigationList/components/ListItem';
-import { Separator } from '../../../shared/views/NavigationList/components/Separator';
+import { NavigationList } from '../../../shared/views/NavigationList/NavigationList';
 import { useHome } from './useHome';
 
 export const Home: React.FunctionComponent = () => {
-  const { screensConfig, onListItemPress } = useHome();
+  const { screensConfig } = useHome();
 
-  return (
-    <View style={styles.container}>
-      <FlatList
-        data={screensConfig}
-        renderItem={({ item }) => (
-          <ListItem label={item.title} onPress={() => onListItemPress(item)} />
-        )}
-        ItemSeparatorComponent={Separator}
-      />
-    </View>
-  );
+  return <NavigationList screensConfig={screensConfig} />;
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: colors.white,
-  },
-});
