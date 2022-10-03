@@ -8,29 +8,46 @@ export const PrivacyManager = () => {
 
   return (
     <Modal
-      animationType="slide"
+      animationType="fade"
       transparent={true}
       visible={isPrivacyManagerVisible}
       onRequestClose={() => {
         setIsPrivacyManagerVisible(!isPrivacyManagerVisible);
       }}>
-      <View style={styles.modalView}>
-        <Text style={styles.modalText}>Hello World!</Text>
+      <View style={styles.container}>
         <Pressable
-          style={[styles.button, styles.buttonClose]}
-          onPress={() => setIsPrivacyManagerVisible(!isPrivacyManagerVisible)}>
-          <Text style={styles.textStyle}>Hide Modal</Text>
-        </Pressable>
+          style={styles.backdrop}
+          onPress={() => {
+            setIsPrivacyManagerVisible(false);
+          }}
+        />
+        <View style={styles.modalView}>
+          <Text style={styles.modalText}>Hello World!</Text>
+          <Pressable
+            style={[styles.button, styles.buttonClose]}
+            onPress={() =>
+              setIsPrivacyManagerVisible(!isPrivacyManagerVisible)
+            }>
+            <Text style={styles.textStyle}>Hide Modal</Text>
+          </Pressable>
+        </View>
       </View>
     </Modal>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'rgba(50,50,50,0.5)',
+    flex: 1,
+  },
+  backdrop: {
+    flex: 1,
+  },
   modalView: {
-    margin: 20,
     backgroundColor: 'white',
-    borderRadius: 20,
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
     padding: 35,
     alignItems: 'center',
     shadowColor: '#000',
@@ -41,6 +58,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 5,
+    width: '100%',
   },
   button: {
     borderRadius: 20,
