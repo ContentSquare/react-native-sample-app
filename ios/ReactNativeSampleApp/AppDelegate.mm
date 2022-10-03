@@ -104,6 +104,7 @@
   return RCTAppSetupDefaultModuleFromClass(moduleClass);
 }
 
+// ContentSquare openURL delegate, see documentation https://docs.contentsquare.com/react-native/#2-call-the-ios-native-api
 - (BOOL)application:(UIApplication *)app
             openURL:(NSURL *)url
             options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
