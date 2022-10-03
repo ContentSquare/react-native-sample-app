@@ -10,9 +10,9 @@ export const useAppInit = () => {
   // ContentSquare in-app link listener, see documentation https://docs.contentsquare.com/react-native/#1-call-the-react-native-api
   useEffect(() => {
     Linking.getInitialURL()
-      .then(ev => {
-        if (ev) {
-          handleOpenURL({ url: ev });
+      .then(url => {
+        if (url) {
+          handleOpenURL({ url });
         }
       })
       .catch(err => {
