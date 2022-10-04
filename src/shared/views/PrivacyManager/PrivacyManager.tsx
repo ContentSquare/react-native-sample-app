@@ -5,6 +5,11 @@ import { gridUnit } from '../../../constants';
 import { SdkEntry } from './components/SdkEntry';
 import { usePrivacyManager } from './usePrivacyManager';
 
+/**
+ * This privacy manager component should be replaced in your app by a proper GDPR sdk
+ * which goal is to get user tracking consent and allow him/her to modify this consent later
+ */
+
 export const PrivacyManager = () => {
   const {
     isPrivacyManagerVisible,

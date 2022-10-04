@@ -23,6 +23,9 @@ export const usePrivacyManager = () => {
 
   const onAcceptAllPress = () => {
     setIsContentSquareActive(true);
+
+    // Here we register the user consent for tracking
+    // the others SDK (if any) should also be activated
     Contentsquare.optIn();
     AsyncStorage.setItem('PRIVACY_CONSENT', 'true');
     setIsPrivacyManagerVisible(false);
@@ -30,6 +33,9 @@ export const usePrivacyManager = () => {
 
   const onRefuseAllPress = () => {
     setIsContentSquareActive(false);
+
+    // Here we register the user refusing tracking
+    // the others SDK (if any) should also be deactivated
     Contentsquare.optOut();
     AsyncStorage.setItem('PRIVACY_CONSENT', 'false');
     setIsPrivacyManagerVisible(false);
