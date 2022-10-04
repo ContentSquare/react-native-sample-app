@@ -8,7 +8,7 @@ export const BasicScreenView: React.FunctionComponent = () => {
       <Text style={styles.text}>
         This controller implements screen views by calling them in the
         navigation callback onStateChange. Look at the implementation in
-        index.tsx.
+        src/app/navigation/index.tsx.
       </Text>
     </View>
   );
