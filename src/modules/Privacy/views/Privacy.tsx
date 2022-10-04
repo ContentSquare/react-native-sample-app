@@ -16,7 +16,7 @@ export const Privacy: FunctionComponent = () => {
       <Button title={'Show privacy preferences'} onPress={showPrivacyManager} />
       <Button title={'Stop tracking user'} onPress={stopTracking} />
       <Button title={'Resume tracking user'} onPress={resumeTracking} />
-      <Button title={'Forger user'} onPress={forgetUser} />
+      <Button title={'Forget user'} onPress={forgetUser} />
       <Button title={'Display user ID'} onPress={showUserId} />
     </View>
   );
