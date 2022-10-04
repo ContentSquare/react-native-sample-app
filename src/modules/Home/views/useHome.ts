@@ -1,8 +1,8 @@
 import Contentsquare from '@contentsquare/react-native-bridge';
+import AsyncStorage from '@react-native-community/async-storage';
 import { useEffect } from 'react';
 import { Screens } from '../../../app/navigation/Screens';
 import { useNavigation } from '../../../app/navigation/useNavigation';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { usePrivacyManagerModal } from '../../../shared/views/PrivacyManager/usePrivacyManagerModal';
 
 type ScreenConfig = {

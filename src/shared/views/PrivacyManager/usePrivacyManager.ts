@@ -1,5 +1,5 @@
 import Contentsquare from '@contentsquare/react-native-bridge';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import AsyncStorage from '@react-native-community/async-storage';
 import { useEffect, useState } from 'react';
 import { usePrivacyManagerModal } from './usePrivacyManagerModal';
 
