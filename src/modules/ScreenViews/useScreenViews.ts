@@ -1,18 +1,7 @@
-import Contentsquare from '@contentsquare/react-native-bridge';
-import { useIsFocused } from '@react-navigation/native';
-import { useEffect } from 'react';
 import { Screens } from '../../app/navigation/Screens';
 import { ScreenConfig } from '../../shared/views/NavigationList/NavigationList';
 
 export const useScreenViews = () => {
-  const isFocused = useIsFocused();
-
-  useEffect(() => {
-    if (isFocused) {
-      Contentsquare.send('Screenview');
-    }
-  }, [isFocused]);
-
   const screensConfig: ScreenConfig[] = [
     {
       title: 'Default implementation',

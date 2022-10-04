@@ -4,7 +4,11 @@
  *
  */
 
-import { NavigationContainer } from '@react-navigation/native';
+import Contentsquare from '@contentsquare/react-native-bridge';
+import {
+  NavigationContainer,
+  useNavigationContainerRef,
+} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { Home } from '../../modules/Home/views/Home';
@@ -17,9 +21,34 @@ import { PagedScrollView } from '../../modules/ScreenViews/views/PagedScrollView
 import { Screens } from './Screens';
 import { RootStackParamList } from './types';
 
+const screenEventByScreenName: Record<string, string> = {
+  Home: 'Showcases',
+  ScreenViews: 'Screen views',
+  BasicScreenView: 'Default screen view demo page',
+};
+
 export const Navigation = () => {
+  const navigationRef = useNavigationContainerRef<RootStackParamList>();
+  const routeNameRef = React.useRef<string>();
+
   return (
-    <NavigationContainer>
+    <NavigationContainer
+      ref={navigationRef}
+      onReady={() => {
+        const currentRouteName = navigationRef.getCurrentRoute()?.name;
+        console.log(currentRouteName);
+        if (currentRouteName && screenEventByScreenName[currentRouteName]) {
+          Contentsquare.send(screenEventByScreenName[currentRouteName]);
+        }
+      }}
+      onStateChange={() => {
+        const currentRouteName = navigationRef.getCurrentRoute()?.name;
+        routeNameRef.current = currentRouteName;
+        console.log(currentRouteName);
+        if (currentRouteName && screenEventByScreenName[currentRouteName]) {
+          Contentsquare.send(screenEventByScreenName[currentRouteName]);
+        }
+      }}>
       <RootNavigator />
       <PrivacyManager />
     </NavigationContainer>
