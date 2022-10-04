@@ -12,7 +12,7 @@ export const useScreenViews = () => {
       title: 'Paged scroll views',
       navigationScreen: Screens.PAGED_SCROLL_VIEW,
     },
-    { title: 'Modal dismissals' },
+    { title: 'Modal dismissals', navigationScreen: Screens.MODAL_SCREEN_VIEW },
   ];
 
   return { screensConfig };
