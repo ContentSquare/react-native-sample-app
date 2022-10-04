@@ -18,7 +18,6 @@ export const useScreenViews = () => {
       title: 'Default implementation',
       navigationScreen: Screens.BASIC_SCREEN_VIEW,
     },
-    { title: 'Storyboard controllers' },
     {
       title: 'Paged scroll views',
       navigationScreen: Screens.PAGED_SCROLL_VIEW,
