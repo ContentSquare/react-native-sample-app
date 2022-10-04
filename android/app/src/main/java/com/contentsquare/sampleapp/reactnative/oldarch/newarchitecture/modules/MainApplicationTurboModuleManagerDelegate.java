@@ -1,4 +1,4 @@
-package com.reactnativesampleapp.newarchitecture.modules;
+package com.contentsquare.sampleapp.reactnative.oldarch.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

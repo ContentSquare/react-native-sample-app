@@ -10,7 +10,7 @@ type Props = {
 export const ListItem: FunctionComponent<Props> = ({ label, onPress }) => {
   return (
     <Pressable style={styles.container} onPress={onPress}>
-      <Text>{label}</Text>
+      <Text style={styles.label}>{label}</Text>
     </Pressable>
   );
 };
@@ -20,5 +20,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     paddingVertical: gridUnit * 2,
     paddingHorizontal: gridUnit,
+  },
+  label: {
+    color: colors.black,
   },
 });
