@@ -1,16 +1,11 @@
 import Contentsquare from '@contentsquare/react-native-bridge';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { SceneMap, TabView } from 'react-native-tab-view';
 import { colors, gridUnit } from '../../../constants';
 
 export const PageTabView: React.FunctionComponent = () => {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    // Sends screen view event when switching between tabs
-    Contentsquare.send(`Tab view ${index + 1}`);
-  }, [index]);
+  const [tabIndex, setTabIndex] = useState(0);
 
   const routes = [
     { key: 'first', title: 'Tab 1' },
@@ -35,11 +30,17 @@ export const PageTabView: React.FunctionComponent = () => {
     second: () => <FirstRoute tabNumber={2} />,
   });
 
+  // Sends screen view event when switching between tabs
+  const onIndexChange = (index: number) => {
+    setTabIndex(index);
+    Contentsquare.send(`Tab view ${index + 1}`);
+  };
+
   return (
     <TabView
-      navigationState={{ index, routes }}
+      navigationState={{ index: tabIndex, routes }}
       renderScene={renderScene}
-      onIndexChange={setIndex}
+      onIndexChange={onIndexChange}
     />
   );
 };
