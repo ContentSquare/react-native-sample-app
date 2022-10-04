@@ -1,7 +1,7 @@
-import { usePrivacyManager } from '../../../shared/views/PrivacyManager/usePrivacyManager';
+import { usePrivacyManagerModal } from '../../../shared/views/PrivacyManager/usePrivacyManagerModal';
 
 export const usePrivacy = () => {
-  const { setIsPrivacyManagerVisible } = usePrivacyManager();
+  const { setIsPrivacyManagerVisible } = usePrivacyManagerModal();
 
   const showPrivacyManager = () => {
     setIsPrivacyManagerVisible(true);

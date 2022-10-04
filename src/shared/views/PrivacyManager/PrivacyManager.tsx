@@ -1,10 +1,20 @@
 import React from 'react';
-import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Button, Modal, Pressable, StyleSheet, View } from 'react-native';
+import contentsquareLogo from '../../../../assets/images/new_contentsquare.png';
+import { gridUnit } from '../../../constants';
+import { SdkEntry } from './components/SdkEntry';
 import { usePrivacyManager } from './usePrivacyManager';
 
 export const PrivacyManager = () => {
-  const { isPrivacyManagerVisible, setIsPrivacyManagerVisible } =
-    usePrivacyManager();
+  const {
+    isPrivacyManagerVisible,
+    setIsPrivacyManagerVisible,
+    isContentSquareActive,
+    onContentSquareActiveChange,
+    onAcceptAllPress,
+    onRefuseAllPress,
+    onSubmit,
+  } = usePrivacyManager();
 
   return (
     <Modal
@@ -22,14 +32,17 @@ export const PrivacyManager = () => {
           }}
         />
         <View style={styles.modalView}>
-          <Text style={styles.modalText}>Hello World!</Text>
-          <Pressable
-            style={[styles.button, styles.buttonClose]}
-            onPress={() =>
-              setIsPrivacyManagerVisible(!isPrivacyManagerVisible)
-            }>
-            <Text style={styles.textStyle}>Hide Modal</Text>
-          </Pressable>
+          <SdkEntry
+            logoSrc={contentsquareLogo}
+            sdkName="Contentsquare"
+            isActive={isContentSquareActive}
+            onStateChange={onContentSquareActiveChange}
+          />
+          <View style={styles.actionsContainer}>
+            <Button title="Tout refuser" onPress={onRefuseAllPress} />
+            <Button title="Tout accepter" onPress={onAcceptAllPress} />
+            <Button title="Valider" onPress={onSubmit} />
+          </View>
         </View>
       </View>
     </Modal>
@@ -46,9 +59,9 @@ const styles = StyleSheet.create({
   },
   modalView: {
     backgroundColor: 'white',
-    borderTopLeftRadius: 8,
-    borderTopRightRadius: 8,
-    padding: 35,
+    borderTopLeftRadius: gridUnit,
+    borderTopRightRadius: gridUnit,
+    paddingVertical: gridUnit * 4,
     alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: {
@@ -56,28 +69,28 @@ const styles = StyleSheet.create({
       height: 2,
     },
     shadowOpacity: 0.25,
-    shadowRadius: 4,
+    shadowRadius: gridUnit / 2,
     elevation: 5,
     width: '100%',
   },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
+  actionsContainer: {
+    borderTopColor: 'black',
+    borderTopWidth: 1,
+    marginTop: 16,
+    width: '100%',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
   },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
+  sdkEntryContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: gridUnit * 2,
   },
-  buttonClose: {
-    backgroundColor: '#2196F3',
+  sdkEntryLogo: {
+    height: gridUnit * 4,
+    width: gridUnit * 4,
   },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  modalText: {
-    marginBottom: 15,
-    textAlign: 'center',
+  sdkEntryName: {
+    flex: 1,
   },
 });

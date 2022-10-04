@@ -25,4 +25,4 @@ export const PrivacyManagerProvider = ({ ...props }) => {
   );
 };
 
-export const usePrivacyManager = () => useContext(PrivacyManagerContext);
+export const usePrivacyManagerModal = () => useContext(PrivacyManagerContext);

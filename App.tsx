@@ -11,7 +11,7 @@
 import React from 'react';
 import { Navigation } from './src/app/navigation';
 import { useAppInit } from './src/app/useAppInit';
-import { PrivacyManagerProvider } from './src/shared/views/PrivacyManager/usePrivacyManager';
+import { PrivacyManagerProvider } from './src/shared/views/PrivacyManager/usePrivacyManagerModal';
 
 const App = () => {
   const { isLoadingComplete } = useAppInit();
