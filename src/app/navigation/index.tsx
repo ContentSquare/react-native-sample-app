@@ -18,6 +18,7 @@ import { ScreenViews } from '../../modules/ScreenViews/ScreenViews';
 import { BasicScreenView } from '../../modules/ScreenViews/views/BasicScreenView';
 import { ModalScreenView } from '../../modules/ScreenViews/views/ModalScreenView';
 import { PagedScrollView } from '../../modules/ScreenViews/views/PagedScrollView';
+import { PageTabView } from '../../modules/ScreenViews/views/PageTabView';
 import { Screens } from './Screens';
 import { RootStackParamList } from './types';
 
@@ -91,6 +92,11 @@ const RootNavigator = () => {
         name={Screens.MODAL_SCREEN_VIEW}
         component={ModalScreenView}
         options={{ title: 'Modal presenter' }}
+      />
+      <Stack.Screen
+        name={Screens.PAGE_TAB_VIEW}
+        component={PageTabView}
+        options={{ title: 'Tab view' }}
       />
     </Stack.Navigator>
   );
