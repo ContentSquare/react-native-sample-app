@@ -10,7 +10,7 @@ import {
   useNavigationContainerRef,
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import React from 'react';
+import React, { useRef } from 'react';
 import { Home } from '../../modules/Home/views/Home';
 import { Privacy } from '../../modules/Privacy/views/Privacy';
 import { PrivacyManager } from '../../shared/views/PrivacyManager/PrivacyManager';
@@ -22,6 +22,7 @@ import { PageTabView } from '../../modules/ScreenViews/views/PageTabView';
 import { Screens } from './Screens';
 import { RootStackParamList } from './types';
 
+// This associates the screen name sent to ContentSquare to the screen name defined in the code
 const screenEventByScreenName: Record<string, string> = {
   Home: 'Showcases',
   ScreenViews: 'Screen views',
@@ -30,18 +31,20 @@ const screenEventByScreenName: Record<string, string> = {
 
 export const Navigation = () => {
   const navigationRef = useNavigationContainerRef<RootStackParamList>();
-  const routeNameRef = React.useRef<string>();
+  const routeNameRef = useRef<string>();
 
   return (
     <NavigationContainer
       ref={navigationRef}
       onReady={() => {
+        // Getting initial route name from navigation and sending a screen view event with ContentSquare SDK
         const currentRouteName = navigationRef.getCurrentRoute()?.name;
         if (currentRouteName && screenEventByScreenName[currentRouteName]) {
           Contentsquare.send(screenEventByScreenName[currentRouteName]);
         }
       }}
       onStateChange={() => {
+        // Getting route name from navigation and sending a screen view event with ContentSquare SDK
         const currentRouteName = navigationRef.getCurrentRoute()?.name;
         routeNameRef.current = currentRouteName;
         if (currentRouteName && screenEventByScreenName[currentRouteName]) {
