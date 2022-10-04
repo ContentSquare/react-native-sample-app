@@ -38,9 +38,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.white,
     justifyContent: 'center',
+    padding: gridUnit * 2,
   },
   text: {
-    padding: gridUnit * 2,
+    paddingTop: gridUnit * 2,
     textAlign: 'center',
   },
 });
