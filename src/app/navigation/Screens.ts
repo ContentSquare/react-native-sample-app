@@ -4,4 +4,5 @@ export enum Screens {
   PRIVACY = 'Privacy',
   BASIC_SCREEN_VIEW = 'BasicScreenView',
   PAGED_SCROLL_VIEW = 'PagedScrollView',
+  MODAL_SCREEN_VIEW = 'ModalScreenView',
 }
