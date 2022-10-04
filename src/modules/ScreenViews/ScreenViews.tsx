@@ -1,6 +1,6 @@
 import Contentsquare from '@contentsquare/react-native-bridge';
 import React, { useEffect } from 'react';
-import { NavigationList } from '../../shared/views/components/NavigationList/NavigationList';
+import { NavigationList } from '../../shared/views/NavigationList/NavigationList';
 import { useScreenViews } from './useScreenViews';
 
 export const ScreenViews: React.FunctionComponent = () => {

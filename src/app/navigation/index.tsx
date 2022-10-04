@@ -12,6 +12,7 @@ import { Privacy } from '../../modules/Privacy/views/Privacy';
 import { PrivacyManager } from '../../shared/views/PrivacyManager/PrivacyManager';
 import { ScreenViews } from '../../modules/ScreenViews/ScreenViews';
 import { BasicScreenView } from '../../modules/ScreenViews/views/BasicScreenView';
+import { PagedScrollView } from '../../modules/ScreenViews/views/PagedScrollView';
 import { Screens } from './Screens';
 import { RootStackParamList } from './types';
 
@@ -52,6 +53,11 @@ const RootNavigator = () => {
         name={Screens.BASIC_SCREEN_VIEW}
         component={BasicScreenView}
         options={{ title: 'Basic screen views' }}
+      />
+      <Stack.Screen
+        name={Screens.PAGED_SCROLL_VIEW}
+        component={PagedScrollView}
+        options={{ title: 'Paged scroll view' }}
       />
     </Stack.Navigator>
   );
