@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderTopLeftRadius: gridUnit,
     borderTopRightRadius: gridUnit,
-    paddingVertical: gridUnit * 4,
+    paddingVertical: gridUnit * 2,
     alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: {
@@ -76,7 +76,8 @@ const styles = StyleSheet.create({
   actionsContainer: {
     borderTopColor: 'black',
     borderTopWidth: 1,
-    marginTop: 16,
+    marginTop: 2 * gridUnit,
+    padding: gridUnit,
     width: '100%',
     justifyContent: 'space-between',
     flexDirection: 'row',

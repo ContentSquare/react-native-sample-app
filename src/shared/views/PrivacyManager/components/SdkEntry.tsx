@@ -7,7 +7,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import { gridUnit } from '../../../../constants';
+import { colors, gridUnit } from '../../../../constants';
 
 type Props = {
   logoSrc: ImageSourcePropType;
@@ -30,43 +30,16 @@ export const SdkEntry = ({
         resizeMode={'contain'}
       />
       <Text style={styles.sdkEntryName}>{sdkName}</Text>
-      <Switch value={isActive} onValueChange={onStateChange} />
+      <Switch
+        value={isActive}
+        onValueChange={onStateChange}
+        trackColor={{ false: colors.lightGrey }}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'rgba(50,50,50,0.5)',
-    flex: 1,
-  },
-  backdrop: {
-    flex: 1,
-  },
-  modalView: {
-    backgroundColor: 'white',
-    borderTopLeftRadius: gridUnit,
-    borderTopRightRadius: gridUnit,
-    paddingVertical: gridUnit * 4,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: gridUnit / 2,
-    elevation: 5,
-    width: '100%',
-  },
-  actionsContainer: {
-    borderTopColor: 'black',
-    borderTopWidth: 1,
-    marginTop: 16,
-    width: '100%',
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-  },
   sdkEntryContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -78,5 +51,6 @@ const styles = StyleSheet.create({
   },
   sdkEntryName: {
     flex: 1,
+    color: colors.black,
   },
 });
