@@ -12,7 +12,6 @@ export const usePrivacyManager = () => {
   useEffect(() => {
     (async () => {
       const privacyConsent = await AsyncStorage.getItem('PRIVACY_CONSENT');
-      console.warn('privacyConsent', privacyConsent, Boolean(privacyConsent));
 
       setIsContentSquareActive(JSON.parse(privacyConsent ?? 'false'));
     })();
