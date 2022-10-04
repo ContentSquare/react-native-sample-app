@@ -7,7 +7,8 @@ export const ModalScreenView: React.FunctionComponent = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   useEffect(() => {
-    // Sends screen view event when modal is shown or dismissed
+    // As react native modals are not new screens, we need to send events manually on modal show/dismiss
+    // On every modal visibility switch, we send an event with whether the "background" page or the modal name
     Contentsquare.send(isModalVisible ? 'Modal' : 'Modal presenter');
   }, [isModalVisible]);
 
