@@ -12,6 +12,7 @@ export const Transactions: React.FunctionComponent = () => {
   const [transactionNumber, setTransactionNumber] = useState(1);
 
   const onValidateButtonPress = () => {
+    // Sends transaction event when pressing the validate button
     Contentsquare.sendTransaction(
       numberOfItems * ITEM_PRICE,
       Currency.USD,
