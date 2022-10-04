@@ -8,6 +8,7 @@ export const PageTabView: React.FunctionComponent = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+    // Sends screen view event when switching between tabs
     Contentsquare.send(`Tab view ${index + 1}`);
   }, [index]);
 

@@ -7,6 +7,7 @@ export const ModalScreenView: React.FunctionComponent = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   useEffect(() => {
+    // Sends screen view event when modal is shown or dismissed
     Contentsquare.send(isModalVisible ? 'Modal' : 'Modal presenter');
   }, [isModalVisible]);
 

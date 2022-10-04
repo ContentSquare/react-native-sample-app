@@ -9,6 +9,7 @@ export const PagedScrollView: React.FunctionComponent = () => {
   const [pageNumber, setPageNumber] = useState(1);
 
   useEffect(() => {
+    // Sends screen view event when scrolling to one of the pages in the ScrollView
     Contentsquare.send(`Scroll page ${pageNumber}`);
   }, [pageNumber]);
 
