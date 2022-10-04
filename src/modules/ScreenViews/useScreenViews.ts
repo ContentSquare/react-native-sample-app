@@ -8,7 +8,10 @@ export const useScreenViews = () => {
       navigationScreen: Screens.BASIC_SCREEN_VIEW,
     },
     { title: 'Storyboard controllers' },
-    { title: 'Paged scroll views' },
+    {
+      title: 'Paged scroll views',
+      navigationScreen: Screens.PAGED_SCROLL_VIEW,
+    },
     { title: 'Modal dismissals' },
   ];
 
