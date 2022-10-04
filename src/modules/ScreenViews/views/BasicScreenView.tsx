@@ -6,8 +6,9 @@ export const BasicScreenView: React.FunctionComponent = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
-        This controller implements screen views by calling them in a useEffect.
-        Look at the implementation in BasicScreenView.tsx.
+        This controller implements screen views by calling them in the
+        navigation callback onStateChange. Look at the implementation in
+        index.tsx.
       </Text>
     </View>
   );
