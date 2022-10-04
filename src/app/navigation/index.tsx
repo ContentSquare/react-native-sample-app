@@ -36,7 +36,6 @@ export const Navigation = () => {
       ref={navigationRef}
       onReady={() => {
         const currentRouteName = navigationRef.getCurrentRoute()?.name;
-        console.log(currentRouteName);
         if (currentRouteName && screenEventByScreenName[currentRouteName]) {
           Contentsquare.send(screenEventByScreenName[currentRouteName]);
         }
@@ -44,7 +43,6 @@ export const Navigation = () => {
       onStateChange={() => {
         const currentRouteName = navigationRef.getCurrentRoute()?.name;
         routeNameRef.current = currentRouteName;
-        console.log(currentRouteName);
         if (currentRouteName && screenEventByScreenName[currentRouteName]) {
           Contentsquare.send(screenEventByScreenName[currentRouteName]);
         }
