@@ -10,4 +10,5 @@ export enum Screens {
   PAGE_TAB_VIEW = 'PageTabView',
   DYNAMIC_VARIABLES = 'DynamicVariables',
   TRANSACTIONS = 'Transactions',
+  WEBVIEWS = 'Webviews',
 }

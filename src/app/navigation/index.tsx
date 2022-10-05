@@ -20,6 +20,7 @@ import { PagedScrollView } from '../../modules/ScreenViews/views/PagedScrollView
 import { PageTabView } from '../../modules/ScreenViews/views/PageTabView';
 import { ScreenViews } from '../../modules/ScreenViews/views/ScreenViews';
 import { Transactions } from '../../modules/Transactions/Transactions';
+import { Webviews } from '../../modules/Webviews/views/Webviews';
 import { PanResponder } from '../../modules/Workarounds/views/PanResponder';
 import { Workarounds } from '../../modules/Workarounds/views/Workarounds';
 import { PrivacyManager } from '../../shared/views/PrivacyManager/PrivacyManager';
@@ -125,6 +126,11 @@ const RootNavigator = () => {
         name={Screens.PAN_RESPONDER}
         component={PanResponder}
         options={{ title: 'Pan Responder' }}
+      />
+      <Stack.Screen
+        name={Screens.WEBVIEWS}
+        component={Webviews}
+        options={{ title: 'Webviews' }}
       />
     </Stack.Navigator>
   );
