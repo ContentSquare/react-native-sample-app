@@ -15,7 +15,7 @@ export const usePrivacyManager = () => {
 
       setIsContentSquareActive(JSON.parse(privacyConsent ?? 'false'));
     })();
-  }, []);
+  }, [isPrivacyManagerVisible]);
 
   const onContentSquareActiveChange = (value: boolean) => {
     setIsContentSquareActive(value);
