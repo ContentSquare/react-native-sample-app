@@ -1,4 +1,5 @@
 import Contentsquare from '@contentsquare/react-native-bridge';
+import AsyncStorage from '@react-native-community/async-storage';
 import { useEffect } from 'react';
 import { Alert } from 'react-native';
 import { usePrivacyManagerModal } from '../../../shared/views/PrivacyManager/usePrivacyManagerModal';
@@ -28,8 +29,11 @@ export const usePrivacy = () => {
   const forgetUser = () => {
     /**
      * Permanently breaking the link between the collected data and actual user.
+     * If the user is opted in, next time the user starts the app,
+     * the SDK will re-start its collection mechanisms as if this was the first ever run for a new user, under a new user ID.
      */
     Contentsquare.forgetMe();
+    AsyncStorage.removeItem('PRIVACY_CONSENT');
   };
   const showUserId = () => {
     /**
