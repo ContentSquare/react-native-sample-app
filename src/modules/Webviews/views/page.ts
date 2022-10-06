@@ -11,7 +11,7 @@ export const htmlPage = `
 
       function sendTransaction() {
         window.cs_wvt = window.cs_wvt || [];
-        const result = window.cs_wvt.push(['trackTransaction', { value: 1000, currency: 'EUR', id: 'my-transaction-id'}]) 
+        const result = window.cs_wvt.push(['trackTransaction', { value: 1000, currency: 'USD', id: 'my-transaction-id'}])
       }
 
       function optOut() {
@@ -36,7 +36,7 @@ export const htmlPage = `
           in the web pages called in your mobile app to build a JavaScript Bridge
           between your WebView content and the native SDK.
         </p>
-        
+
         <h2 style="font-size:22pt">Sending webview events</h2>
         <div>
           <button onclick="optIn()">
@@ -53,7 +53,7 @@ export const htmlPage = `
             <h3 style="font-size:20pt">Send event</h3>
           </button>
           <button onclick="sendTransaction()">
-            <h3 style="font-size:20pt">Send 10$ transaction</h3>
+            <h3 style="font-size:20pt">Send 1000$ transaction</h3>
           </button>
         </div>
       </section>
