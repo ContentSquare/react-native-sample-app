@@ -14,6 +14,11 @@ export const usePrivacy = () => {
     setIsPrivacyManagerVisible(true);
   };
 
+  /**
+   * Although we do not gather any humanly readable text from the user's screens,
+   * we understand that there may be some areas that you want to completely exclude from tracking.
+   * For this reason we also support pausing and resuming the complete tracking mechanism.
+   */
   const stopTracking = () => {
     Contentsquare.stopTracking();
   };
@@ -21,9 +26,16 @@ export const usePrivacy = () => {
     Contentsquare.resumeTracking();
   };
   const forgetUser = () => {
+    /**
+     * Permanently breaking the link between the collected data and actual user.
+     */
     Contentsquare.forgetMe();
   };
   const showUserId = () => {
+    /**
+     * This ID is a non binding identifier which can be used to make a data request to Contentsquare.
+     * You are able to get an ID only if the user is not Opted-out.
+     */
     Contentsquare.getUserId((userId: string) => {
       Alert.alert('Contentsquare user ID', userId);
     });
