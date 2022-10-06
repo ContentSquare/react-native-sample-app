@@ -1,26 +1,20 @@
-import Contentsquare, { Currency } from '@contentsquare/react-native-bridge';
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { colors, gridUnit } from '../../constants';
-
-const ITEM_NAME = 'Bottle of water';
-const ITEM_PRICE = 2;
-const ITEM_PRICE_CURRENCY = Currency.EUR;
+import {
+  ITEM_NAME,
+  ITEM_PRICE,
+  ITEM_PRICE_CURRENCY,
+  useTransactions,
+} from './useTransactions';
 
 export const Transactions: React.FunctionComponent = () => {
-  const [numberOfItems, setNumberOfItems] = useState(0);
-  const [transactionNumber, setTransactionNumber] = useState(1);
-
-  const onValidateButtonPress = () => {
-    // Sends transaction event when pressing the validate button
-    Contentsquare.sendTransaction(
-      numberOfItems * ITEM_PRICE,
-      ITEM_PRICE_CURRENCY,
-      `transaction#${transactionNumber}`,
-    );
-    setNumberOfItems(0);
-    setTransactionNumber(transactionNumber + 1);
-  };
+  const {
+    numberOfItems,
+    transactionNumber,
+    onAddItemButtonPress,
+    onValidateButtonPress,
+  } = useTransactions();
 
   return (
     <View style={styles.container}>
@@ -39,10 +33,7 @@ export const Transactions: React.FunctionComponent = () => {
       <Text
         style={styles.text}>{`Transaction number ${transactionNumber}`}</Text>
       <View style={styles.buttonsView}>
-        <Button
-          title="Add item"
-          onPress={() => setNumberOfItems(numberOfItems + 1)}
-        />
+        <Button title="Add item" onPress={onAddItemButtonPress} />
         <Button title="Validate cart" onPress={onValidateButtonPress} />
       </View>
     </View>
