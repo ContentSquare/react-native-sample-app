@@ -26,20 +26,22 @@ export const usePrivacy = () => {
   const resumeTracking = () => {
     Contentsquare.resumeTracking();
   };
+
+  /**
+   * Permanently breaking the link between the collected data and actual user.
+   * If the user is opted in, next time the user starts the app,
+   * the SDK will re-start its collection mechanisms as if this was the first ever run for a new user, under a new user ID.
+   */
   const forgetUser = () => {
-    /**
-     * Permanently breaking the link between the collected data and actual user.
-     * If the user is opted in, next time the user starts the app,
-     * the SDK will re-start its collection mechanisms as if this was the first ever run for a new user, under a new user ID.
-     */
     Contentsquare.forgetMe();
     AsyncStorage.removeItem('PRIVACY_CONSENT');
   };
+
+  /**
+   * This ID is a non binding identifier which can be used to make a data request to Contentsquare.
+   * You are able to get an ID only if the user is not Opted-out.
+   */
   const showUserId = () => {
-    /**
-     * This ID is a non binding identifier which can be used to make a data request to Contentsquare.
-     * You are able to get an ID only if the user is not Opted-out.
-     */
     Contentsquare.getUserId((userId: string) => {
       Alert.alert('Contentsquare user ID', userId);
     });

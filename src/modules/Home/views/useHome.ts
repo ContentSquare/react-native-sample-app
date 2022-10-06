@@ -16,6 +16,11 @@ export const useHome = () => {
   const { setIsPrivacyManagerVisible } = usePrivacyManagerModal();
 
   useEffect(() => {
+    /**
+     * In this sample app, we are implementing an internal privacy mechanism similar to what you might have.
+     * Here, we show a banner whenever privacy consent has never been given, when you open the app.
+     */
+
     (async () => {
       const privacyConsent = await AsyncStorage.getItem('PRIVACY_CONSENT');
 
