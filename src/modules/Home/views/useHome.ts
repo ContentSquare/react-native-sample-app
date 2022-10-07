@@ -45,6 +45,10 @@ export const useHome = () => {
     {
       title: 'Masking',
     },
+    {
+      title: 'Workarounds',
+      navigationScreen: Screens.WORKAROUNDS,
+    },
   ];
 
   return { screensConfig };
