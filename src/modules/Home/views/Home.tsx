@@ -1,9 +1,9 @@
 import React from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
 import { colors } from '../../../constants';
-import { ListItem } from '../../../shared/ListItem';
-import { Separator } from '../../../shared/Separator';
-import { useHome } from '../hooks/useHome';
+import { ListItem } from '../../../shared/views/NavigationList/components/ListItem';
+import { Separator } from '../../../shared/views/NavigationList/components/Separator';
+import { useHome } from './useHome';
 
 export const Home: React.FunctionComponent = () => {
   const { screensConfig, onListItemPress } = useHome();

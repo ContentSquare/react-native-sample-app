@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { Pressable, StyleSheet, Text } from 'react-native';
-import { colors, gridUnit } from '../constants';
+import { colors, gridUnit } from '../../../../constants';
 
 type Props = {
   label: string;

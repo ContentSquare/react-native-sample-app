@@ -4,10 +4,12 @@
  */
 
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { Screens } from './Screens';
 
 export type RootStackParamList = {
-  Home: undefined;
-  ScreenViews: undefined;
+  [Screens.HOME]: undefined;
+  [Screens.SCREEN_VIEWS]: undefined;
+  [Screens.PRIVACY]: undefined;
 };
 
 export type RootNavigatorNavigationProps =

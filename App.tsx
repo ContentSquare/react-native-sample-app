@@ -11,11 +11,20 @@
 import React from 'react';
 import { Navigation } from './src/app/navigation';
 import { useAppInit } from './src/app/useAppInit';
+import { PrivacyManagerProvider } from './src/shared/views/PrivacyManager/usePrivacyManagerModal';
 
 const App = () => {
-  useAppInit();
+  const { isLoadingComplete } = useAppInit();
 
-  return <Navigation />;
+  if (!isLoadingComplete) {
+    return null;
+  } else {
+    return (
+      <PrivacyManagerProvider>
+        <Navigation />
+      </PrivacyManagerProvider>
+    );
+  }
 };
 
 export default App;
