@@ -10,6 +10,10 @@ export type RootStackParamList = {
   [Screens.HOME]: undefined;
   [Screens.SCREEN_VIEWS]: undefined;
   [Screens.PRIVACY]: undefined;
+  [Screens.BASIC_SCREEN_VIEW]: undefined;
+  [Screens.PAGED_SCROLL_VIEW]: undefined;
+  [Screens.MODAL_SCREEN_VIEW]: undefined;
+  [Screens.PAGE_TAB_VIEW]: undefined;
 };
 
 export type RootNavigatorNavigationProps =
