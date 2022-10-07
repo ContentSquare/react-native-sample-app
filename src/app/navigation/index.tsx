@@ -27,7 +27,7 @@ const screenEventByScreenName: Record<string, string> = {
   Home: 'Showcases',
   ScreenViews: 'Screen views',
   BasicScreenView: 'Default screen view demo page',
-  PageTabView: 'Tab view 1',
+  PageTabView: 'Tab view #1: Shoes',
 };
 
 export const Navigation = () => {
