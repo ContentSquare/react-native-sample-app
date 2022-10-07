@@ -21,6 +21,7 @@ import { PagedScrollView } from '../../modules/ScreenViews/views/PagedScrollView
 import { PageTabView } from '../../modules/ScreenViews/views/PageTabView';
 import { Screens } from './Screens';
 import { RootStackParamList } from './types';
+import { DynamicVariables } from '../../modules/DynamicVariables/DynamicVariables';
 
 // This associates the screen name sent to ContentSquare to the screen name defined in the code
 const screenEventByScreenName: Record<string, string> = {
@@ -101,6 +102,11 @@ const RootNavigator = () => {
         name={Screens.PAGE_TAB_VIEW}
         component={PageTabView}
         options={{ title: 'Tab view' }}
+      />
+      <Stack.Screen
+        name={Screens.DYNAMIC_VARIABLES}
+        component={DynamicVariables}
+        options={{ title: 'Dynamic variables' }}
       />
     </Stack.Navigator>
   );
