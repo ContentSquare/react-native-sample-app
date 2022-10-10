@@ -4,6 +4,10 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 import { colors, gridUnit } from '../../constants';
 
 export const DynamicVariables: React.FunctionComponent = () => {
+  const onSendButtonPress = (key: string, value: number | string) => {
+    Contentsquare.sendDynamicVar(key, value);
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
@@ -15,13 +19,13 @@ export const DynamicVariables: React.FunctionComponent = () => {
       <Button
         title="Send a number"
         onPress={() => {
-          Contentsquare.sendDynamicVar('number', 20);
+          onSendButtonPress('number', 20);
         }}
       />
       <Button
         title="Send a string"
         onPress={() => {
-          Contentsquare.sendDynamicVar('string', 'this is a string');
+          onSendButtonPress('string', 'this is a string');
         }}
       />
     </View>
