@@ -75,7 +75,7 @@ export const useTransactions = () => {
     onValidateButtonPress,
     numberOfItems1: cart.filter(itemPrice => itemPrice === item1Price).length,
     numberOfItems2: cart.filter(itemPrice => itemPrice === item2Price).length,
-    total: getTotal(),
+    total: Math.round(getTotal() * 100) / 100,
     currency,
     setCurrency,
     isDropdownOpen,
