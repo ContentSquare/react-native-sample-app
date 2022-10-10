@@ -5,6 +5,7 @@ import { colors, gridUnit } from '../../constants';
 
 export const DynamicVariables: React.FunctionComponent = () => {
   const onSendButtonPress = (key: string, value: number | string) => {
+    // Sends variable with an associated key
     Contentsquare.sendDynamicVar(key, value);
   };
 
