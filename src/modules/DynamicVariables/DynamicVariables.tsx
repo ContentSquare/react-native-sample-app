@@ -1,13 +1,10 @@
-import Contentsquare from '@contentsquare/react-native-bridge';
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { colors, gridUnit } from '../../constants';
+import { useDynamicVariables } from './useDynamicVariables';
 
 export const DynamicVariables: React.FunctionComponent = () => {
-  const onSendButtonPress = (key: string, value: number | string) => {
-    // Sends variable with an associated key
-    Contentsquare.sendDynamicVar(key, value);
-  };
+  const { onSendButtonPress } = useDynamicVariables();
 
   return (
     <View style={styles.container}>
