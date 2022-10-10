@@ -1,4 +1,9 @@
-export const currencyByCurrencyCode: Record<number, string> = {
-  978: '€',
-  840: '$',
+import { Currency } from '@contentsquare/react-native-bridge';
+
+export const currencyByCurrencyCode: Record<
+  Currency[keyof Currency & number],
+  string
+> = {
+  [Currency.EUR]: '€',
+  [Currency.USD]: '$',
 };
