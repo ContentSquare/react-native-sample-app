@@ -1,3 +1,4 @@
+import Contentsquare from '@contentsquare/react-native-bridge';
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { colors, gridUnit } from '../../constants';
@@ -11,8 +12,18 @@ export const DynamicVariables: React.FunctionComponent = () => {
         other relevant user data. Please refer to the logs to check the
         variables being sent.
       </Text>
-      <Button title="Send a number" />
-      <Button title="Send a string" />
+      <Button
+        title="Send a number"
+        onPress={() => {
+          Contentsquare.sendDynamicVar('number', 20);
+        }}
+      />
+      <Button
+        title="Send a string"
+        onPress={() => {
+          Contentsquare.sendDynamicVar('string', 'this is a string');
+        }}
+      />
     </View>
   );
 };
