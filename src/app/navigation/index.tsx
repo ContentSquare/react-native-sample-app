@@ -112,7 +112,7 @@ const RootNavigator = () => {
       <Stack.Screen
         name={Screens.TRANSACTIONS}
         component={Transactions}
-        options={{ title: 'Screen views' }}
+        options={{ title: 'Transaction' }}
       />
     </Stack.Navigator>
   );
