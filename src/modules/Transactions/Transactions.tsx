@@ -1,15 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import DropDownPicker from 'react-native-dropdown-picker';
 import { colors, gridUnit } from '../../constants';
+import { currencyByCurrencyCode } from '../../shared/lib/currencyByCurrencyCode';
 import { PriceButton } from '../../shared/PriceButton';
 import { Spacer } from '../../shared/Spacer';
 import { CartLine } from './components/CartLine';
 import {
-  ITEMS_CURRENCY,
+  CURRENCIES,
+  EUR_TO_USD_CONVERT_RATE,
   ITEM_1_NAME,
-  ITEM_1_PRICE,
   ITEM_2_NAME,
-  ITEM_2_PRICE,
   useTransactions,
 } from './useTransactions';
 
@@ -20,28 +21,49 @@ export const Transactions: React.FunctionComponent = () => {
     onValidateButtonPress,
     numberOfItems1,
     numberOfItems2,
+    isDropdownOpen,
+    setIsDropDownOpen,
+    currency,
+    setCurrency,
+    item1Price,
+    item2Price,
+    onCurrencyChange,
   } = useTransactions();
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>
+      <Text>
         This showcases how to track purchases made by an user with
         CustomerTransactions. Add items to the cart then press the confirm
         button to send the transaction.
       </Text>
+      <Spacer height={gridUnit * 2} />
+      <DropDownPicker
+        open={isDropdownOpen}
+        value={currency}
+        items={CURRENCIES}
+        setOpen={setIsDropDownOpen}
+        setValue={setCurrency}
+        placeholder={currencyByCurrencyCode[currency]}
+        onChangeValue={value => {
+          onCurrencyChange(value);
+        }}
+      />
       <Spacer height={gridUnit} />
+      <Text>{`⚠️ Updating the currency will empty your cart.\n1 EUR = ${EUR_TO_USD_CONVERT_RATE} USD`}</Text>
+      <Spacer height={gridUnit * 2} />
       <PriceButton
         label={ITEM_1_NAME}
-        price={ITEM_1_PRICE}
-        currency={ITEMS_CURRENCY}
-        onPress={() => onAddItemButtonPress(ITEM_1_PRICE)}
+        price={item1Price}
+        currency={currency}
+        onPress={() => onAddItemButtonPress(item1Price)}
       />
       <Spacer height={gridUnit} />
       <PriceButton
         label={ITEM_2_NAME}
-        price={ITEM_2_PRICE}
-        currency={ITEMS_CURRENCY}
-        onPress={() => onAddItemButtonPress(ITEM_2_PRICE)}
+        price={item2Price}
+        currency={currency}
+        onPress={() => onAddItemButtonPress(item2Price)}
       />
       <Spacer height={gridUnit * 2} />
       <View style={styles.cart}>
@@ -54,14 +76,14 @@ export const Transactions: React.FunctionComponent = () => {
             <CartLine
               quantity={numberOfItems1}
               itemName={ITEM_1_NAME}
-              unitPrice={ITEM_1_PRICE}
-              currency={ITEMS_CURRENCY}
+              unitPrice={item1Price}
+              currency={currency}
             />
             <CartLine
               quantity={numberOfItems2}
               itemName={ITEM_2_NAME}
-              unitPrice={ITEM_2_PRICE}
-              currency={ITEMS_CURRENCY}
+              unitPrice={item2Price}
+              currency={currency}
             />
           </>
         )}
@@ -70,14 +92,14 @@ export const Transactions: React.FunctionComponent = () => {
       <PriceButton
         label="Confirm order (identified)"
         price={total}
-        currency={ITEMS_CURRENCY}
+        currency={currency}
         onPress={() => onValidateButtonPress(true)}
       />
       <Spacer height={gridUnit} />
       <PriceButton
         label="Confirm order (unidentified)"
         price={total}
-        currency={ITEMS_CURRENCY}
+        currency={currency}
         onPress={() => onValidateButtonPress(false)}
       />
       <Spacer height={gridUnit * 2} />
@@ -90,10 +112,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.white,
     padding: gridUnit * 2,
-  },
-  text: {
-    paddingVertical: gridUnit,
-    textAlign: 'center',
   },
   cart: {
     flex: 1,
