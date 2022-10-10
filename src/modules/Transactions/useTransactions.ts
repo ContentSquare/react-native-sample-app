@@ -19,6 +19,9 @@ export const useTransactions = () => {
 
   const onValidateButtonPress = (isIdentified: boolean) => {
     // Sends transaction event with an optional transactionID when pressing the validate button
+    // The currency is conforming to the ISO 4217 standard.
+    // Although the currency can be passed either as "alphanumeric code" or "numeric code",
+    // you should always prefer using the bridge's Currency object values.
     Contentsquare.sendTransaction(
       getTotal(),
       ITEMS_CURRENCY,
