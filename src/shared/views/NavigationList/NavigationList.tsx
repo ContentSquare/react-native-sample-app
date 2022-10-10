@@ -28,8 +28,6 @@ export const NavigationList: React.FunctionComponent<Props> = ({
           <ListItem
             label={item.title}
             onPress={() => {
-              console.log(item.navigationScreen);
-
               item.navigationScreen && navigate(item.navigationScreen);
             }}
           />
