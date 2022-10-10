@@ -50,7 +50,7 @@ export const Transactions: React.FunctionComponent = () => {
         }}
       />
       <Spacer height={gridUnit} />
-      <Text>{`⚠️ Updating the currency will empty your cart.\n1 EUR = ${EUR_TO_USD_CONVERT_RATE} USD`}</Text>
+      <Text>{`1 EUR = ${EUR_TO_USD_CONVERT_RATE} USD`}</Text>
       <Spacer height={gridUnit * 2} />
       <PriceButton
         label={ITEM_1_NAME}
