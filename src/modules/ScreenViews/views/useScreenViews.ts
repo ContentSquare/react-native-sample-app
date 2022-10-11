@@ -1,5 +1,5 @@
-import { Screens } from '../../app/navigation/Screens';
-import { ScreenConfig } from '../../shared/views/NavigationList/NavigationList';
+import { Screens } from '../../../app/navigation/Screens';
+import { ScreenConfig } from '../../../shared/views/NavigationList/NavigationList';
 
 export const useScreenViews = () => {
   const screensConfig: ScreenConfig[] = [

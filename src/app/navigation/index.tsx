@@ -11,18 +11,20 @@ import {
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React, { useRef } from 'react';
+import { DynamicVariables } from '../../modules/DynamicVariables/DynamicVariables';
 import { Home } from '../../modules/Home/views/Home';
 import { Privacy } from '../../modules/Privacy/views/Privacy';
-import { ScreenViews } from '../../modules/ScreenViews/ScreenViews';
 import { BasicScreenView } from '../../modules/ScreenViews/views/BasicScreenView';
 import { ModalScreenView } from '../../modules/ScreenViews/views/ModalScreenView';
 import { PagedScrollView } from '../../modules/ScreenViews/views/PagedScrollView';
 import { PageTabView } from '../../modules/ScreenViews/views/PageTabView';
+import { ScreenViews } from '../../modules/ScreenViews/views/ScreenViews';
+import { Transactions } from '../../modules/Transactions/Transactions';
+import { PanResponder } from '../../modules/Workarounds/views/PanResponder';
+import { Workarounds } from '../../modules/Workarounds/views/Workarounds';
 import { PrivacyManager } from '../../shared/views/PrivacyManager/PrivacyManager';
 import { Screens } from './Screens';
 import { RootStackParamList } from './types';
-import { DynamicVariables } from '../../modules/DynamicVariables/DynamicVariables';
-import { Transactions } from '../../modules/Transactions/Transactions';
 
 // This associates the screen name sent to ContentSquare to the screen name defined in the code
 const screenEventByScreenName: Record<string, string> = {
@@ -113,6 +115,16 @@ const RootNavigator = () => {
         name={Screens.TRANSACTIONS}
         component={Transactions}
         options={{ title: 'Transaction' }}
+      />
+      <Stack.Screen
+        name={Screens.WORKAROUNDS}
+        component={Workarounds}
+        options={{ title: 'Workarounds' }}
+      />
+      <Stack.Screen
+        name={Screens.PAN_RESPONDER}
+        component={PanResponder}
+        options={{ title: 'Pan Responder' }}
       />
     </Stack.Navigator>
   );

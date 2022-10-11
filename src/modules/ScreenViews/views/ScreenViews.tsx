@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavigationList } from '../../shared/views/NavigationList/NavigationList';
+import { NavigationList } from '../../../shared/views/NavigationList/NavigationList';
 import { useScreenViews } from './useScreenViews';
 
 export const ScreenViews: React.FunctionComponent = () => {

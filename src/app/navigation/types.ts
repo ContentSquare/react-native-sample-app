@@ -10,6 +10,8 @@ export type RootStackParamList = {
   [Screens.HOME]: undefined;
   [Screens.SCREEN_VIEWS]: undefined;
   [Screens.PRIVACY]: undefined;
+  [Screens.WORKAROUNDS]: undefined;
+  [Screens.PAN_RESPONDER]: undefined;
   [Screens.BASIC_SCREEN_VIEW]: undefined;
   [Screens.PAGED_SCROLL_VIEW]: undefined;
   [Screens.MODAL_SCREEN_VIEW]: undefined;
