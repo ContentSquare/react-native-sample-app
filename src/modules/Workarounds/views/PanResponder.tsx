@@ -24,6 +24,7 @@ export const PanResponder = () => {
       onMoveShouldSetPanResponderCapture: () => true,
 
       onPanResponderGrant: () => {
+        // stop the Contentsquare tracking when the pan gesture starts
         Contentsquare.stopTracking();
         // The gesture has started. Show visual feedback so the user knows
         // what is happening!
@@ -39,6 +40,7 @@ export const PanResponder = () => {
       },
       onPanResponderTerminationRequest: () => true,
       onPanResponderRelease: (_, gestureState) => {
+        // resume tracking as the gesture ends
         Contentsquare.resumeTracking();
         // The user has released all touches while this view is the
         // responder. This typically means a gesture has succeeded
