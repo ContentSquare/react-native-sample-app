@@ -2,7 +2,7 @@ import { Currency } from '@contentsquare/react-native-bridge';
 import React, { FunctionComponent } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { gridUnit } from '../../../constants';
-import { currencyByCurrencyCode } from '../../../shared/lib/currencyByCurrencyCode';
+import { currencyByCurrencyCode } from '../../../shared/lib/currency';
 
 type Props = {
   quantity: number;

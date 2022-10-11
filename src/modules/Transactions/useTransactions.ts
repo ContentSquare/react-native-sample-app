@@ -1,6 +1,6 @@
 import Contentsquare, { Currency } from '@contentsquare/react-native-bridge';
 import { useState } from 'react';
-import { currencyByCurrencyCode } from '../../shared/lib/currencyByCurrencyCode';
+import { currencyByCurrencyCode } from '../../shared/lib/currency';
 
 export const ITEM_1_NAME = 'Bottle of water';
 export const ITEM_1_DEFAULT_PRICE = 2;

@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
 import { colors, gridUnit } from '../../constants';
-import { currencyByCurrencyCode } from '../../shared/lib/currencyByCurrencyCode';
+import { currencyByCurrencyCode } from '../../shared/lib/currency';
 import { PriceButton } from '../../shared/PriceButton';
 import { Spacer } from '../../shared/Spacer';
 import { CartLine } from './components/CartLine';

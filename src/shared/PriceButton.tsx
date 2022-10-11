@@ -2,7 +2,7 @@ import { Currency } from '@contentsquare/react-native-bridge';
 import React from 'react';
 import { Pressable, StyleSheet, Text } from 'react-native';
 import { colors, gridUnit } from '../constants';
-import { currencyByCurrencyCode } from './lib/currencyByCurrencyCode';
+import { currencyByCurrencyCode } from './lib/currency';
 
 type Props = {
   label: string;
