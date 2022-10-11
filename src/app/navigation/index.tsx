@@ -14,13 +14,13 @@ import React, { useRef } from 'react';
 import { DynamicVariables } from '../../modules/DynamicVariables/DynamicVariables';
 import { Home } from '../../modules/Home/views/Home';
 import { Privacy } from '../../modules/Privacy/views/Privacy';
-import { ScreenViews } from '../../modules/ScreenViews/views/ScreenViews';
 import { BasicScreenView } from '../../modules/ScreenViews/views/BasicScreenView';
 import { ModalScreenView } from '../../modules/ScreenViews/views/ModalScreenView';
 import { PagedScrollView } from '../../modules/ScreenViews/views/PagedScrollView';
 import { PageTabView } from '../../modules/ScreenViews/views/PageTabView';
+import { ScreenViews } from '../../modules/ScreenViews/views/ScreenViews';
 import { Transactions } from '../../modules/Transactions/Transactions';
-import { PanResponderScreen } from '../../modules/Workarounds/views/PanResponder';
+import { PanResponder } from '../../modules/Workarounds/views/PanResponder';
 import { Workarounds } from '../../modules/Workarounds/views/Workarounds';
 import { PrivacyManager } from '../../shared/views/PrivacyManager/PrivacyManager';
 import { Screens } from './Screens';
@@ -123,7 +123,7 @@ const RootNavigator = () => {
       />
       <Stack.Screen
         name={Screens.PAN_RESPONDER}
-        component={PanResponderScreen}
+        component={PanResponder}
         options={{ title: 'Pan Responder' }}
       />
     </Stack.Navigator>

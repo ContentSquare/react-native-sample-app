@@ -1,8 +1,12 @@
 import React, { useRef, useState } from 'react';
-import { View, StyleSheet, PanResponder } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  PanResponder as PanResponderComponent,
+} from 'react-native';
 import Contentsquare from '@contentsquare/react-native-bridge';
 
-export const PanResponderScreen = () => {
+export const PanResponder = () => {
   var _previousLeft: number = 20;
   var _previousTop: number = 84;
   const [left, setLeft] = useState(_previousLeft);
@@ -12,7 +16,7 @@ export const PanResponderScreen = () => {
   const circle: React.ElementRef<typeof View> | null = null;
 
   const panResponder = useRef(
-    PanResponder.create({
+    PanResponderComponent.create({
       // Ask to be the responder:
       onStartShouldSetPanResponder: () => true,
       onStartShouldSetPanResponderCapture: () => true,
