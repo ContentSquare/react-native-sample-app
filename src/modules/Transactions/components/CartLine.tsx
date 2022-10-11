@@ -1,14 +1,12 @@
-import { Currency } from '@contentsquare/react-native-bridge';
 import React, { FunctionComponent } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { gridUnit } from '../../../constants';
-import { currencyByCurrencyCode } from '../../../shared/lib/currency';
 
 type Props = {
   quantity: number;
   itemName: string;
   unitPrice: number;
-  currency: Currency;
+  currency: string;
 };
 
 export const CartLine: FunctionComponent<Props> = ({
@@ -24,9 +22,7 @@ export const CartLine: FunctionComponent<Props> = ({
   return (
     <View style={styles.container}>
       <Text>{`${quantity} x ${itemName}`}</Text>
-      <Text>{`${unitPrice * quantity} ${
-        currencyByCurrencyCode[currency]
-      }`}</Text>
+      <Text>{`${unitPrice * quantity} ${currency}`}</Text>
     </View>
   );
 };

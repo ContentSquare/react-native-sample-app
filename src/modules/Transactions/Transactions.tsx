@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
 import { colors, gridUnit } from '../../constants';
-import { currencyByCurrencyCode } from '../../shared/lib/currency';
 import { PriceButton } from '../../shared/PriceButton';
 import { Spacer } from '../../shared/Spacer';
 import { CartLine } from './components/CartLine';
@@ -23,6 +22,7 @@ export const Transactions: React.FunctionComponent = () => {
     numberOfItems2,
     isDropdownOpen,
     setIsDropDownOpen,
+    currencyValue,
     currency,
     setCurrency,
     item1Price,
@@ -46,7 +46,7 @@ export const Transactions: React.FunctionComponent = () => {
         items={CURRENCIES}
         setOpen={setIsDropDownOpen}
         setValue={setCurrency}
-        placeholder={currencyByCurrencyCode[currency]}
+        placeholder={currencyValue}
         onChangeValue={value => {
           onCurrencyChange(value);
         }}
@@ -57,14 +57,14 @@ export const Transactions: React.FunctionComponent = () => {
       <PriceButton
         label={ITEM_1_NAME}
         price={item1Price}
-        currency={currency}
+        currency={currencyValue}
         onPress={() => onAddItemButtonPress(item1Price)}
       />
       <Spacer height={gridUnit} />
       <PriceButton
         label={ITEM_2_NAME}
         price={item2Price}
-        currency={currency}
+        currency={currencyValue}
         onPress={() => onAddItemButtonPress(item2Price)}
       />
       <Spacer height={gridUnit * 2} />
@@ -79,13 +79,13 @@ export const Transactions: React.FunctionComponent = () => {
               quantity={numberOfItems1}
               itemName={ITEM_1_NAME}
               unitPrice={item1Price}
-              currency={currency}
+              currency={currencyValue}
             />
             <CartLine
               quantity={numberOfItems2}
               itemName={ITEM_2_NAME}
               unitPrice={item2Price}
-              currency={currency}
+              currency={currencyValue}
             />
           </>
         )}
@@ -94,7 +94,7 @@ export const Transactions: React.FunctionComponent = () => {
       <PriceButton
         label="Confirm order (identified)"
         price={total}
-        currency={currency}
+        currency={currencyValue}
         onPress={() => onValidateButtonPress(true)}
         isDisabled={isCartEmpty}
       />
@@ -102,7 +102,7 @@ export const Transactions: React.FunctionComponent = () => {
       <PriceButton
         label="Confirm order (unidentified)"
         price={total}
-        currency={currency}
+        currency={currencyValue}
         onPress={() => onValidateButtonPress(false)}
         isDisabled={isCartEmpty}
       />

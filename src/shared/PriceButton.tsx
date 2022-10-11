@@ -1,13 +1,11 @@
-import { Currency } from '@contentsquare/react-native-bridge';
 import React from 'react';
 import { Pressable, StyleSheet, Text } from 'react-native';
 import { colors, gridUnit } from '../constants';
-import { currencyByCurrencyCode } from './lib/currency';
 
 type Props = {
   label: string;
   price: number;
-  currency: Currency;
+  currency: string;
   onPress?: () => void;
   isDisabled?: boolean;
 };
@@ -27,10 +25,7 @@ export const PriceButton: React.FunctionComponent<Props> = ({
       onPress={isDisabled ? undefined : onPress}>
       <Text style={styles.text}>{label}</Text>
       <Text
-        style={[
-          styles.text,
-          styles.priceText,
-        ]}>{`${price} ${currencyByCurrencyCode[currency]}`}</Text>
+        style={[styles.text, styles.priceText]}>{`${price} ${currency}`}</Text>
     </Pressable>
   );
 };
