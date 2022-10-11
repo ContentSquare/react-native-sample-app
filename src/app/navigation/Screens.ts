@@ -7,4 +7,5 @@ export enum Screens {
   MODAL_SCREEN_VIEW = 'ModalScreenView',
   PAGE_TAB_VIEW = 'PageTabView',
   DYNAMIC_VARIABLES = 'DynamicVariables',
+  TRANSACTIONS = 'Transactions',
 }
