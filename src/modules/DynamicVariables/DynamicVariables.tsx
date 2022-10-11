@@ -10,7 +10,7 @@ export const DynamicVariables: React.FunctionComponent = () => {
     <View style={styles.container}>
       <Text style={styles.text}>
         This showcases how to use dynamic variables to gather additional data
-        about the session, suc as which version of an A/B test the user saw, or
+        about the session, such as which version of an A/B test the user saw, or
         other relevant user data. Please refer to the logs to check the
         variables being sent.
       </Text>
