@@ -39,20 +39,20 @@ export const htmlPage = `
 
         <h2 style="font-size:22pt">Sending webview events</h2>
         <div>
-          <button onclick="optIn()">
+          <button style="background-color: #4CAF50; color: white; padding: 15px 32px; text-align: center;" onclick="optIn()">
             <h3 style="font-size:20pt">Opt-in</h3>
           </button>
-          <button onclick="optOut()">
+          <button style="background-color: #008CBA; color: white; padding: 15px 32px; text-align: center;" onclick="optOut()">
             <h3 style="font-size:20pt">Opt-out</h3>
           </button>
         </div>
 
         <h2 style="font-size:22pt">Sending webview events</h2>
         <div>
-          <button onclick="sendScreenView()">
+          <button style="background-color: #f44336; color: white; padding: 15px 32px; text-align: center;" onclick="sendScreenView()">
             <h3 style="font-size:20pt">Send event</h3>
           </button>
-          <button onclick="sendTransaction()">
+          <button style="background-color: #555555; color: white; padding: 15px 32px; text-align: center;" onclick="sendTransaction()">
             <h3 style="font-size:20pt">Send 1000$ transaction</h3>
           </button>
         </div>
