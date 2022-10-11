@@ -14,6 +14,7 @@ export type RootStackParamList = {
   [Screens.PAGED_SCROLL_VIEW]: undefined;
   [Screens.MODAL_SCREEN_VIEW]: undefined;
   [Screens.PAGE_TAB_VIEW]: undefined;
+  [Screens.DYNAMIC_VARIABLES]: undefined;
 };
 
 export type RootNavigatorNavigationProps =

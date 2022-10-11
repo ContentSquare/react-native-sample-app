@@ -28,7 +28,7 @@ export const useHome = () => {
   const screensConfig: ScreenConfig[] = [
     { title: 'Screen views', navigationScreen: Screens.SCREEN_VIEWS },
     { title: 'Privacy', navigationScreen: Screens.PRIVACY },
-    { title: 'Dynamic variables' },
+    { title: 'Dynamic variables', navigationScreen: Screens.DYNAMIC_VARIABLES },
     { title: 'Transactions' },
     { title: 'Masking' },
   ];
