@@ -9,6 +9,7 @@ type Props = {
   price: number;
   currency: Currency;
   onPress?: () => void;
+  isDisabled?: boolean;
 };
 
 export const PriceButton: React.FunctionComponent<Props> = ({
@@ -16,9 +17,14 @@ export const PriceButton: React.FunctionComponent<Props> = ({
   price,
   currency,
   onPress,
+  isDisabled = false,
 }) => {
+  const backgroundColor = isDisabled ? colors.lightGrey : colors.blue;
+
   return (
-    <Pressable style={styles.container} onPress={onPress}>
+    <Pressable
+      style={[styles.container, { backgroundColor }]}
+      onPress={isDisabled ? undefined : onPress}>
       <Text style={styles.text}>{label}</Text>
       <Text
         style={[
@@ -33,7 +39,6 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     borderRadius: gridUnit,
-    backgroundColor: colors.blue,
     justifyContent: 'space-between',
     padding: 2 * gridUnit,
   },

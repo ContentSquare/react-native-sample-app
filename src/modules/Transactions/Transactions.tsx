@@ -30,6 +30,8 @@ export const Transactions: React.FunctionComponent = () => {
     onCurrencyChange,
   } = useTransactions();
 
+  const isCartEmpty = numberOfItems1 === 0 && numberOfItems2 === 0;
+
   return (
     <View style={styles.container}>
       <Text>
@@ -67,7 +69,7 @@ export const Transactions: React.FunctionComponent = () => {
       />
       <Spacer height={gridUnit * 2} />
       <View style={styles.cart}>
-        {numberOfItems1 === 0 && numberOfItems2 === 0 ? (
+        {isCartEmpty ? (
           <View style={styles.emptyCartView}>
             <Text>Your cart is empty</Text>
           </View>
@@ -94,6 +96,7 @@ export const Transactions: React.FunctionComponent = () => {
         price={total}
         currency={currency}
         onPress={() => onValidateButtonPress(true)}
+        isDisabled={isCartEmpty}
       />
       <Spacer height={gridUnit} />
       <PriceButton
@@ -101,6 +104,7 @@ export const Transactions: React.FunctionComponent = () => {
         price={total}
         currency={currency}
         onPress={() => onValidateButtonPress(false)}
+        isDisabled={isCartEmpty}
       />
       <Spacer height={gridUnit * 2} />
     </View>
