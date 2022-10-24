@@ -10,8 +10,6 @@ export const Webviews: FunctionComponent = () => {
     // When useEffect is called, we inject our WebView.
     // We do not have state changes in this component, so we do not protect the call.
 
-    Contentsquare.send('Webviews');
-
     Contentsquare.injectWebView(webViewRef);
     webViewRef.current;
 
