@@ -21,6 +21,6 @@ export const Webviews: FunctionComponent = () => {
     };
   }, [webViewRef]);
 
-  // Contentsquare sdk is not compatible with react-native-webview >= 11.21
+  // If you are using react-native-webview >= 11.21, note that the Contentsquare Bridge is only compatible with it starting with version 1.8.0.
   return <WebView source={{ html: htmlPage }} ref={webViewRef} />;
 };
