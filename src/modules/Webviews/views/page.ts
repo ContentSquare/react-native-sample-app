@@ -23,6 +23,8 @@ export const htmlPage = `
         window.cs_wvt = window.cs_wvt || [];
         const result = window.cs_wvt.push(['optin']);
       }
+
+      sendScreenView();
     </script>
 
   </head>
@@ -49,9 +51,6 @@ export const htmlPage = `
 
         <h2 style="font-size:22pt">Sending webview events</h2>
         <div>
-          <button style="background-color: #f44336; color: white; padding: 15px 32px; text-align: center;" onclick="sendScreenView()">
-            <h3 style="font-size:20pt">Send event</h3>
-          </button>
           <button style="background-color: #555555; color: white; padding: 15px 32px; text-align: center;" onclick="sendTransaction()">
             <h3 style="font-size:20pt">Send 1000$ transaction</h3>
           </button>
