@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
-import { Linking, StyleSheet, Text, View } from 'react-native';
-import Contentsquare from '@contentsquare/react-native-bridge';
+import { Button, Linking, StyleSheet, Text, View } from 'react-native';
+import Contentsquare, { Currency } from '@contentsquare/react-native-bridge';
 
 const handleOpenURL = (event) => {
   Contentsquare.handleUrl(event.url);
@@ -10,6 +10,7 @@ const handleOpenURL = (event) => {
 export default function App() {
 
 useEffect(() => {
+  Contentsquare.send('Home screen view')
   try {
     Linking.getInitialURL()
       .then(url => {
@@ -29,7 +30,9 @@ useEffect(() => {
 
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>This app runs using Expo.</Text>
+      <Text>Try to send a transaction by pressing the button below.</Text>
+     <Button title='Make a transaction' onPress={() => {Contentsquare.sendTransaction(10, Currency.USD)}}/>
       <StatusBar style="auto" />
     </View>
   );
