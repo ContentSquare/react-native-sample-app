@@ -1,4 +1,3 @@
-import Contentsquare from '@contentsquare/react-native-bridge';
 import AsyncStorage from '@react-native-community/async-storage';
 import { useEffect } from 'react';
 import { Screens } from '../../../app/navigation/Screens';
