@@ -1,24 +1,47 @@
 import Contentsquare from '@contentsquare/react-native-bridge';
-import React, { FunctionComponent, useEffect, useRef } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import { WebView } from 'react-native-webview';
+import { WebViewNavigationEvent } from 'react-native-webview/lib/WebViewTypes';
 import { htmlPage } from './page';
 
-export const Webviews: FunctionComponent = () => {
-  const webViewRef = useRef<WebView>(null);
+export const Webviews = () => {
+  const [webViewNativeTag, setWebviewNativeTag] = useState<number>();
+  const [injectedWebViewTag, setInjectedWebViewTag] = useState<number>();
 
-  useEffect(() => {
-    // When useEffect is called, we inject our WebView.
-    // We do not have state changes in this component, so we do not protect the call.
+  const loadStart = (event: WebViewNavigationEvent) => {
+    // react-native-webview typing for nativeEvent.target is not correct
+    // @ts-ignore
+    const webViewTag = event.nativeEvent.target as number;
+    if (webViewTag) {
+      setWebviewNativeTag(webViewTag);
+    }
+  };
 
-    Contentsquare.injectWebView(webViewRef);
-    webViewRef.current;
+  const loadEnd = () => {
+    if (
+      webViewNativeTag !== undefined &&
+      webViewNativeTag !== injectedWebViewTag
+    ) {
+      // @ts-ignore
+      Contentsquare.injectWebView(webViewNativeTag);
+      setInjectedWebViewTag(webViewNativeTag);
+    }
+  };
 
+  useLayoutEffect(() => {
     return () => {
-      // We are removing the injection in the return function, which is run when this component unmounts.
-      Contentsquare.removeWebViewInjection(webViewRef);
+      if (webViewNativeTag !== undefined) {
+        // @ts-ignore
+        Contentsquare.removeWebViewInjection(webViewNativeTag);
+      }
     };
-  }, [webViewRef]);
+  }, [webViewNativeTag]);
 
-  // If you are using react-native-webview >= 11.21, note that the Contentsquare Bridge is only compatible with it starting with version 1.8.0.
-  return <WebView source={{ html: htmlPage }} ref={webViewRef} />;
+  return (
+    <WebView
+      onLoadStart={loadStart}
+      onLoadEnd={loadEnd}
+      source={{ html: htmlPage }}
+    />
+  );
 };
