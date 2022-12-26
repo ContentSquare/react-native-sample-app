@@ -41,6 +41,10 @@ export const useHome = () => {
       navigationScreen: Screens.TRANSACTIONS,
     },
     {
+      title: 'Webviews',
+      navigationScreen: Screens.WEBVIEWS,
+    },
+    {
       title: 'Workarounds',
       navigationScreen: Screens.WORKAROUNDS,
     },
