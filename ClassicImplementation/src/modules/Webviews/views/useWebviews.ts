@@ -27,14 +27,13 @@ export const useWebviews = () => {
   };
 
   useLayoutEffect(() => {
-    console.log('useEffect');
     return () => {
-      if (webViewNativeTag !== undefined) {
+      if (injectedWebViewTag !== undefined) {
         // @ts-ignore
-        Contentsquare.removeWebViewInjection(webViewNativeTag);
+        Contentsquare.removeWebViewInjection(injectedWebViewTag);
       }
     };
-  }, [webViewNativeTag]);
+  }, [injectedWebViewTag]);
 
   return { loadStart, loadEnd };
 };

@@ -16,7 +16,7 @@ export const useWebviews = () => {
     };
   
     const loadEnd = () => {
-      if (
+        if (
         webViewNativeTag !== undefined &&
         webViewNativeTag !== injectedWebViewTag
       ) {
@@ -26,14 +26,14 @@ export const useWebviews = () => {
       }
     };
   
-    useLayoutEffect(() => {
+    useLayoutEffect(() => {       
       return () => {
-        if (webViewNativeTag !== undefined) {
+        if (injectedWebViewTag !== undefined) {
           // @ts-ignore
-          Contentsquare.removeWebViewInjection(webViewNativeTag);
+          Contentsquare.removeWebViewInjection(injectedWebViewTag);
         }
       };
-    }, [webViewNativeTag]);
+    }, [injectedWebViewTag]);
 
     return { loadStart, loadEnd }
   
