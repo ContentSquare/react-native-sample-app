@@ -7,9 +7,6 @@ export const useWebviews = () => {
     const [injectedWebViewTag, setInjectedWebViewTag] = useState<number>();
   
     const loadStart = (event: WebViewNavigationEvent) => {
-
-        console.log('start');
-        
       // react-native-webview typing for nativeEvent.target is not correct
       // @ts-ignore
       const webViewTag = event.nativeEvent.target as number;
@@ -30,8 +27,6 @@ export const useWebviews = () => {
     };
   
     useLayoutEffect(() => {
-        console.log('useEffect');
-        
       return () => {
         if (webViewNativeTag !== undefined) {
           // @ts-ignore
