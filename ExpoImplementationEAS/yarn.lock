@@ -1061,10 +1061,10 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@contentsquare/react-native-bridge@^2.7.0":
-  version "2.7.0"
-  resolved "https://registry.npmjs.org/@contentsquare/react-native-bridge/-/react-native-bridge-2.7.0.tgz"
-  integrity sha512-09o4aKHHH221hctHCASufGUiTldqc6uLAncH8YoputnE1qMZi3voN6SqK0l1zrxBgP58cqRRgxvCgQHFZBZY9w==
+"@contentsquare/react-native-bridge@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@contentsquare/react-native-bridge/-/react-native-bridge-3.0.0.tgz#94a3776dd977da4a308c47f34e85cbb9bc8e2024"
+  integrity sha512-Wgdx6ZzeVnDnwW+W0j6F1LWzlJDm1caagapdizuXqFj2BPAjarZod9GyATe5RVEore5f6EnV+LlFRmBJa8q1Jg==
 
 "@expo/bunyan@4.0.0", "@expo/bunyan@^4.0.0":
   version "4.0.0"
