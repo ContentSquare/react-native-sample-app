@@ -1,8 +1,8 @@
-import AsyncStorage from '@react-native-community/async-storage';
-import { useEffect } from 'react';
-import { Screens } from '../../../app/navigation/Screens';
-import { ScreenConfig } from '../../../shared/views/NavigationList/NavigationList';
-import { usePrivacyManagerModal } from '../../../shared/views/PrivacyManager/usePrivacyManagerModal';
+import AsyncStorage from "@react-native-community/async-storage";
+import { useEffect } from "react";
+import { Screens } from "../../../app/navigation/Screens";
+import { ScreenConfig } from "../../../shared/views/NavigationList/NavigationList";
+import { usePrivacyManagerModal } from "../../../shared/views/PrivacyManager/usePrivacyManagerModal";
 
 export const useHome = () => {
   const { setIsPrivacyManagerVisible } = usePrivacyManagerModal();
@@ -14,7 +14,7 @@ export const useHome = () => {
      */
 
     (async () => {
-      const privacyConsent = await AsyncStorage.getItem('PRIVACY_CONSENT');
+      const privacyConsent = await AsyncStorage.getItem("PRIVACY_CONSENT");
 
       if (privacyConsent === null) {
         setIsPrivacyManagerVisible(true);
@@ -25,27 +25,23 @@ export const useHome = () => {
 
   const screensConfig: ScreenConfig[] = [
     {
-      title: 'Screen views',
+      title: "Screen views",
       navigationScreen: Screens.SCREEN_VIEWS,
     },
     {
-      title: 'Privacy',
+      title: "Privacy",
       navigationScreen: Screens.PRIVACY,
     },
     {
-      title: 'Dynamic variables',
+      title: "Dynamic variables",
       navigationScreen: Screens.DYNAMIC_VARIABLES,
     },
     {
-      title: 'Transactions',
+      title: "Transactions",
       navigationScreen: Screens.TRANSACTIONS,
     },
     {
-      title: 'Webviews',
-      navigationScreen: Screens.WEBVIEWS,
-    },
-    {
-      title: 'Workarounds',
+      title: "Workarounds",
       navigationScreen: Screens.WORKAROUNDS,
     },
   ];
