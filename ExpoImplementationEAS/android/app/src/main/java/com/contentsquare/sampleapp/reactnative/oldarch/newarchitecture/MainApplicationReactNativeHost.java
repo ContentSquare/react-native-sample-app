@@ -29,7 +29,7 @@ import java.util.List;
  * A {@link ReactNativeHost} that helps you load everything needed for the New Architecture, both
  * TurboModule delegates and the Fabric Renderer.
  *
- * <p>Please note that this class is used ONLY if you opt-in for the New Architecture (see the
+ * Please note that this class is used ONLY if you opt-in for the New Architecture (see the
  * `newArchEnabled` property). Is ignored otherwise.
  */
 public class MainApplicationReactNativeHost extends ReactNativeHost {

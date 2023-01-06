@@ -9,7 +9,7 @@ export const useAppInit = () => {
 
   const [isLoadingComplete, setLoadingComplete] = useState(false);
 
-  // ContentSquare in-app link listener, see documentation https://docs.contentsquare.com/react-native/#1-call-the-react-native-api
+  // Contentsquare in-app link listener, see documentation https://docs.contentsquare.com/react-native/#1-call-the-react-native-api
   useEffect(() => {
     const loadResourcesAndDataAsync = async () => {
       try {
