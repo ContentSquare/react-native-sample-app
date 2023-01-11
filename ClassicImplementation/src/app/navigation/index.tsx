@@ -27,7 +27,7 @@ import { PrivacyManager } from '../../shared/views/PrivacyManager/PrivacyManager
 import { Screens } from './Screens';
 import { RootStackParamList } from './types';
 
-// This associates the screen name sent to ContentSquare to the screen name defined in the code
+// This associates the screen name sent to Contentsquare to the screen name defined in the code
 const screenEventByScreenName: Record<string, string> = {
   Home: 'Showcases',
   ScreenViews: 'Screen views',
@@ -43,14 +43,14 @@ export const Navigation = () => {
     <NavigationContainer
       ref={navigationRef}
       onReady={() => {
-        // Getting initial route name from navigation and sending a screen view event with ContentSquare SDK
+        // Getting initial route name from navigation and sending a screen view event with Contentsquare SDK
         const currentRouteName = navigationRef.getCurrentRoute()?.name;
         if (currentRouteName && screenEventByScreenName[currentRouteName]) {
           Contentsquare.send(screenEventByScreenName[currentRouteName]);
         }
       }}
       onStateChange={() => {
-        // Getting route name from navigation and sending a screen view event with ContentSquare SDK
+        // Getting route name from navigation and sending a screen view event with Contentsquare SDK
         const currentRouteName = navigationRef.getCurrentRoute()?.name;
         routeNameRef.current = currentRouteName;
         if (currentRouteName && screenEventByScreenName[currentRouteName]) {
