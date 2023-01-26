@@ -1,14 +1,18 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { colors, gridUnit } from '../../../constants';
+import React, { useEffect } from "react";
+import { StyleSheet, Text, View } from "react-native";
+import { colors, gridUnit } from "../../../constants";
+import Contentsquare from "@contentsquare/react-native-bridge";
 
 export const BasicScreenView: React.FunctionComponent = () => {
+  useEffect(() => {
+    Contentsquare.send("Expo screen view");
+  }, []);
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
-        This controller implements screen views by calling them in the
-        navigation callback onStateChange. Look at the implementation in
-        src/app/navigation/index.tsx.
+        This basic screen implements Contentsquare screen view. Look at the
+        implementation in src/modules/ScreenViews/views/BasicScreenView.tsx.
       </Text>
     </View>
   );
@@ -18,10 +22,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   text: {
     padding: gridUnit * 2,
-    textAlign: 'center',
+    textAlign: "center",
   },
 });
