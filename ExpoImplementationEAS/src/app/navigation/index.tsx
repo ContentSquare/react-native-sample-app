@@ -49,6 +49,11 @@ const RootNavigator = () => {
         component={Privacy}
         options={{ title: "Privacy" }}
       />
+      <Stack.Screen
+        name={Screens.WEBVIEWS}
+        component={Webviews}
+        options={{ title: 'Webviews' }}
+      />
     </Stack.Navigator>
   );
 };
