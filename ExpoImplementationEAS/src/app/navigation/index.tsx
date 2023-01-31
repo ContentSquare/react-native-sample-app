@@ -25,6 +25,7 @@ import { Workarounds } from '../../modules/Workarounds/views/Workarounds';
 import { PrivacyManager } from '../../shared/views/PrivacyManager/PrivacyManager';
 import { Screens } from './Screens';
 import { RootStackParamList } from './types';
+import { Webviews } from '../../modules/Webviews/views/Webviews';
 
 // This associates the screen name sent to Contentsquare to the screen name defined in the code
 const screenEventByScreenName: Record<string, string> = {
@@ -125,6 +126,11 @@ const RootNavigator = () => {
         name={Screens.PAN_RESPONDER}
         component={PanResponder}
         options={{ title: 'Pan Responder' }}
+      />
+      <Stack.Screen
+        name={Screens.WEBVIEWS}
+        component={Webviews}
+        options={{ title: 'Webviews' }}
       />
     </Stack.Navigator>
   );

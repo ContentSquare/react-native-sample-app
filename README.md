@@ -7,7 +7,8 @@
 
 ## 🧐 Pick your choice of React Native implementation
 
-* **[Classic implementation](https://github.com/ContentSquare/react-native-sample-app)** - a React Native sample app that is built with the classic React Native architecture.
+* **[Classic implementation](https://github.com/ContentSquare/react-native-sample-app/tree/main/ClassicImplementation)** - a React Native sample app that is built with the classic React Native architecture.
+* **[Expo implementation](https://github.com/ContentSquare/react-native-sample-app/tree/main/ExpoImplementationEAS)** - a React Native sample app that is built with Expo EAS.
 
 
 ## 📚 Docs

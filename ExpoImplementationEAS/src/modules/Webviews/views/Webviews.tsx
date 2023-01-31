@@ -4,7 +4,8 @@ import { htmlPage } from './page';
 import { useWebviews } from './useWebviews';
 
 export const Webviews = () => {
-  const { loadStart, loadEnd } = useWebviews();
+
+  const {loadStart, loadEnd} = useWebviews();
 
   return (
     <WebView
