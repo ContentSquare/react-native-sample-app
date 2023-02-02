@@ -7,8 +7,8 @@
 
 ## 🧐 Pick your choice of React Native implementation
 
-* **[Classic implementation](https://github.com/ContentSquare/react-native-sample-app/tree/main/ClassicImplementation)** - a React Native sample app that is built with the classic React Native architecture.
-* **[Expo implementation](https://github.com/ContentSquare/react-native-sample-app/tree/main/ExpoImplementationEAS)** - a React Native sample app that is built with Expo EAS.
+* **[Classic implementation](https://github.com/ContentSquare/react-native-sample-app/tree/main/ClassicImplementation)** - a React Native sample app that is built with the classic React Native architecture. Showcases how to implement the Contentsquare bridge in your app.
+* **[Expo implementation](https://github.com/ContentSquare/react-native-sample-app/tree/main/ExpoImplementationEAS)** - an empty React Native app built with Expo EAS. Only shows how to add the Contentsquare bridge to an Expo EAS app, check the Classic implementation app for details about how to properly implement the Contentsquare bridge.
 
 
 ## 📚 Docs

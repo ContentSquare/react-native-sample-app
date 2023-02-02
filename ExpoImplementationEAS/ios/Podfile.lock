@@ -1,6 +1,6 @@
 PODS:
   - boost (1.76.0)
-  - ContentsquareBridgeModule (3.0.1):
+  - ContentsquareBridgeModule (3.1.0):
     - CS_iOS_SDK_STATIC (= 4.18.0)
     - React
   - CS_iOS_SDK_STATIC (4.18.0):
@@ -251,7 +251,7 @@ PODS:
     - RCTTypeSafety
     - React-Core
     - ReactCommon/turbomodule/core
-  - react-native-webview (11.26.0):
+  - react-native-webview (11.26.1):
     - React-Core
   - React-perflogger (0.68.2)
   - React-RCTActionSheet (0.68.2):
@@ -478,7 +478,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   boost: a7c83b31436843459a1961bfd74b96033dc77234
-  ContentsquareBridgeModule: bc0e419bb30826d6b6da6a63d62e6cce57ef384d
+  ContentsquareBridgeModule: d998ee55f225b19f7626ccab8a1b8b7e11c21de5
   CS_iOS_SDK_STATIC: 903e824019009b4a2042520ef259543a318970c5
   DoubleConversion: 831926d9b8bf8166fd87886c4abab286c2422662
   EXApplication: d6562af1204162e0ac46d341a7d4e5dc720b33de
@@ -509,7 +509,7 @@ SPEC CHECKSUMS:
   React-logger: a0833912d93b36b791b7a521672d8ee89107aff1
   react-native-pager-view: 54bed894cecebe28cede54c01038d9d1e122de43
   react-native-safe-area-context: 99b24a0c5acd0d5dcac2b1a7f18c49ea317be99a
-  react-native-webview: 994b9f8fbb504d6314dc40d83f94f27c6831b3bf
+  react-native-webview: 9f111dfbcfc826084d6c507f569e5e03342ee1c1
   React-perflogger: a18b4f0bd933b8b24ecf9f3c54f9bf65180f3fe6
   React-RCTActionSheet: 547fe42fdb4b6089598d79f8e1d855d7c23e2162
   React-RCTAnimation: bc9440a1c37b06ae9ebbb532d244f607805c6034
