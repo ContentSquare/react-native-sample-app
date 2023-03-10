@@ -6,6 +6,10 @@ import { useDynamicVariables } from './useDynamicVariables';
 export const DynamicVariables: React.FunctionComponent = () => {
   const { onSendButtonPress } = useDynamicVariables();
 
+  const onError = (error: Error) =>{
+    console.log(error.toString())
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
@@ -24,6 +28,12 @@ export const DynamicVariables: React.FunctionComponent = () => {
         title="Send a string"
         onPress={() => {
           onSendButtonPress('string', 'this is a string');
+        }}
+      />
+      <Button
+        title="Send float value causing error log"
+        onPress={() => {
+          onSendButtonPress('number', 3.14, onError);
         }}
       />
     </View>
