@@ -4,11 +4,7 @@ import { colors, gridUnit } from '../../constants';
 import { useDynamicVariables } from './useDynamicVariables';
 
 export const DynamicVariables: React.FunctionComponent = () => {
-  const { onSendButtonPress } = useDynamicVariables();
-
-  const onError = (error: Error) => {
-    console.log(error.toString())
-  }
+  const { onSendButtonPress, onErrorCallback } = useDynamicVariables();
 
   return (
     <View style={styles.container}>
@@ -33,7 +29,7 @@ export const DynamicVariables: React.FunctionComponent = () => {
       <Button
         title="Send float value causing error log"
         onPress={() => {
-          onSendButtonPress('number', 3.14, onError);
+          onSendButtonPress('number', 3.14, onErrorCallback);
         }}
       />
     </View>

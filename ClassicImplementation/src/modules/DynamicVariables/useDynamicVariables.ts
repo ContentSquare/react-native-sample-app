@@ -1,6 +1,11 @@
 import Contentsquare from '@contentsquare/react-native-bridge';
 
 export const useDynamicVariables = () => {
+
+  const onErrorCallback = (error: Error) => {
+    console.log('Error when using sendDynamicVar() -> ', error.toString())
+  };
+
   const onSendButtonPress = (key: string, value: number | string, onError?: (error: Error) => void) => {
     // For each dynamic variable, we send:
     // key (string, mandatory)
@@ -13,5 +18,5 @@ export const useDynamicVariables = () => {
     Contentsquare.sendDynamicVar(key, value, onError);
   };
 
-  return { onSendButtonPress };
+  return { onSendButtonPress, onErrorCallback };
 };
