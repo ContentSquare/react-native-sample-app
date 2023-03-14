@@ -6,7 +6,7 @@ import { useDynamicVariables } from './useDynamicVariables';
 export const DynamicVariables: React.FunctionComponent = () => {
   const { onSendButtonPress } = useDynamicVariables();
 
-  const onError = (error: Error) =>{
+  const onError = (error: Error) => {
     console.log(error.toString())
   }
 
