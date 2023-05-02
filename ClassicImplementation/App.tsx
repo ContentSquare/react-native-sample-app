@@ -1,30 +1,41 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
-import React from 'react';
-import { Navigation } from './src/app/navigation';
-import { useAppInit } from './src/app/useAppInit';
-import { PrivacyManagerProvider } from './src/shared/views/PrivacyManager/usePrivacyManagerModal';
+import React, { useEffect } from 'react';
+import { useAppInit } from './src/useAppInit';
+import Contentsquare from '@contentsquare/react-native-bridge';
+import { StyleSheet, Text, View } from 'react-native';
+import { colors, gridUnit } from './src/constants';
 
 const App = () => {
   const { isLoadingComplete } = useAppInit();
+
+  useEffect(() => {
+    Contentsquare.optIn();
+    Contentsquare.send("Classic implementation screen view");
+  }, []);
 
   if (!isLoadingComplete) {
     return null;
   } else {
     return (
-      <PrivacyManagerProvider>
-        <Navigation />
-      </PrivacyManagerProvider>
+      <View style={styles.container}>
+        <Text style={styles.text}>
+          This app showcases how to add the Contentsquare bridge in a bare React Native
+          app. Check out the code and documentation to learn more!
+        </Text>
+      </View>
     );
   }
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.white,
+    justifyContent: "center",
+  },
+  text: {
+    padding: gridUnit * 2,
+    textAlign: "center",
+  },
+});
 
 export default App;
