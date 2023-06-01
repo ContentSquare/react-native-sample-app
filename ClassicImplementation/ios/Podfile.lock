@@ -1,7 +1,7 @@
 PODS:
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
-  - ContentsquareBridgeModule (3.3.0):
+  - ContentsquareBridgeModule (3.2.0):
     - CS_iOS_SDK_STATIC (= 4.20.0)
     - React
   - CS_iOS_SDK_STATIC (4.20.0):
@@ -610,7 +610,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
-  ContentsquareBridgeModule: 22530ed8d191dae0abea236b75fb1d933c88e218
+  ContentsquareBridgeModule: 45be6398612103577f2aa54741389be62e8be3dd
   CS_iOS_SDK_STATIC: 6f39fdcb9199d2255385b6880384c2aa2b9b092d
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   FBLazyVector: 60195509584153283780abdac5569feffb8f08cc
@@ -668,4 +668,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 480c6e12b43259494addde607249351b2ccfc198
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.12.0
