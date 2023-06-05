@@ -1,6 +1,11 @@
 #import "AppDelegate.h"
 
 #import <React/RCTBundleURLProvider.h>
+#import <ACPIdentity.h>
+#import <ACPSignal.h>
+#import <ACPLifecycle.h>
+#import <ACPAnalytics.h>
+#import <ACPCore.h>
 
 @implementation AppDelegate
 
@@ -10,6 +15,17 @@
   // You can add your custom initial props in the dictionary below.
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
+  
+  [ACPCore setLogLevel:ACPMobileLogLevelVerbose];
+  [ACPCore configureWithAppId:@"<YOUR_APP_ID>"];
+  [ACPCore setWrapperType:ACPMobileWrapperTypeReactNative];
+  
+  [ACPIdentity registerExtension];
+  [ACPLifecycle registerExtension];
+  [ACPSignal registerExtension];
+  [ACPAnalytics registerExtension];
+  
+  [ACPCore start:nil];
 
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }

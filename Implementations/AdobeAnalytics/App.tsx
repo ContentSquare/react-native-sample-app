@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -24,6 +24,8 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+import Contentsquare from '@contentsquare/react-native-bridge';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -61,6 +63,12 @@ function App(): JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  useEffect(() => {
+    // TODO: Contentsquare start
+    Contentsquare.start();
+    Contentsquare.send('InitialRouteName');
+  }, []);
 
   return (
     <SafeAreaView style={backgroundStyle}>
