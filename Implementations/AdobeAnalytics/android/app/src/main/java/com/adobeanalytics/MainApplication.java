@@ -10,6 +10,14 @@ import com.facebook.react.defaults.DefaultReactNativeHost;
 import com.facebook.soloader.SoLoader;
 import java.util.List;
 
+import com.adobe.marketing.mobile.MobileCore; // import MobileCore
+import com.adobe.marketing.mobile.Identity;
+import com.adobe.marketing.mobile.Lifecycle;
+import com.adobe.marketing.mobile.Signal;
+import com.adobe.marketing.mobile.Analytics;
+import com.adobe.marketing.mobile.WrapperType;
+import com.adobe.marketing.mobile.LoggingMode;
+
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
@@ -58,5 +66,21 @@ public class MainApplication extends Application implements ReactApplication {
       DefaultNewArchitectureEntryPoint.load();
     }
     ReactNativeFlipper.initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
+
+    MobileCore.setApplication(this); // add this line
+    MobileCore.setLogLevel(LoggingMode.VERBOSE);
+    MobileCore.configureWithAppID("<YOUR_APP_ID>");
+    MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
+
+    try {
+        Identity.registerExtension();
+        Lifecycle.registerExtension();
+        Signal.registerExtension();
+        Analytics.registerExtension();
+    } catch (Exception e) {
+        // handle exception
+    }
+
+    MobileCore.start(null);
   }
 }
