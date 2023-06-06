@@ -65,8 +65,7 @@ function App(): JSX.Element {
   };
 
   useEffect(() => {
-    // TODO: Contentsquare start
-    Contentsquare.start();
+    // TODO: Sessions without at least one screenview will be discarded.
     Contentsquare.send('InitialRouteName');
   }, []);
 
