@@ -1,15 +1,39 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { colors } from '../../../constants';
+import { CSMask } from '@contentsquare/react-native-bridge';
+import React, { useState } from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
+import { colors, gridUnit } from '../../../constants';
 
-export const SessionReplayMasking = () => (
-  <View style={styles.container}></View>
-);
+export const SessionReplayMasking = () => {
+  const [shouldMaskContent, setShouldMaskContent] = useState(false);
+
+  return (
+    <View style={styles.container}>
+      <CSMask isMasking={shouldMaskContent}>
+        <Text style={styles.title}>Buy my amazing merch!</Text>
+        <Text>
+          Hurry up! This offer won't be available tomorrow. Only $99.98 to get
+          hands on a wonderful brandnew life changing item
+        </Text>
+      </CSMask>
+      <Button
+        title={shouldMaskContent ? 'Unmask content' : 'Mask content'}
+        onPress={() => {
+          setShouldMaskContent(currentValue => !currentValue);
+        }}
+      />
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
-    justifyContent: 'center',
+    padding: 2 * gridUnit,
+  },
+  title: {
+    textAlign: 'center',
+    fontWeight: '700',
+    paddingVertical: gridUnit,
   },
 });
