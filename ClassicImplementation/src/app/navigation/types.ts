@@ -19,6 +19,7 @@ export type RootStackParamList = {
   [Screens.DYNAMIC_VARIABLES]: undefined;
   [Screens.TRANSACTIONS]: undefined;
   [Screens.WEBVIEWS]: undefined;
+  [Screens.SESSION_REPLAY_MASKING]: undefined;
 };
 
 export type RootNavigatorNavigationProps =

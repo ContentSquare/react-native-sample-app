@@ -26,6 +26,7 @@ import { Workarounds } from '../../modules/Workarounds/views/Workarounds';
 import { PrivacyManager } from '../../shared/views/PrivacyManager/PrivacyManager';
 import { Screens } from './Screens';
 import { RootStackParamList } from './types';
+import { SessionReplayMasking } from '../../modules/SessionReplayMasking/views/SessionReplayMasking';
 
 // This associates the screen name sent to Contentsquare to the screen name defined in the code
 const screenEventByScreenName: Record<string, string> = {
@@ -131,6 +132,11 @@ const RootNavigator = () => {
         name={Screens.WEBVIEWS}
         component={Webviews}
         options={{ title: 'Webviews' }}
+      />
+      <Stack.Screen
+        name={Screens.SESSION_REPLAY_MASKING}
+        component={SessionReplayMasking}
+        options={{ title: 'Session replay masking' }}
       />
     </Stack.Navigator>
   );
