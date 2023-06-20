@@ -12,4 +12,5 @@ export enum Screens {
   TRANSACTIONS = 'Transactions',
   WEBVIEWS = 'Webviews',
   SESSION_REPLAY_MASKING = 'SessionReplayMasking',
+  CUSTOM_VARIABLES = 'CustomVariables',
 }

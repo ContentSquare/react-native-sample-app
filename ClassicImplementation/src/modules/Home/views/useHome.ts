@@ -33,6 +33,10 @@ export const useHome = () => {
       navigationScreen: Screens.PRIVACY,
     },
     {
+      title: 'Custom variables',
+      navigationScreen: Screens.CUSTOM_VARIABLES,
+    },
+    {
       title: 'Dynamic variables',
       navigationScreen: Screens.DYNAMIC_VARIABLES,
     },
