@@ -11,14 +11,16 @@ import {
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React, { useRef } from 'react';
+import { CustomVariables } from '../../modules/CustomVariables/views/CustomVariables';
 import { DynamicVariables } from '../../modules/DynamicVariables/DynamicVariables';
 import { Home } from '../../modules/Home/views/Home';
 import { Privacy } from '../../modules/Privacy/views/Privacy';
 import { BasicScreenView } from '../../modules/ScreenViews/views/BasicScreenView';
 import { ModalScreenView } from '../../modules/ScreenViews/views/ModalScreenView';
-import { PagedScrollView } from '../../modules/ScreenViews/views/PagedScrollView';
 import { PageTabView } from '../../modules/ScreenViews/views/PageTabView';
+import { PagedScrollView } from '../../modules/ScreenViews/views/PagedScrollView';
 import { ScreenViews } from '../../modules/ScreenViews/views/ScreenViews';
+import { SessionReplayMasking } from '../../modules/SessionReplayMasking/views/SessionReplayMasking';
 import { Transactions } from '../../modules/Transactions/Transactions';
 import { Webviews } from '../../modules/Webviews/views/Webviews';
 import { PanResponder } from '../../modules/Workarounds/views/PanResponder';
@@ -26,7 +28,6 @@ import { Workarounds } from '../../modules/Workarounds/views/Workarounds';
 import { PrivacyManager } from '../../shared/views/PrivacyManager/PrivacyManager';
 import { Screens } from './Screens';
 import { RootStackParamList } from './types';
-import { SessionReplayMasking } from '../../modules/SessionReplayMasking/views/SessionReplayMasking';
 
 // This associates the screen name sent to Contentsquare to the screen name defined in the code
 const screenEventByScreenName: Record<string, string> = {
@@ -137,6 +138,11 @@ const RootNavigator = () => {
         name={Screens.SESSION_REPLAY_MASKING}
         component={SessionReplayMasking}
         options={{ title: 'Session replay masking' }}
+      />
+      <Stack.Screen
+        name={Screens.CUSTOM_VARIABLES}
+        component={CustomVariables}
+        options={{ title: 'Custom variables' }}
       />
     </Stack.Navigator>
   );
