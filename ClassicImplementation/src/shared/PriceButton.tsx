@@ -22,10 +22,12 @@ export const PriceButton: React.FunctionComponent<Props> = ({
   return (
     <Pressable
       style={[styles.container, { backgroundColor }]}
-      onPress={isDisabled ? undefined : onPress}>
+      onPress={isDisabled ? undefined : onPress}
+    >
       <Text style={styles.text}>{label}</Text>
       <Text
-        style={[styles.text, styles.priceText]}>{`${price} ${currency}`}</Text>
+        style={[styles.text, styles.priceText]}
+      >{`${price} ${currency}`}</Text>
     </Pressable>
   );
 };

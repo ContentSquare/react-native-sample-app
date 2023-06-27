@@ -32,12 +32,13 @@ export const PagedScrollView: React.FunctionComponent = () => {
       pagingEnabled
       onScroll={event => {
         const pageIndex = Math.round(
-          event.nativeEvent.contentOffset.x / SCREEN_WIDTH,
+          event.nativeEvent.contentOffset.x / SCREEN_WIDTH
         );
         if (pageNumber - 1 !== pageIndex) {
           setPageNumber(pageIndex + 1);
         }
-      }}>
+      }}
+    >
       <PageContent number={1} />
       <PageContent number={2} />
       <PageContent number={3} />

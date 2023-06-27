@@ -23,7 +23,8 @@ export const ModalScreenView: React.FunctionComponent = () => {
       <Modal
         animationType="slide"
         presentationStyle={'pageSheet'}
-        visible={isModalVisible}>
+        visible={isModalVisible}
+      >
         <View style={styles.container}>
           <Button
             title="Dismiss modal"

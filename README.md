@@ -4,15 +4,14 @@
 
 ### Here you will find sample applications that will show you how to use the Contentsquare Bridge for React Native and integrate it in your app.
 
-
 ## 🧐 Pick your choice of React Native implementation
 
-* **[Classic implementation](https://github.com/ContentSquare/react-native-sample-app/tree/main/ClassicImplementation)** - a React Native sample app that is built with the classic React Native architecture. Showcases how to implement the Contentsquare bridge in your app.
-* **[Expo implementation](https://github.com/ContentSquare/react-native-sample-app/tree/main/ExpoImplementationEAS)** - an empty React Native app built with Expo EAS. Only shows how to add the Contentsquare bridge to an Expo EAS app, check the Classic implementation app for details about how to properly implement the Contentsquare bridge.
-
+- **[Classic implementation](https://github.com/ContentSquare/react-native-sample-app/tree/main/ClassicImplementation)** - a React Native sample app that is built with the classic React Native architecture. Showcases how to implement the Contentsquare bridge in your app.
+- **[Expo implementation](https://github.com/ContentSquare/react-native-sample-app/tree/main/ExpoImplementationEAS)** - an empty React Native app built with Expo EAS. Only shows how to add the Contentsquare bridge to an Expo EAS app, check the Classic implementation app for details about how to properly implement the Contentsquare bridge.
 
 ## Integration with 3rd party services
-* **[AdobeAnalytics](https://github.com/ContentSquare/react-native-sample-app/tree/main/Implementations/AdobeAnalytics)** - a React Native sample app that is built with the classic React Native architecture. Showcases how to implement the Contentsquare bridge in your app and intergare it with [AdobeAnalytics](https://github.com/adobe/react-native-acpanalytics). If you wish to learn more on how to use Adobe Analytics with Contentsquare React Native Bridge check documentation [here](https://docs.contentsquare.com/react-native/#use-adobe-analytics).
+
+- **[AdobeAnalytics](https://github.com/ContentSquare/react-native-sample-app/tree/main/Implementations/AdobeAnalytics)** - a React Native sample app that is built with the classic React Native architecture. Showcases how to implement the Contentsquare bridge in your app and intergare it with [AdobeAnalytics](https://github.com/adobe/react-native-acpanalytics). If you wish to learn more on how to use Adobe Analytics with Contentsquare React Native Bridge check documentation [here](https://docs.contentsquare.com/react-native/#use-adobe-analytics).
 
 ## 📚 Docs
 

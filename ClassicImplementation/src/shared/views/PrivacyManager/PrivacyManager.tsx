@@ -28,7 +28,8 @@ export const PrivacyManager = () => {
       visible={isPrivacyManagerVisible}
       onRequestClose={() => {
         setIsPrivacyManagerVisible(!isPrivacyManagerVisible);
-      }}>
+      }}
+    >
       <View style={styles.container}>
         <Pressable
           style={styles.backdrop}

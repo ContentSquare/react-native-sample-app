@@ -1,17 +1,17 @@
-import {ACPCore} from '@adobe/react-native-acpcore';
+import { ACPCore } from '@adobe/react-native-acpcore';
 import Contentsquare from '@contentsquare/react-native-bridge';
 import AsyncStorage from '@react-native-community/async-storage';
 
 export async function updateCsMatchingKey() {
   const csMatchingKeyRecord = await AsyncStorage.getItem(
-    'csMatchingKey_creation_ts',
+    'csMatchingKey_creation_ts'
   );
   if (!csMatchingKeyRecord) {
     await submitNewCsMatchingKey();
     return;
   }
 
-  const {timestamp} = JSON.parse(csMatchingKeyRecord);
+  const { timestamp } = JSON.parse(csMatchingKeyRecord);
   if (Date.now() - timestamp > 30 * 60 * 1000) {
     // if the key is not valid anymore, submit a new one
     await submitNewCsMatchingKey();
@@ -28,7 +28,7 @@ async function submitNewCsMatchingKey() {
   };
   await AsyncStorage.setItem(
     'csMatchingKey_creation_ts',
-    JSON.stringify(newCsMatchingKeyRecord),
+    JSON.stringify(newCsMatchingKeyRecord)
   );
 
   // Submit the matching key to Contentsquare and Adobe
