@@ -7,7 +7,7 @@ const numberOfCustomVariables = 3;
 
 export const CustomVariables = () => {
   const [variablesToSend, setVariablesToSend] = useState<string[]>(
-    Array.from(''.repeat(numberOfCustomVariables)),
+    Array.from(''.repeat(numberOfCustomVariables))
   );
 
   return (
@@ -35,7 +35,7 @@ export const CustomVariables = () => {
               index,
               key: `CustomVariable${index}`,
               value,
-            }),
+            })
           );
           Contentsquare.send('CustomVariablesScreen', customVariables);
         }}

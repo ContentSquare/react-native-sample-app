@@ -60,7 +60,7 @@ export const PanResponder = () => {
         // responder. Returns true by default. Is currently only supported on android.
         return true;
       },
-    }),
+    })
   ).current;
 
   return (

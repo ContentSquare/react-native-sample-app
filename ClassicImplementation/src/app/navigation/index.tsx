@@ -58,7 +58,8 @@ export const Navigation = () => {
         if (currentRouteName && screenEventByScreenName[currentRouteName]) {
           Contentsquare.send(screenEventByScreenName[currentRouteName]);
         }
-      }}>
+      }}
+    >
       <RootNavigator />
       <PrivacyManager />
     </NavigationContainer>

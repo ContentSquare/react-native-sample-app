@@ -5,14 +5,24 @@ import { ConfigPlugin, withInfoPlist } from '@expo/config-plugins';
 // import { ConfigPlugin, InfoPlist, withInfoPlist } from 'expo/config-plugins';
 // import { ExpoConfig } from 'expo/config';
 
-const CS_URL_SCHEME = "cs-$(PRODUCT_BUNDLE_IDENTIFIER)"
+const CS_URL_SCHEME = 'cs-$(PRODUCT_BUNDLE_IDENTIFIER)';
 
-export const withCSCustomConfig: ConfigPlugin<void> = (config) => {
-  return withInfoPlist(config, (config) => {
-    const hasURLSchemes = config.modResults.CFBundleURLTypes && config.modResults.CFBundleURLTypes.length > 0;
+export const withCSCustomConfig: ConfigPlugin<void> = config => {
+  return withInfoPlist(config, config => {
+    const hasURLSchemes =
+      config.modResults.CFBundleURLTypes &&
+      config.modResults.CFBundleURLTypes.length > 0;
     if (hasURLSchemes) {
-      if (config.modResults.CFBundleURLTypes && config.modResults.CFBundleURLTypes.find((URLType) => URLType.CFBundleURLSchemes.includes(CS_URL_SCHEME)) === undefined) {
-        config.modResults.CFBundleURLTypes && config.modResults.CFBundleURLTypes[0].CFBundleURLSchemes.push(CS_URL_SCHEME);
+      if (
+        config.modResults.CFBundleURLTypes &&
+        config.modResults.CFBundleURLTypes.find(URLType =>
+          URLType.CFBundleURLSchemes.includes(CS_URL_SCHEME)
+        ) === undefined
+      ) {
+        config.modResults.CFBundleURLTypes &&
+          config.modResults.CFBundleURLTypes[0].CFBundleURLSchemes.push(
+            CS_URL_SCHEME
+          );
       }
     } else {
       config.modResults.CFBundleURLTypes = [

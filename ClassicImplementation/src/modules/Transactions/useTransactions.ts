@@ -43,8 +43,8 @@ export const useTransactions = () => {
         cart.map(itemPrice =>
           convertEurToUsd(ITEM_1_DEFAULT_PRICE) === itemPrice
             ? ITEM_1_DEFAULT_PRICE
-            : ITEM_2_DEFAULT_PRICE,
-        ),
+            : ITEM_2_DEFAULT_PRICE
+        )
       );
     }
   };
@@ -69,13 +69,13 @@ export const useTransactions = () => {
       Contentsquare.sendTransactionWithStringCurrency(
         getTotal(),
         currency,
-        isIdentified ? `transaction#${transactionNumber}` : undefined,
+        isIdentified ? `transaction#${transactionNumber}` : undefined
       );
     } else {
       Contentsquare.sendTransaction(
         getTotal(),
         currency,
-        isIdentified ? `transaction#${transactionNumber}` : undefined,
+        isIdentified ? `transaction#${transactionNumber}` : undefined
       );
     }
     if (isIdentified) {

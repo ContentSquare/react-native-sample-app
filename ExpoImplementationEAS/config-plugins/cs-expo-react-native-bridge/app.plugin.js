@@ -1,1 +1,1 @@
-module.exports = require("./build/withCsExpoReactNativeBridge");
+module.exports = require('./build/withCsExpoReactNativeBridge');

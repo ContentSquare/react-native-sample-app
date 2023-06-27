@@ -5,8 +5,8 @@
  * @format
  */
 
-import React, {useEffect} from 'react';
-import type {PropsWithChildren} from 'react';
+import React, { useEffect } from 'react';
+import type { PropsWithChildren } from 'react';
 import {
   SafeAreaView,
   StatusBar,
@@ -16,7 +16,7 @@ import {
   View,
 } from 'react-native';
 
-import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
+import { Colors, Header } from 'react-native/Libraries/NewAppScreen';
 
 import Contentsquare from '@contentsquare/react-native-bridge';
 
@@ -24,7 +24,7 @@ type SectionProps = PropsWithChildren<{
   title?: string;
 }>;
 
-function Section({children, title}: SectionProps): JSX.Element {
+function Section({ children, title }: SectionProps): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -34,7 +34,8 @@ function Section({children, title}: SectionProps): JSX.Element {
           {
             color: isDarkMode ? Colors.white : Colors.black,
           },
-        ]}>
+        ]}
+      >
         {title}
       </Text>
       <Text
@@ -43,7 +44,8 @@ function Section({children, title}: SectionProps): JSX.Element {
           {
             color: isDarkMode ? Colors.light : Colors.dark,
           },
-        ]}>
+        ]}
+      >
         {children}
       </Text>
     </View>
@@ -72,7 +74,8 @@ function App(): JSX.Element {
       <View
         style={{
           backgroundColor: isDarkMode ? Colors.black : Colors.white,
-        }}>
+        }}
+      >
         <Section title="Contentsquare SDK and Adobe Analytics Integration">
           In this sample app, we are showcasing the integration of Contentsquare
           SDK and Adobe Analytics.
