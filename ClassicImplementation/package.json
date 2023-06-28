@@ -10,9 +10,10 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@contentsquare/react-native-bridge": "^3.4.0",
+    "@contentsquare/react-native-bridge": "^3.5.0",
     "@react-native-community/async-storage": "1.12.1",
     "@react-native-community/cli": "^10.1.3",
+    "@react-native-community/clipboard": "1.5.1",
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/native-stack": "^6.9.0",
     "react": "18.2.0",

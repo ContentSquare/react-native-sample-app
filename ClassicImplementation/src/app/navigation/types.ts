@@ -19,7 +19,9 @@ export type RootStackParamList = {
   [Screens.DYNAMIC_VARIABLES]: undefined;
   [Screens.TRANSACTIONS]: undefined;
   [Screens.WEBVIEWS]: undefined;
+  [Screens.SESSION_REPLAY_VIEWS]: undefined;
   [Screens.SESSION_REPLAY_MASKING]: undefined;
+  [Screens.SESSION_REPLAY_LINKING]: undefined;
   [Screens.CUSTOM_VARIABLES]: undefined;
 };
 

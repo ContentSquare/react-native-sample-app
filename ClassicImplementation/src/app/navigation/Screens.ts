@@ -11,6 +11,8 @@ export enum Screens {
   DYNAMIC_VARIABLES = 'DynamicVariables',
   TRANSACTIONS = 'Transactions',
   WEBVIEWS = 'Webviews',
+  SESSION_REPLAY_VIEWS = 'SessionReplayViews',
   SESSION_REPLAY_MASKING = 'SessionReplayMasking',
+  SESSION_REPLAY_LINKING = 'SessionReplayLinking',
   CUSTOM_VARIABLES = 'CustomVariables',
 }
