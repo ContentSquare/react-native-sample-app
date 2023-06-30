@@ -11,7 +11,6 @@ export const SessionReplayLinking = () => {
   const getCurrentSessionReplayLink = async () => {
 
     const link = await Contentsquare.getCurrentSessionReplayLink()
-    console.log(link)
 
     if (link) {
       setSRLinkDescription(`The current SessionReplay link is:\n${link}`)
