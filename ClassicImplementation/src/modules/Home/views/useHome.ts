@@ -49,8 +49,8 @@ export const useHome = () => {
       navigationScreen: Screens.WEBVIEWS,
     },
     {
-      title: 'Session replay masking',
-      navigationScreen: Screens.SESSION_REPLAY_MASKING,
+      title: 'Session replay',
+      navigationScreen: Screens.SESSION_REPLAY_VIEWS,
     },
     {
       title: 'Workarounds',

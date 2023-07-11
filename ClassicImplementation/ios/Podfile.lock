@@ -1,10 +1,10 @@
 PODS:
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
-  - ContentsquareBridgeModule (3.4.0):
-    - CS_iOS_SDK_STATIC (= 4.22.1)
+  - ContentsquareBridgeModule (3.5.0):
+    - CS_iOS_SDK_STATIC (= 4.23.0)
     - React
-  - CS_iOS_SDK_STATIC (4.22.1):
+  - CS_iOS_SDK_STATIC (4.23.0):
     - SwiftProtobuf (~> 1.0)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.71.8)
@@ -430,11 +430,13 @@ PODS:
     - React-perflogger (= 0.71.8)
   - RNCAsyncStorage (1.12.1):
     - React-Core
+  - RNCClipboard (1.5.1):
+    - React-Core
   - RNScreens (3.19.0):
     - React-Core
     - React-RCTImage
   - SocketRocket (0.6.0)
-  - SwiftProtobuf (1.21.0)
+  - SwiftProtobuf (1.22.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -502,6 +504,7 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
+  - "RNCClipboard (from `../node_modules/@react-native-community/clipboard`)"
   - RNScreens (from `../node_modules/react-native-screens`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -602,6 +605,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
+  RNCClipboard:
+    :path: "../node_modules/@react-native-community/clipboard"
   RNScreens:
     :path: "../node_modules/react-native-screens"
   Yoga:
@@ -610,8 +615,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
-  ContentsquareBridgeModule: c1449986ee39da99d5dbd642bc884895e3b40127
-  CS_iOS_SDK_STATIC: fd7c52e7345b43aa79a25f8d35a0ffcab9ec4466
+  ContentsquareBridgeModule: 8b523383380dd2c430741392f30646779d896b96
+  CS_iOS_SDK_STATIC: 7e64857cb0df1206fe01f1da7ecf2594957a04d6
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   FBLazyVector: f637f31eacba90d4fdeff3fa41608b8f361c173b
   FBReactNativeSpec: 0d9a4f4de7ab614c49e98c00aedfd3bfbda33d59
@@ -660,9 +665,10 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 7c51ae9d4b3e9608a2366e39ccaa606aa551b9ed
   ReactCommon: 85c98ab0a509e70bf5ee5d9715cf68dbf495b84c
   RNCAsyncStorage: b03032fdbdb725bea0bd9e5ec5a7272865ae7398
+  RNCClipboard: 41d8d918092ae8e676f18adada19104fa3e68495
   RNScreens: ea4cd3a853063cda19a4e3c28d2e52180c80f4eb
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
-  SwiftProtobuf: afced68785854575756db965e9da52bbf3dc45e7
+  SwiftProtobuf: 40bd808372cb8706108f22d28f8ab4a6b9bc6989
   Yoga: 065f0b74dba4832d6e328238de46eb72c5de9556
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 

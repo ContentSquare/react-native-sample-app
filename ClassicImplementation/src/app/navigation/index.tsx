@@ -20,7 +20,9 @@ import { ModalScreenView } from '../../modules/ScreenViews/views/ModalScreenView
 import { PageTabView } from '../../modules/ScreenViews/views/PageTabView';
 import { PagedScrollView } from '../../modules/ScreenViews/views/PagedScrollView';
 import { ScreenViews } from '../../modules/ScreenViews/views/ScreenViews';
-import { SessionReplayMasking } from '../../modules/SessionReplayMasking/views/SessionReplayMasking';
+import { SessionReplayLinking } from '../../modules/SessionReplay/views/SessionReplayLinking';
+import { SessionReplayMasking } from '../../modules/SessionReplay/views/SessionReplayMasking';
+import { SessionReplayViews } from '../../modules/SessionReplay/views/SessionReplayViews';
 import { Transactions } from '../../modules/Transactions/Transactions';
 import { Webviews } from '../../modules/Webviews/views/Webviews';
 import { PanResponder } from '../../modules/Workarounds/views/PanResponder';
@@ -136,9 +138,19 @@ const RootNavigator = () => {
         options={{ title: 'Webviews' }}
       />
       <Stack.Screen
+        name={Screens.SESSION_REPLAY_VIEWS}
+        component={SessionReplayViews}
+        options={{ title: 'Session replay' }}
+      />
+      <Stack.Screen
         name={Screens.SESSION_REPLAY_MASKING}
         component={SessionReplayMasking}
         options={{ title: 'Session replay masking' }}
+      />
+      <Stack.Screen
+        name={Screens.SESSION_REPLAY_LINKING}
+        component={SessionReplayLinking}
+        options={{ title: 'Session replay linking' }}
       />
       <Stack.Screen
         name={Screens.CUSTOM_VARIABLES}

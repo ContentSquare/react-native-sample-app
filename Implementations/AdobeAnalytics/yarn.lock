@@ -1168,7 +1168,7 @@
   resolved "https://artifactory.csq.fr/api/npm/npm/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@contentsquare/react-native-bridge@^3.4.0":
+"@contentsquare/react-native-bridge@^3.5.0":
   version "3.5.0"
   resolved "https://artifactory.csq.fr/api/npm/npm/@contentsquare/react-native-bridge/-/react-native-bridge-3.5.0.tgz#629f10a2ec7595cac19e84a864294b689f6fe5c2"
   integrity sha512-RFcoGshwQ2tfViQ8hwMKEN9Wc4a/mmkmyH0fQFBlWOMllyAnteRDAeg8E+j6jLPDAWN+KBrQQEV/+ymWuTk0eg==

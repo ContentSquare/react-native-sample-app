@@ -1230,10 +1230,10 @@
   resolved "https://artifactory.csq.fr/api/npm/npm/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@contentsquare/react-native-bridge@^3.4.0":
-  version "3.4.0"
-  resolved "https://artifactory.csq.fr/api/npm/npm/@contentsquare/react-native-bridge/-/react-native-bridge-3.4.0.tgz#7a7ad5726442c736dd241535c54b83f1be513403"
-  integrity sha512-B+cIQWIUKk24aKY1lFFOVxQv5KZRfiIhUi8CMbBfxy7MipChFTScf8zFJT1klKS/qOY84nx2JFMrIIwMEliD2w==
+"@contentsquare/react-native-bridge@^3.5.0":
+  version "3.5.0"
+  resolved "https://artifactory.csq.fr/api/npm/npm/@contentsquare/react-native-bridge/-/react-native-bridge-3.5.0.tgz#629f10a2ec7595cac19e84a864294b689f6fe5c2"
+  integrity sha512-RFcoGshwQ2tfViQ8hwMKEN9Wc4a/mmkmyH0fQFBlWOMllyAnteRDAeg8E+j6jLPDAWN+KBrQQEV/+ymWuTk0eg==
 
 "@eslint/eslintrc@^2.0.0":
   version "2.0.0"
@@ -1862,6 +1862,11 @@
     graceful-fs "^4.1.3"
     prompts "^2.4.0"
     semver "^6.3.0"
+
+"@react-native-community/clipboard@1.5.1":
+  version "1.5.1"
+  resolved "https://artifactory.csq.fr/api/npm/npm/@react-native-community/clipboard/-/clipboard-1.5.1.tgz#32abb3ea2eb91ee3f9c5fb1d32d5783253c9fabe"
+  integrity sha512-AHAmrkLEH5UtPaDiRqoULERHh3oNv7Dgs0bTC0hO5Z2GdNokAMPT5w8ci8aMcRemcwbtdHjxChgtjbeA38GBdA==
 
 "@react-native-community/eslint-config@^3.2.0":
   version "3.2.0"
