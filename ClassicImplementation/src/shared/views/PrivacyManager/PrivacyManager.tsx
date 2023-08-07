@@ -45,9 +45,9 @@ export const PrivacyManager = () => {
             onStateChange={onContentSquareActiveChange}
           />
           <View style={styles.actionsContainer}>
-            <Button title="Tout refuser" onPress={onRefuseAllPress} />
-            <Button title="Tout accepter" onPress={onAcceptAllPress} />
-            <Button title="Valider" onPress={onSubmit} />
+            <Button title="Reject all" onPress={onRefuseAllPress} />
+            <Button title="Accept all" onPress={onAcceptAllPress} />
+            <Button title="Confirm" onPress={onSubmit} />
           </View>
         </View>
       </View>

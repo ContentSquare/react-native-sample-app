@@ -15,4 +15,5 @@ export enum Screens {
   SESSION_REPLAY_MASKING = 'SessionReplayMasking',
   SESSION_REPLAY_LINKING = 'SessionReplayLinking',
   CUSTOM_VARIABLES = 'CustomVariables',
+  ERROR_ANALYSIS = 'ErrorAnalysis'
 }

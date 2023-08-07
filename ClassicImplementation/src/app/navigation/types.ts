@@ -23,6 +23,7 @@ export type RootStackParamList = {
   [Screens.SESSION_REPLAY_MASKING]: undefined;
   [Screens.SESSION_REPLAY_LINKING]: undefined;
   [Screens.CUSTOM_VARIABLES]: undefined;
+  [Screens.ERROR_ANALYSIS]: undefined;
 };
 
 export type RootNavigatorNavigationProps =
