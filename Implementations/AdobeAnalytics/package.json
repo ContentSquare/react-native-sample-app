@@ -12,7 +12,7 @@
   "dependencies": {
     "@adobe/react-native-acpanalytics": "^2.0.1",
     "@adobe/react-native-acpcore": "^2.0.2",
-    "@contentsquare/react-native-bridge": "^3.5.0",
+    "@contentsquare/react-native-bridge": "^3.6.0",
     "@react-native-community/async-storage": "^1.12.1",
     "react": "18.2.0",
     "react-native": "0.71.8"

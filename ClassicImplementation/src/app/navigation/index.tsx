@@ -13,6 +13,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React, { useRef } from 'react';
 import { CustomVariables } from '../../modules/CustomVariables/views/CustomVariables';
 import { DynamicVariables } from '../../modules/DynamicVariables/DynamicVariables';
+import { ErrorAnalysis } from '../../modules/ErrorAnalysis/ErrorAnalysis';
 import { Home } from '../../modules/Home/views/Home';
 import { Privacy } from '../../modules/Privacy/views/Privacy';
 import { BasicScreenView } from '../../modules/ScreenViews/views/BasicScreenView';
@@ -156,6 +157,11 @@ const RootNavigator = () => {
         name={Screens.CUSTOM_VARIABLES}
         component={CustomVariables}
         options={{ title: 'Custom variables' }}
+      />
+      <Stack.Screen
+        name={Screens.ERROR_ANALYSIS}
+        component={ErrorAnalysis}
+        options={{ title: 'Error Analysis' }}
       />
     </Stack.Navigator>
   );

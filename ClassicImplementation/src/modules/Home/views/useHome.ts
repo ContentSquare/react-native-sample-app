@@ -56,6 +56,10 @@ export const useHome = () => {
       title: 'Workarounds',
       navigationScreen: Screens.WORKAROUNDS,
     },
+    {
+      title: 'Error Analysis',
+      navigationScreen: Screens.ERROR_ANALYSIS,
+    },
   ];
 
   return { screensConfig };
