@@ -1,4 +1,4 @@
-import { ACPCore } from '@adobe/react-native-acpcore';
+// import { ACPCore } from '@adobe/react-native-acpcore';
 import Contentsquare from '@contentsquare/react-native-bridge';
 import AsyncStorage from '@react-native-community/async-storage';
 
@@ -33,7 +33,7 @@ async function submitNewCsMatchingKey() {
 
   // Submit the matching key to Contentsquare and Adobe
   Contentsquare.sendDynamicVar('csMatchingKey', csMatchingKeyValue);
-  ACPCore.trackState('csMatchingKey_state', {
-    csMatchingKey: csMatchingKeyValue,
-  });
+  // ACPCore.trackState('csMatchingKey_state', {
+  //   csMatchingKey: csMatchingKeyValue,
+  // });
 }

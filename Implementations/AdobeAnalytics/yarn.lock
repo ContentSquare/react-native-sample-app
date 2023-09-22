@@ -2,18 +2,6 @@
 # yarn lockfile v1
 
 
-"@adobe/react-native-acpanalytics@^2.0.1":
-  version "2.0.1"
-  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-acpanalytics/-/react-native-acpanalytics-2.0.1.tgz#94b59ea6f383bd49fa995e41b8392fe600a912ce"
-  integrity sha512-M3FOT+1IWAF4v2BSgypho+xjE+Ip6mAuq76ik/u9VTP1z/0JOf9bB3cKm2TgOczXNHm5N51FvnLEkYSRXJhZxw==
-  dependencies:
-    "@babel/runtime" "^7.14.8"
-
-"@adobe/react-native-acpcore@^2.0.2":
-  version "2.0.2"
-  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-acpcore/-/react-native-acpcore-2.0.2.tgz#e7d594d47ffbd8931a460d4a707a284b8dc743e7"
-  integrity sha512-3BESeg4gnDuGkMl0kKENvBRiBcvKZqKxThLs+150IKVv0sIIdNvfcjAZf/L3cHpzlQaUCEuZNOdjrTdweJME8w==
-
 "@ampproject/remapping@^2.2.0":
   version "2.2.1"
   resolved "https://artifactory.csq.fr/api/npm/npm/@ampproject/remapping/-/remapping-2.2.1.tgz#99e8e11851128b8702cd57c33684f1d0f260b630"
@@ -1122,7 +1110,7 @@
   resolved "https://artifactory.csq.fr/api/npm/npm/@babel/regjsgen/-/regjsgen-0.8.0.tgz#f0ba69b075e1f05fb2825b7fad991e7adbb18310"
   integrity sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.14.8", "@babel/runtime@^7.20.0", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.20.0", "@babel/runtime@^7.8.4":
   version "7.22.5"
   resolved "https://artifactory.csq.fr/api/npm/npm/@babel/runtime/-/runtime-7.22.5.tgz#8564dd588182ce0047d55d7a75e93921107b57ec"
   integrity sha512-ecjvYlnAaZ/KVneE/OdKYBYfgXV3Ptu6zQWmgEF7vwKhQnvVS6bjMD2XYgj+SNvQ1GfK/pjgokfPkC/2CO8CuA==

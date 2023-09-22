@@ -1,12 +1,4 @@
 PODS:
-  - ACPAnalytics (2.5.4):
-    - ACPAnalytics/xcframeworks (= 2.5.4)
-    - ACPCore (>= 2.9.6)
-  - ACPAnalytics/xcframeworks (2.5.4):
-    - ACPCore (>= 2.9.6)
-  - ACPCore (2.9.7):
-    - ACPCore/main (= 2.9.7)
-  - ACPCore/main (2.9.7)
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
   - ContentsquareBridgeModule (3.7.0):
@@ -112,12 +104,6 @@ PODS:
     - fmt (~> 6.2.1)
     - glog
     - libevent
-  - RCTACPAnalytics (2.0.1):
-    - ACPAnalytics
-    - React
-  - RCTACPCore (2.0.2):
-    - ACPCore
-    - React
   - RCTRequired (0.71.8)
   - RCTTypeSafety (0.71.8):
     - FBLazyVector (= 0.71.8)
@@ -476,8 +462,6 @@ DEPENDENCIES:
   - libevent (~> 2.1.12)
   - OpenSSL-Universal (= 1.1.1100)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
-  - "RCTACPAnalytics (from `../node_modules/@adobe/react-native-acpanalytics`)"
-  - "RCTACPCore (from `../node_modules/@adobe/react-native-acpcore`)"
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
   - React (from `../node_modules/react-native/`)
@@ -511,8 +495,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - ACPAnalytics
-    - ACPCore
     - CocoaAsyncSocket
     - CS_ErrorAnalysis_STATIC
     - CS_iOS_SDK_STATIC
@@ -550,10 +532,6 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec"
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
-  RCTACPAnalytics:
-    :path: "../node_modules/@adobe/react-native-acpanalytics"
-  RCTACPCore:
-    :path: "../node_modules/@adobe/react-native-acpcore"
   RCTRequired:
     :path: "../node_modules/react-native/Libraries/RCTRequired"
   RCTTypeSafety:
@@ -612,8 +590,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  ACPAnalytics: 6b94de281850b4aff02882ec7091e89c811c7d87
-  ACPCore: 4328e8e8327e93f0c70ee44ae4cd2e0882302489
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   ContentsquareBridgeModule: 77013f1e88afd55ccaaf8dff9605037f5eb617a3
@@ -638,8 +614,6 @@ SPEC CHECKSUMS:
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   PLCrashReporter: 5d2d3967afe0efad61b3048d617e2199a5d1b787
   RCT-Folly: 424b8c9a7a0b9ab2886ffe9c3b041ef628fd4fb1
-  RCTACPAnalytics: 729589e9b359d77c2b45a2d129d08dec8c72a8a5
-  RCTACPCore: 8cb93b24fcedd3eec3a69df72b74c2c7110d95f1
   RCTRequired: 8af6a32dfc2b65ec82193c2dee6e1011ff22ac2a
   RCTTypeSafety: bee9dd161c175896c680d47ef1d9eaacf2b587f4
   React: d850475db9ba8006a8b875d79e1e0d6ac8a0f8b6
