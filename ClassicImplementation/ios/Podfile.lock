@@ -1,13 +1,13 @@
 PODS:
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
-  - ContentsquareBridgeModule (3.6.0):
-    - CS_ErrorAnalysis_STATIC (= 4.24.0)
-    - CS_iOS_SDK_STATIC (= 4.24.0)
+  - ContentsquareBridgeModule (3.7.0):
+    - CS_ErrorAnalysis_STATIC (= 4.25.1)
+    - CS_iOS_SDK_STATIC (= 4.25.1)
     - React
-  - CS_ErrorAnalysis_STATIC (4.24.0):
+  - CS_ErrorAnalysis_STATIC (4.25.1):
     - PLCrashReporter (~> 1.0)
-  - CS_iOS_SDK_STATIC (4.24.0):
+  - CS_iOS_SDK_STATIC (4.25.1):
     - SwiftProtobuf (~> 1.0)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.71.8)
@@ -439,8 +439,8 @@ PODS:
   - RNScreens (3.19.0):
     - React-Core
     - React-RCTImage
-  - SocketRocket (0.6.0)
-  - SwiftProtobuf (1.22.1)
+  - SocketRocket (0.6.1)
+  - SwiftProtobuf (1.23.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -621,9 +621,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
-  ContentsquareBridgeModule: cd5cabaf1f986cbbf38dfa62bd0844c62079639d
-  CS_ErrorAnalysis_STATIC: d30e4a934ab5fd0e048b0877e5ed8b99b449d3e1
-  CS_iOS_SDK_STATIC: c055608b8051d28d7998d9f98cca00003ae4a15e
+  ContentsquareBridgeModule: 77013f1e88afd55ccaaf8dff9605037f5eb617a3
+  CS_ErrorAnalysis_STATIC: 1d7d4bf0b6593db9e387adf3ea8312a071c752b5
+  CS_iOS_SDK_STATIC: 192bfc49be1b828f1de7f0456005e7727542357e
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   FBLazyVector: f637f31eacba90d4fdeff3fa41608b8f361c173b
   FBReactNativeSpec: 0d9a4f4de7ab614c49e98c00aedfd3bfbda33d59
@@ -675,8 +675,8 @@ SPEC CHECKSUMS:
   RNCAsyncStorage: b03032fdbdb725bea0bd9e5ec5a7272865ae7398
   RNCClipboard: 41d8d918092ae8e676f18adada19104fa3e68495
   RNScreens: ea4cd3a853063cda19a4e3c28d2e52180c80f4eb
-  SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
-  SwiftProtobuf: 7773c4e96a99d7b8ab7cda0fc30a883732ff93b1
+  SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
+  SwiftProtobuf: b70d65f419fbfe61a2d58003456ca5da58e337d6
   Yoga: 065f0b74dba4832d6e328238de46eb72c5de9556
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
