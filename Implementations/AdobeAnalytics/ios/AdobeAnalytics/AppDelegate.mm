@@ -1,11 +1,6 @@
 #import "AppDelegate.h"
 
 #import <React/RCTBundleURLProvider.h>
-//#import <ACPIdentity.h>
-//#import <ACPSignal.h>
-//#import <ACPLifecycle.h>
-//#import <ACPAnalytics.h>
-//#import <ACPCore.h>
 
 @implementation AppDelegate
 
@@ -16,17 +11,25 @@
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
   
-//  [ACPCore setLogLevel:ACPMobileLogLevelVerbose];
-//  [ACPCore configureWithAppId:@"<YOUR_APP_ID>"];
-//  [ACPCore setWrapperType:ACPMobileWrapperTypeReactNative];
-//
-//  [ACPIdentity registerExtension];
-//  [ACPLifecycle registerExtension];
-//  [ACPSignal registerExtension];
-//  [ACPAnalytics registerExtension];
-//
-//  [ACPCore start:nil];
+  [AEPMobileCore setLogLevel: AEPLogLevelDebug];
+  [AEPMobileCore configureWithAppId:@"<YOUR_APP_ID>"];
 
+  const UIApplicationState appState = application.applicationState;
+  
+  [AEPMobileCore registerExtensions: @[
+    AEPMobileUserProfile.class,
+    AEPMobileIdentity.class,
+    AEPMobileLifecycle.class,
+    AEPMobileSignal.class,
+    AEPMobileEdge.class,
+    AEPMobileEdgeIdentity.class,
+
+  ] completion:^{
+    if (appState != UIApplicationStateBackground) {
+      [AEPMobileCore lifecycleStart:nil];
+    }
+  }];
+  
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 

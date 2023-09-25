@@ -1,4 +1,22 @@
 PODS:
+  - AEPCore (4.1.0):
+    - AEPRulesEngine (>= 4.0.0)
+    - AEPServices (>= 4.1.0)
+  - AEPEdge (4.2.0):
+    - AEPCore (>= 4.1.0)
+    - AEPEdgeIdentity (>= 4.0.0)
+  - AEPEdgeIdentity (4.0.0):
+    - AEPCore (>= 4.0.0)
+  - AEPIdentity (4.1.0):
+    - AEPCore (>= 4.1.0)
+  - AEPLifecycle (4.1.0):
+    - AEPCore (>= 4.1.0)
+  - AEPRulesEngine (4.0.0)
+  - AEPServices (4.1.0)
+  - AEPSignal (4.1.0):
+    - AEPCore (>= 4.1.0)
+  - AEPUserProfile (4.0.0):
+    - AEPCore
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
   - ContentsquareBridgeModule (3.7.0):
@@ -104,6 +122,18 @@ PODS:
     - fmt (~> 6.2.1)
     - glog
     - libevent
+  - RCTAEPCore (5.0.1):
+    - AEPCore (~> 4.0)
+    - AEPIdentity (~> 4.0)
+    - AEPLifecycle (~> 4.0)
+    - AEPSignal (~> 4.0)
+    - React
+  - RCTAEPEdge (5.0.0):
+    - AEPEdge (~> 4.0)
+    - React
+  - RCTAEPUserProfile (5.0.0):
+    - AEPUserProfile (~> 4.0)
+    - React
   - RCTRequired (0.71.8)
   - RCTTypeSafety (0.71.8):
     - FBLazyVector (= 0.71.8)
@@ -462,6 +492,9 @@ DEPENDENCIES:
   - libevent (~> 2.1.12)
   - OpenSSL-Universal (= 1.1.1100)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
+  - "RCTAEPCore (from `../node_modules/@adobe/react-native-aepcore`)"
+  - "RCTAEPEdge (from `../node_modules/@adobe/react-native-aepedge`)"
+  - "RCTAEPUserProfile (from `../node_modules/@adobe/react-native-aepuserprofile`)"
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
   - React (from `../node_modules/react-native/`)
@@ -495,6 +528,15 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AEPCore
+    - AEPEdge
+    - AEPEdgeIdentity
+    - AEPIdentity
+    - AEPLifecycle
+    - AEPRulesEngine
+    - AEPServices
+    - AEPSignal
+    - AEPUserProfile
     - CocoaAsyncSocket
     - CS_ErrorAnalysis_STATIC
     - CS_iOS_SDK_STATIC
@@ -532,6 +574,12 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec"
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
+  RCTAEPCore:
+    :path: "../node_modules/@adobe/react-native-aepcore"
+  RCTAEPEdge:
+    :path: "../node_modules/@adobe/react-native-aepedge"
+  RCTAEPUserProfile:
+    :path: "../node_modules/@adobe/react-native-aepuserprofile"
   RCTRequired:
     :path: "../node_modules/react-native/Libraries/RCTRequired"
   RCTTypeSafety:
@@ -590,6 +638,15 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  AEPCore: 20fb832a7467b25ca4aca186c0a5a1e3c0c6abc3
+  AEPEdge: c31a1c31d8466f964efeb9a4f94eebc52a0b55a5
+  AEPEdgeIdentity: c2396b9119abd6eb530ea11efc58ec019b163bd4
+  AEPIdentity: 88671626d6043a488896ee7d71483a8bcec80739
+  AEPLifecycle: 97693ea99ef9deb818b726a4e429ef96abb1353e
+  AEPRulesEngine: 458450a34922823286ead045a0c2bd8c27e224c6
+  AEPServices: d94555679870311d2f1391c5d7a5de590fd1f3c0
+  AEPSignal: 9152e68bae462276f57ac63666e879cc7ff7c302
+  AEPUserProfile: 5c1d90014627cacff99efb193ce9acd287905661
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   ContentsquareBridgeModule: 77013f1e88afd55ccaaf8dff9605037f5eb617a3
@@ -614,6 +671,9 @@ SPEC CHECKSUMS:
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   PLCrashReporter: 5d2d3967afe0efad61b3048d617e2199a5d1b787
   RCT-Folly: 424b8c9a7a0b9ab2886ffe9c3b041ef628fd4fb1
+  RCTAEPCore: 9b2faad034280d77239ef975c675debb52660d27
+  RCTAEPEdge: 207126072a6467736e8fba6553152acb59c13dd3
+  RCTAEPUserProfile: 7c5f172fa05273e81161f6ee4b10e635374bacae
   RCTRequired: 8af6a32dfc2b65ec82193c2dee6e1011ff22ac2a
   RCTTypeSafety: bee9dd161c175896c680d47ef1d9eaacf2b587f4
   React: d850475db9ba8006a8b875d79e1e0d6ac8a0f8b6
@@ -646,6 +706,6 @@ SPEC CHECKSUMS:
   Yoga: 065f0b74dba4832d6e328238de46eb72c5de9556
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: ae4c2d8c53b09e2df103e40a9bdd7d9a332d31db
+PODFILE CHECKSUM: 6018301c9171e5761367d6746c95585b224875f5
 
 COCOAPODS: 1.12.1
