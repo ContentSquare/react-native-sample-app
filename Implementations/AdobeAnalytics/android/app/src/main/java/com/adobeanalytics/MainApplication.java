@@ -18,6 +18,7 @@ import com.adobe.marketing.mobile.MobileCore;
 import com.adobe.marketing.mobile.Signal;
 import com.adobe.marketing.mobile.Extension;
 import com.adobe.marketing.mobile.Edge;
+import com.adobe.marketing.mobile.edge.bridge.EdgeBridge;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -76,6 +77,7 @@ public class MainApplication extends Application implements ReactApplication {
       Lifecycle.EXTENSION,
       Signal.EXTENSION,
       Edge.EXTENSION,
+      EdgeBridge.EXTENSION,
       com.adobe.marketing.mobile.edge.identity.Identity.EXTENSION
     );
 

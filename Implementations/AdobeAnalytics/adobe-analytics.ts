@@ -12,10 +12,10 @@ export async function updateCsMatchingKey() {
   }
 
   const { timestamp } = JSON.parse(csMatchingKeyRecord);
-  // if (Date.now() - timestamp > 30 * 60 * 1000) {
-  // if the key is not valid anymore, submit a new one
-  await submitNewCsMatchingKey();
-  // }
+  if (Date.now() - timestamp > 30 * 60 * 1000) {
+    // if the key is not valid anymore, submit a new one
+    await submitNewCsMatchingKey();
+  }
   // if the key is still valid, do nothing
 }
 
@@ -26,6 +26,11 @@ async function submitNewCsMatchingKey() {
     csMatchingKey: csMatchingKeyValue,
     timestamp: Date.now(),
   };
+
+  console.debug({
+    csMatchingKey: csMatchingKeyValue,
+  });
+
   await AsyncStorage.setItem(
     'csMatchingKey_creation_ts',
     JSON.stringify(newCsMatchingKeyRecord),
@@ -33,9 +38,6 @@ async function submitNewCsMatchingKey() {
 
   // Submit the matching key to Contentsquare and Adobe
   Contentsquare.sendDynamicVar('csMatchingKey', csMatchingKeyValue);
-  console.log('csMatchingKey_state', {
-    csMatchingKey: csMatchingKeyValue,
-  });
   MobileCore.trackState('csMatchingKey_state', {
     csMatchingKey: csMatchingKeyValue,
   });

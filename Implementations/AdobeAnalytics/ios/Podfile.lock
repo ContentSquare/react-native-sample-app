@@ -17,6 +17,8 @@ PODS:
   - AEPServices (4.1.0)
   - AEPSignal (4.1.0):
     - AEPCore (>= 4.1.0)
+  - AEPUserProfile (4.0.0):
+    - AEPCore
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
   - ContentsquareBridgeModule (3.7.0):
@@ -133,6 +135,9 @@ PODS:
     - React
   - RCTAEPEdgeBridge (5.0.0):
     - AEPEdgeBridge (~> 4.0)
+    - React
+  - RCTAEPUserProfile (5.0.0):
+    - AEPUserProfile (~> 4.0)
     - React
   - RCTRequired (0.71.8)
   - RCTTypeSafety (0.71.8):
@@ -495,6 +500,7 @@ DEPENDENCIES:
   - "RCTAEPCore (from `../node_modules/@adobe/react-native-aepcore`)"
   - "RCTAEPEdge (from `../node_modules/@adobe/react-native-aepedge`)"
   - "RCTAEPEdgeBridge (from `../node_modules/@adobe/react-native-aepedgebridge`)"
+  - "RCTAEPUserProfile (from `../node_modules/@adobe/react-native-aepuserprofile`)"
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
   - React (from `../node_modules/react-native/`)
@@ -537,6 +543,7 @@ SPEC REPOS:
     - AEPRulesEngine
     - AEPServices
     - AEPSignal
+    - AEPUserProfile
     - CocoaAsyncSocket
     - CS_ErrorAnalysis_STATIC
     - CS_iOS_SDK_STATIC
@@ -580,6 +587,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@adobe/react-native-aepedge"
   RCTAEPEdgeBridge:
     :path: "../node_modules/@adobe/react-native-aepedgebridge"
+  RCTAEPUserProfile:
+    :path: "../node_modules/@adobe/react-native-aepuserprofile"
   RCTRequired:
     :path: "../node_modules/react-native/Libraries/RCTRequired"
   RCTTypeSafety:
@@ -647,6 +656,7 @@ SPEC CHECKSUMS:
   AEPRulesEngine: 458450a34922823286ead045a0c2bd8c27e224c6
   AEPServices: d94555679870311d2f1391c5d7a5de590fd1f3c0
   AEPSignal: 9152e68bae462276f57ac63666e879cc7ff7c302
+  AEPUserProfile: 5c1d90014627cacff99efb193ce9acd287905661
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   ContentsquareBridgeModule: 77013f1e88afd55ccaaf8dff9605037f5eb617a3
@@ -674,6 +684,7 @@ SPEC CHECKSUMS:
   RCTAEPCore: 9b2faad034280d77239ef975c675debb52660d27
   RCTAEPEdge: 207126072a6467736e8fba6553152acb59c13dd3
   RCTAEPEdgeBridge: ac3a4318f76f881b6a44f748d894d72bcc721230
+  RCTAEPUserProfile: 7c5f172fa05273e81161f6ee4b10e635374bacae
   RCTRequired: 8af6a32dfc2b65ec82193c2dee6e1011ff22ac2a
   RCTTypeSafety: bee9dd161c175896c680d47ef1d9eaacf2b587f4
   React: d850475db9ba8006a8b875d79e1e0d6ac8a0f8b6
