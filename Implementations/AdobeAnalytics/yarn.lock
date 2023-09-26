@@ -12,10 +12,10 @@
   resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepedge/-/react-native-aepedge-5.0.0.tgz#c7e2f5a012a7b935f653de2352869dff46d21af4"
   integrity sha512-o9J58DXgNoy2yLoPUO9wYRFck/uKFgpD5mg4YG3HKIFaqHC9YolHzPbnU4ickPddkFiT4aa2xXCRBCVYCNg6fQ==
 
-"@adobe/react-native-aepuserprofile@^5.0.0":
+"@adobe/react-native-aepedgebridge@^5.0.0":
   version "5.0.0"
-  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepuserprofile/-/react-native-aepuserprofile-5.0.0.tgz#d6416d0fa5cd8be6651c82de3400ebd037b7e2af"
-  integrity sha512-1Iusah7PiiKdnqKK8rtlER2XMG00sxePE5i06UkUr9D5NUN/Uh3+McmH7eczhrAmJIxUCIH40S2chIrF267T+g==
+  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepedgebridge/-/react-native-aepedgebridge-5.0.0.tgz#eff10d378800be2903099e901cdb33f6fd209113"
+  integrity sha512-W6UsKATJRJAPrg2qnbwGo1K1IBqUOgwTc0KUI1muhes8Ivdfr7YsOpEuxULJd+mMyvCIP1mkLP2zTv/PR85nwA==
 
 "@ampproject/remapping@^2.2.0":
   version "2.2.1"

@@ -17,13 +17,12 @@
   const UIApplicationState appState = application.applicationState;
   
   [AEPMobileCore registerExtensions: @[
-    AEPMobileUserProfile.class,
     AEPMobileIdentity.class,
     AEPMobileLifecycle.class,
     AEPMobileSignal.class,
     AEPMobileEdge.class,
+    AEPMobileEdgeBridge.class,
     AEPMobileEdgeIdentity.class,
-
   ] completion:^{
     if (appState != UIApplicationStateBackground) {
       [AEPMobileCore lifecycleStart:nil];

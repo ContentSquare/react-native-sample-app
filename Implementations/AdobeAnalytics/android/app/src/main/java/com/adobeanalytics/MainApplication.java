@@ -12,26 +12,12 @@ import com.facebook.soloader.SoLoader;
 import java.util.Arrays;
 import java.util.List;
 
-import com.adobe.marketing.mobile.AdobeCallback;
-import com.adobe.marketing.mobile.Identity;
-import com.adobe.marketing.mobile.InvalidInitException;
 import com.adobe.marketing.mobile.Lifecycle;
 import com.adobe.marketing.mobile.LoggingMode;
 import com.adobe.marketing.mobile.MobileCore;
 import com.adobe.marketing.mobile.Signal;
-import com.adobe.marketing.mobile.UserProfile;
-//import com.adobe.marketing.mobile.Target;
-//import com.adobe.marketing.mobile.Places;
-//import com.adobe.marketing.mobile.Assurance;
-import com.adobe.marketing.mobile.AdobeCallback;
 import com.adobe.marketing.mobile.Extension;
-import com.adobe.marketing.mobile.LoggingMode;
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Lifecycle;
-import com.adobe.marketing.mobile.Signal;
 import com.adobe.marketing.mobile.Edge;
-//import com.adobe.marketing.mobile.edge.consent.Consent;
-
 
 public class MainApplication extends Application implements ReactApplication {
 
