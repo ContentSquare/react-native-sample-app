@@ -72,7 +72,7 @@ public class MainApplication extends Application implements ReactApplication {
     MobileCore.setApplication(this); // add this line
     MobileCore.setLogLevel(LoggingMode.VERBOSE);
 
-    MobileCore.configureWithAppID("ae93c31080b0/9d37a808c031/launch-a2fe521edfee");
+    MobileCore.configureWithAppID("<YOUR_APP_ID>");
     List<Class<? extends Extension>> extensions = Arrays.asList(
       Lifecycle.EXTENSION,
       Signal.EXTENSION,
