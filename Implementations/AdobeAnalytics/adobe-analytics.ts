@@ -1,10 +1,10 @@
-// import { ACPCore } from '@adobe/react-native-acpcore';
+import { MobileCore } from '@adobe/react-native-aepcore';
 import Contentsquare from '@contentsquare/react-native-bridge';
 import AsyncStorage from '@react-native-community/async-storage';
 
 export async function updateCsMatchingKey() {
   const csMatchingKeyRecord = await AsyncStorage.getItem(
-    'csMatchingKey_creation_ts'
+    'csMatchingKey_creation_ts',
   );
   if (!csMatchingKeyRecord) {
     await submitNewCsMatchingKey();
@@ -12,10 +12,10 @@ export async function updateCsMatchingKey() {
   }
 
   const { timestamp } = JSON.parse(csMatchingKeyRecord);
-  if (Date.now() - timestamp > 30 * 60 * 1000) {
-    // if the key is not valid anymore, submit a new one
-    await submitNewCsMatchingKey();
-  }
+  // if (Date.now() - timestamp > 30 * 60 * 1000) {
+  // if the key is not valid anymore, submit a new one
+  await submitNewCsMatchingKey();
+  // }
   // if the key is still valid, do nothing
 }
 
@@ -28,12 +28,15 @@ async function submitNewCsMatchingKey() {
   };
   await AsyncStorage.setItem(
     'csMatchingKey_creation_ts',
-    JSON.stringify(newCsMatchingKeyRecord)
+    JSON.stringify(newCsMatchingKeyRecord),
   );
 
   // Submit the matching key to Contentsquare and Adobe
   Contentsquare.sendDynamicVar('csMatchingKey', csMatchingKeyValue);
-  // ACPCore.trackState('csMatchingKey_state', {
-  //   csMatchingKey: csMatchingKeyValue,
-  // });
+  console.log('csMatchingKey_state', {
+    csMatchingKey: csMatchingKeyValue,
+  });
+  MobileCore.trackState('csMatchingKey_state', {
+    csMatchingKey: csMatchingKeyValue,
+  });
 }
