@@ -2,13 +2,17 @@
 #import <UIKit/UIKit.h>
 
 @import AEPCore;
+@import AEPUserProfile;
 @import AEPServices;
 @import AEPIdentity;
 @import AEPLifecycle;
 @import AEPSignal;
-@import AEPEdge;
+//@import AEPTarget;
+//@import AEPPlaces;
+//@import AEPAssurance;
+
 @import AEPEdgeBridge;
-@import AEPEdgeIdentity;
+
 
 @interface AppDelegate : RCTAppDelegate
 

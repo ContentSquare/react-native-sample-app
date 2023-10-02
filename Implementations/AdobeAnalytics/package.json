@@ -10,9 +10,10 @@
     "test": "jest"
   },
   "dependencies": {
-    "@adobe/react-native-aepcore": "^5.0.0",
-    "@adobe/react-native-aepedge": "^5.0.0",
-    "@adobe/react-native-aepedgebridge": "^5.0.0",
+    "@adobe/react-native-aepcore": "5.0.1",
+    "@adobe/react-native-aepedge": "5.0.0",
+    "@adobe/react-native-aepedgebridge": "5.0.0",
+    "@adobe/react-native-aepedgeidentity": "5.0.0",
     "@adobe/react-native-aepuserprofile": "^5.0.0",
     "@contentsquare/react-native-bridge": "^3.7.0",
     "@react-native-community/async-storage": "^1.12.1",

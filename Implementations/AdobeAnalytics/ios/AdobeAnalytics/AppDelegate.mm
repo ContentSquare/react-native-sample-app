@@ -17,17 +17,26 @@
   const UIApplicationState appState = application.applicationState;
   
   [AEPMobileCore registerExtensions: @[
+    AEPMobileEdgeBridge.class,
+    AEPMobileEdgeBridge.class,
+    AEPMobileLifecycle.class,
+    
+    AEPMobileUserProfile.class,
     AEPMobileIdentity.class,
     AEPMobileLifecycle.class,
     AEPMobileSignal.class,
-    AEPMobileEdge.class,
-    AEPMobileEdgeBridge.class,
-    AEPMobileEdgeIdentity.class,
+//    AEPMobileTarget.class,
+//    AEPMobilePlaces.class,
+//    AEPMobileAssurance.class,
+
+
   ] completion:^{
     if (appState != UIApplicationStateBackground) {
       [AEPMobileCore lifecycleStart:nil];
     }
   }];
+  
+//  EdgeBridge.self, Lifecycle.self, Identity.self, Signal.self
   
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }

@@ -2,20 +2,25 @@
 # yarn lockfile v1
 
 
-"@adobe/react-native-aepcore@^5.0.0":
+"@adobe/react-native-aepcore@5.0.1":
   version "5.0.1"
   resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepcore/-/react-native-aepcore-5.0.1.tgz#5a87d106f0a66d954bb6256785cc2f89dec96b53"
   integrity sha512-WdftR79S65fT4FqVQZwQlHHYAswv6FhP64hO2QMyyZEWpRRdq+aFjTVleGgz0x7WY2WSw2h4VSgYCoN+W1ke3g==
 
-"@adobe/react-native-aepedge@^5.0.0":
+"@adobe/react-native-aepedge@5.0.0":
   version "5.0.0"
   resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepedge/-/react-native-aepedge-5.0.0.tgz#c7e2f5a012a7b935f653de2352869dff46d21af4"
   integrity sha512-o9J58DXgNoy2yLoPUO9wYRFck/uKFgpD5mg4YG3HKIFaqHC9YolHzPbnU4ickPddkFiT4aa2xXCRBCVYCNg6fQ==
 
-"@adobe/react-native-aepedgebridge@^5.0.0":
+"@adobe/react-native-aepedgebridge@5.0.0":
   version "5.0.0"
   resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepedgebridge/-/react-native-aepedgebridge-5.0.0.tgz#eff10d378800be2903099e901cdb33f6fd209113"
   integrity sha512-W6UsKATJRJAPrg2qnbwGo1K1IBqUOgwTc0KUI1muhes8Ivdfr7YsOpEuxULJd+mMyvCIP1mkLP2zTv/PR85nwA==
+
+"@adobe/react-native-aepedgeidentity@5.0.0":
+  version "5.0.0"
+  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepedgeidentity/-/react-native-aepedgeidentity-5.0.0.tgz#19e097746cccf66b67603bc04ead7bf7ac317971"
+  integrity sha512-mrqgU5fUIKEWZOLQlf2QHjWnkhh6l991toUSbLRqvMgJ6OJwSd958llfQNqhDxBq2nN7l68zhB1jkHH6akYAdA==
 
 "@adobe/react-native-aepuserprofile@^5.0.0":
   version "5.0.0"
