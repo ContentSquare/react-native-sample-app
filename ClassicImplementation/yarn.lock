@@ -1230,10 +1230,10 @@
   resolved "https://artifactory.csq.fr/api/npm/npm/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@contentsquare/react-native-bridge@^3.7.0":
-  version "3.7.0"
-  resolved "https://artifactory.csq.fr/api/npm/npm/@contentsquare/react-native-bridge/-/react-native-bridge-3.7.0.tgz#6a6f1f8a70c590497b28e60865318f166e759a87"
-  integrity sha512-0xem3VXF3DrhAFMaAyzCz5WmSaZulV8h8L+3BxC6tcb44bmyJ7j7ig70SYcwVLy2/Y+7AFU9NSVRlZQOqhT4TQ==
+"@contentsquare/react-native-bridge@^3.8.0":
+  version "3.8.0"
+  resolved "https://artifactory.csq.fr/api/npm/npm/@contentsquare/react-native-bridge/-/react-native-bridge-3.8.0.tgz#d390dcdda5ceba70db344e7fdbf1b49c6412b300"
+  integrity sha512-vp+rA8fAXL2XC9E1y2JiLX2s+dRamy4v7Bv/MLf+V60+GegKM6G7teMfbs6LvurgAeF1YvesaDRhwIym2oVkCA==
 
 "@eslint/eslintrc@^2.0.0":
   version "2.0.0"
