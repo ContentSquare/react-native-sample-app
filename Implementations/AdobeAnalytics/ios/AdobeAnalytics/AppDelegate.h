@@ -7,12 +7,9 @@
 @import AEPIdentity;
 @import AEPLifecycle;
 @import AEPSignal;
-//@import AEPTarget;
-//@import AEPPlaces;
-//@import AEPAssurance;
-
-@import AEPEdgeBridge;
-
+@import AEPEdge;
+@import AEPEdgeIdentity;
+@import AEPAssurance;
 
 @interface AppDelegate : RCTAppDelegate
 

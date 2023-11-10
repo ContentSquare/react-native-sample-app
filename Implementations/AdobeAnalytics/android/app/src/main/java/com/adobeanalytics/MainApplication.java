@@ -1,6 +1,10 @@
 package com.adobeanalytics;
 
 import android.app.Application;
+
+import com.adobe.marketing.mobile.Assurance;
+import com.adobe.marketing.mobile.UserProfile;
+import com.adobe.marketing.mobile.assurance.AssuranceExtension;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
@@ -75,15 +79,17 @@ public class MainApplication extends Application implements ReactApplication {
 
     MobileCore.configureWithAppID("<YOUR_APP_ID>");
     List<Class<? extends Extension>> extensions = Arrays.asList(
-        Lifecycle.EXTENSION,
-        Signal.EXTENSION,
-        Edge.EXTENSION,
-        EdgeBridge.EXTENSION,
-        Identity.EXTENSION,
-        com.adobe.marketing.mobile.edge.identity.Identity.EXTENSION
+            Lifecycle.EXTENSION,
+            Signal.EXTENSION,
+            Edge.EXTENSION,
+            EdgeBridge.EXTENSION,
+            Identity.EXTENSION,
+            UserProfile.EXTENSION,
+            Assurance.EXTENSION,
+            com.adobe.marketing.mobile.edge.identity.Identity.EXTENSION
     );
 
-    MobileCore.registerExtensions(extensions, o -> {
+      MobileCore.registerExtensions(extensions, o -> {
         MobileCore.lifecycleStart(null);
         //enable this for Lifecycle. See Note for collecting Lifecycle metrics.
     });

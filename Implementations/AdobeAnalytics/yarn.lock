@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@adobe/react-native-aepassurance@^5.0.0":
+  version "5.0.0"
+  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepassurance/-/react-native-aepassurance-5.0.0.tgz#1d5b5abd221f8cb5458f44944751f274b8572a6d"
+  integrity sha512-CWoZE/UQ0a1tXwwiTPkr9GJJmYrUq9mewNFTRSY8o7AwFv2ea+arF0z46Js9l0dFpmBTctcTdBd4l/2+VCPXTQ==
+
 "@adobe/react-native-aepcore@5.0.1":
   version "5.0.1"
   resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepcore/-/react-native-aepcore-5.0.1.tgz#5a87d106f0a66d954bb6256785cc2f89dec96b53"
@@ -16,6 +21,11 @@
   version "5.0.0"
   resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepedgebridge/-/react-native-aepedgebridge-5.0.0.tgz#eff10d378800be2903099e901cdb33f6fd209113"
   integrity sha512-W6UsKATJRJAPrg2qnbwGo1K1IBqUOgwTc0KUI1muhes8Ivdfr7YsOpEuxULJd+mMyvCIP1mkLP2zTv/PR85nwA==
+
+"@adobe/react-native-aepedgeconsent@^5.0.0":
+  version "5.0.0"
+  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepedgeconsent/-/react-native-aepedgeconsent-5.0.0.tgz#1baf7218475d0ca945a7f119ee26faa453a84e80"
+  integrity sha512-ifHVZfHt3NNXP5hvTlbNWMilvLGg38OqzgoYnbfFXSu4KNsu1gfudqPEEiAReKBi664ldp8XjHbes+2yrqdnpg==
 
 "@adobe/react-native-aepedgeidentity@5.0.0":
   version "5.0.0"

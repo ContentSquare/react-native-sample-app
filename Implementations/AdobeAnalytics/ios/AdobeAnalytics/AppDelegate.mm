@@ -1,6 +1,7 @@
 #import "AppDelegate.h"
 
 #import <React/RCTBundleURLProvider.h>
+#import <React/RCTLinkingManager.h>
 
 @implementation AppDelegate
 
@@ -17,27 +18,19 @@
   const UIApplicationState appState = application.applicationState;
   
   [AEPMobileCore registerExtensions: @[
-    AEPMobileEdgeBridge.class,
-    AEPMobileEdgeBridge.class,
     AEPMobileLifecycle.class,
-    
     AEPMobileUserProfile.class,
     AEPMobileIdentity.class,
     AEPMobileLifecycle.class,
     AEPMobileSignal.class,
-//    AEPMobileTarget.class,
-//    AEPMobilePlaces.class,
-//    AEPMobileAssurance.class,
-
-
+    AEPMobileEdgeIdentity.class,
+    AEPMobileEdge.class,
+    AEPMobileAssurance.class,
   ] completion:^{
     if (appState != UIApplicationStateBackground) {
       [AEPMobileCore lifecycleStart:nil];
     }
   }];
-  
-//  EdgeBridge.self, Lifecycle.self, Identity.self, Signal.self
-  
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
@@ -57,6 +50,16 @@
 /// @return: `true` if the `concurrentRoot` feature is enabled. Otherwise, it returns `false`.
 - (BOOL)concurrentRootEnabled
 {
+  return true;
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+  //  return [RCTLinkingManager application:application openURL:url options:options];
+  // NOTE: https://github.com/adobe/aepsdk-react-native/tree/main/packages/assurance#initializing
+  [AEPMobileAssurance startSessionWithUrl:url];
   return true;
 }
 

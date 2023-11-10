@@ -1,6 +1,7 @@
-import { MobileCore } from '@adobe/react-native-aepcore';
+import { Edge, ExperienceEvent } from '@adobe/react-native-aepedge';
 import Contentsquare from '@contentsquare/react-native-bridge';
 import AsyncStorage from '@react-native-community/async-storage';
+import { Platform } from 'react-native';
 
 export async function updateCsMatchingKey() {
   const csMatchingKeyRecord = await AsyncStorage.getItem(
@@ -38,7 +39,15 @@ async function submitNewCsMatchingKey() {
 
   // Submit the matching key to Contentsquare and Adobe
   Contentsquare.sendDynamicVar('csMatchingKey', csMatchingKeyValue);
-  MobileCore.trackState('csMatchingKey_state', {
-    csMatchingKey: csMatchingKeyValue,
-  });
+  const xdmData = { eventType: 'csMatchingKey_state' };
+  const data = { csMatchingKey: csMatchingKeyValue };
+  const experienceEvent = new ExperienceEvent(xdmData, data);
+
+  console.log('experienceEvent = ' + JSON.stringify(experienceEvent));
+  // send ExperienceEvent with promise
+  Edge.sendEvent(experienceEvent).then(eventHandles =>
+    console.log(
+      'Edge.sendEvent returned eventHandles = ' + JSON.stringify(eventHandles),
+    ),
+  );
 }
