@@ -2,17 +2,40 @@
 # yarn lockfile v1
 
 
-"@adobe/react-native-acpanalytics@^2.0.1":
-  version "2.0.1"
-  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-acpanalytics/-/react-native-acpanalytics-2.0.1.tgz#94b59ea6f383bd49fa995e41b8392fe600a912ce"
-  integrity sha512-M3FOT+1IWAF4v2BSgypho+xjE+Ip6mAuq76ik/u9VTP1z/0JOf9bB3cKm2TgOczXNHm5N51FvnLEkYSRXJhZxw==
-  dependencies:
-    "@babel/runtime" "^7.14.8"
+"@adobe/react-native-aepassurance@^5.0.0":
+  version "5.0.0"
+  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepassurance/-/react-native-aepassurance-5.0.0.tgz#1d5b5abd221f8cb5458f44944751f274b8572a6d"
+  integrity sha512-CWoZE/UQ0a1tXwwiTPkr9GJJmYrUq9mewNFTRSY8o7AwFv2ea+arF0z46Js9l0dFpmBTctcTdBd4l/2+VCPXTQ==
 
-"@adobe/react-native-acpcore@^2.0.2":
-  version "2.0.2"
-  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-acpcore/-/react-native-acpcore-2.0.2.tgz#e7d594d47ffbd8931a460d4a707a284b8dc743e7"
-  integrity sha512-3BESeg4gnDuGkMl0kKENvBRiBcvKZqKxThLs+150IKVv0sIIdNvfcjAZf/L3cHpzlQaUCEuZNOdjrTdweJME8w==
+"@adobe/react-native-aepcore@5.0.1":
+  version "5.0.1"
+  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepcore/-/react-native-aepcore-5.0.1.tgz#5a87d106f0a66d954bb6256785cc2f89dec96b53"
+  integrity sha512-WdftR79S65fT4FqVQZwQlHHYAswv6FhP64hO2QMyyZEWpRRdq+aFjTVleGgz0x7WY2WSw2h4VSgYCoN+W1ke3g==
+
+"@adobe/react-native-aepedge@5.0.0":
+  version "5.0.0"
+  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepedge/-/react-native-aepedge-5.0.0.tgz#c7e2f5a012a7b935f653de2352869dff46d21af4"
+  integrity sha512-o9J58DXgNoy2yLoPUO9wYRFck/uKFgpD5mg4YG3HKIFaqHC9YolHzPbnU4ickPddkFiT4aa2xXCRBCVYCNg6fQ==
+
+"@adobe/react-native-aepedgebridge@5.0.0":
+  version "5.0.0"
+  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepedgebridge/-/react-native-aepedgebridge-5.0.0.tgz#eff10d378800be2903099e901cdb33f6fd209113"
+  integrity sha512-W6UsKATJRJAPrg2qnbwGo1K1IBqUOgwTc0KUI1muhes8Ivdfr7YsOpEuxULJd+mMyvCIP1mkLP2zTv/PR85nwA==
+
+"@adobe/react-native-aepedgeconsent@^5.0.0":
+  version "5.0.0"
+  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepedgeconsent/-/react-native-aepedgeconsent-5.0.0.tgz#1baf7218475d0ca945a7f119ee26faa453a84e80"
+  integrity sha512-ifHVZfHt3NNXP5hvTlbNWMilvLGg38OqzgoYnbfFXSu4KNsu1gfudqPEEiAReKBi664ldp8XjHbes+2yrqdnpg==
+
+"@adobe/react-native-aepedgeidentity@5.0.0":
+  version "5.0.0"
+  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepedgeidentity/-/react-native-aepedgeidentity-5.0.0.tgz#19e097746cccf66b67603bc04ead7bf7ac317971"
+  integrity sha512-mrqgU5fUIKEWZOLQlf2QHjWnkhh6l991toUSbLRqvMgJ6OJwSd958llfQNqhDxBq2nN7l68zhB1jkHH6akYAdA==
+
+"@adobe/react-native-aepuserprofile@^5.0.0":
+  version "5.0.0"
+  resolved "https://artifactory.csq.fr/api/npm/npm/@adobe/react-native-aepuserprofile/-/react-native-aepuserprofile-5.0.0.tgz#d6416d0fa5cd8be6651c82de3400ebd037b7e2af"
+  integrity sha512-1Iusah7PiiKdnqKK8rtlER2XMG00sxePE5i06UkUr9D5NUN/Uh3+McmH7eczhrAmJIxUCIH40S2chIrF267T+g==
 
 "@ampproject/remapping@^2.2.0":
   version "2.2.1"
@@ -1122,7 +1145,7 @@
   resolved "https://artifactory.csq.fr/api/npm/npm/@babel/regjsgen/-/regjsgen-0.8.0.tgz#f0ba69b075e1f05fb2825b7fad991e7adbb18310"
   integrity sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.14.8", "@babel/runtime@^7.20.0", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.20.0", "@babel/runtime@^7.8.4":
   version "7.22.5"
   resolved "https://artifactory.csq.fr/api/npm/npm/@babel/runtime/-/runtime-7.22.5.tgz#8564dd588182ce0047d55d7a75e93921107b57ec"
   integrity sha512-ecjvYlnAaZ/KVneE/OdKYBYfgXV3Ptu6zQWmgEF7vwKhQnvVS6bjMD2XYgj+SNvQ1GfK/pjgokfPkC/2CO8CuA==
@@ -5855,6 +5878,11 @@ prettier-linter-helpers@^1.0.0:
   integrity sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==
   dependencies:
     fast-diff "^1.1.2"
+
+prettier@^3.0.3:
+  version "3.0.3"
+  resolved "https://artifactory.csq.fr/api/npm/npm/prettier/-/prettier-3.0.3.tgz#432a51f7ba422d1469096c0fdc28e235db8f9643"
+  integrity sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg==
 
 pretty-format@^26.5.2, pretty-format@^26.6.2:
   version "26.6.2"

@@ -1,6 +1,10 @@
 package com.adobeanalytics;
 
 import android.app.Application;
+
+import com.adobe.marketing.mobile.Assurance;
+import com.adobe.marketing.mobile.UserProfile;
+import com.adobe.marketing.mobile.assurance.AssuranceExtension;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
@@ -8,15 +12,18 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactNativeHost;
 import com.facebook.soloader.SoLoader;
+
+import java.util.Arrays;
 import java.util.List;
 
-import com.adobe.marketing.mobile.MobileCore; // import MobileCore
-import com.adobe.marketing.mobile.Identity;
 import com.adobe.marketing.mobile.Lifecycle;
-import com.adobe.marketing.mobile.Signal;
-import com.adobe.marketing.mobile.Analytics;
-import com.adobe.marketing.mobile.WrapperType;
 import com.adobe.marketing.mobile.LoggingMode;
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Signal;
+import com.adobe.marketing.mobile.Extension;
+import com.adobe.marketing.mobile.Edge;
+import com.adobe.marketing.mobile.edge.identity.Identity;
+import com.adobe.marketing.mobile.edge.bridge.EdgeBridge;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -69,18 +76,22 @@ public class MainApplication extends Application implements ReactApplication {
 
     MobileCore.setApplication(this); // add this line
     MobileCore.setLogLevel(LoggingMode.VERBOSE);
+
     MobileCore.configureWithAppID("<YOUR_APP_ID>");
-    MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
+    List<Class<? extends Extension>> extensions = Arrays.asList(
+            Lifecycle.EXTENSION,
+            Signal.EXTENSION,
+            Edge.EXTENSION,
+            EdgeBridge.EXTENSION,
+            Identity.EXTENSION,
+            UserProfile.EXTENSION,
+            Assurance.EXTENSION,
+            com.adobe.marketing.mobile.edge.identity.Identity.EXTENSION
+    );
 
-    try {
-        Identity.registerExtension();
-        Lifecycle.registerExtension();
-        Signal.registerExtension();
-        Analytics.registerExtension();
-    } catch (Exception e) {
-        // handle exception
-    }
-
-    MobileCore.start(null);
+      MobileCore.registerExtensions(extensions, o -> {
+        MobileCore.lifecycleStart(null);
+        //enable this for Lifecycle. See Note for collecting Lifecycle metrics.
+    });
   }
 }

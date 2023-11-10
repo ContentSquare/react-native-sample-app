@@ -5,15 +5,16 @@
  * @format
  */
 
-import React, { useEffect } from 'react';
 import type { PropsWithChildren } from 'react';
+import React, { useEffect } from 'react';
 import {
+  Linking,
   SafeAreaView,
   StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
   View,
+  useColorScheme,
 } from 'react-native';
 
 import { Colors, Header } from 'react-native/Libraries/NewAppScreen';
@@ -62,6 +63,10 @@ function App(): JSX.Element {
   useEffect(() => {
     // TODO: Sessions without at least one screenview will be discarded.
     Contentsquare.send('InitialRouteName');
+
+    Linking.addEventListener('url', (event: { url: string }) => {
+      Contentsquare.handleUrl(event.url);
+    });
   }, []);
 
   return (
