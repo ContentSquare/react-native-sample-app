@@ -1,7 +1,7 @@
 import { Edge, ExperienceEvent } from '@adobe/react-native-aepedge';
 import Contentsquare from '@contentsquare/react-native-bridge';
-import AsyncStorage from '@react-native-community/async-storage';
 import { Platform } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export async function updateCsMatchingKey() {
   const csMatchingKeyRecord = await AsyncStorage.getItem(

@@ -1,4 +1,4 @@
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useEffect } from 'react';
 import { Screens } from '../../../app/navigation/Screens';
 import { ScreenConfig } from '../../../shared/views/NavigationList/NavigationList';
