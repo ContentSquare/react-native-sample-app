@@ -29,6 +29,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["@contentsquare/react-native-bridge"]
+    "plugins": ["./config-plugins/withAndroidNamespace","@contentsquare/react-native-bridge"]
   }
 }
