@@ -1,12 +1,12 @@
 PODS:
   - boost (1.76.0)
-  - ContentsquareBridgeModule (3.7.0):
-    - CS_ErrorAnalysis_STATIC (= 4.25.1)
-    - CS_iOS_SDK_STATIC (= 4.25.1)
+  - ContentsquareBridgeModule (3.8.0):
+    - CS_ErrorAnalysis_STATIC (= 4.25.2)
+    - CS_iOS_SDK_STATIC (= 4.25.2)
     - React
-  - CS_ErrorAnalysis_STATIC (4.25.1):
+  - CS_ErrorAnalysis_STATIC (4.25.2):
     - PLCrashReporter (~> 1.0)
-  - CS_iOS_SDK_STATIC (4.25.1):
+  - CS_iOS_SDK_STATIC (4.25.2):
     - SwiftProtobuf (~> 1.0)
   - DoubleConversion (1.1.6)
   - EXApplication (5.3.1):
@@ -419,7 +419,7 @@ PODS:
     - React-logger (= 0.72.5)
     - React-perflogger (= 0.72.5)
   - SocketRocket (0.6.1)
-  - SwiftProtobuf (1.24.0)
+  - SwiftProtobuf (1.25.1)
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -579,9 +579,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
-  ContentsquareBridgeModule: 77013f1e88afd55ccaaf8dff9605037f5eb617a3
-  CS_ErrorAnalysis_STATIC: 1d7d4bf0b6593db9e387adf3ea8312a071c752b5
-  CS_iOS_SDK_STATIC: 192bfc49be1b828f1de7f0456005e7727542357e
+  ContentsquareBridgeModule: 4a1eef11d1b7771ba6e0f6a57ad69c1b92a1475d
+  CS_ErrorAnalysis_STATIC: 113209860cd64b4bd5c4405d1901a3a16ed068ad
+  CS_iOS_SDK_STATIC: 3cb8870825ddab77fdbe7d25eb5cb29188c012db
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   EXApplication: 042aa2e3f05258a16962ea1a9914bf288db9c9a1
   EXConstants: ce5bbea779da8031ac818c36bea41b10e14d04e1
@@ -629,9 +629,9 @@ SPEC CHECKSUMS:
   React-utils: 7a9918a1ffdd39aba67835d42386f592ea3f8e76
   ReactCommon: a77b3916d0d39113b5f0de714a0acd47c9d17c3a
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
-  SwiftProtobuf: bcfd2bc231cf9ae552cdc7c4e877bd3b41fe57b1
+  SwiftProtobuf: 69f02cd54fb03201c5e6bf8b76f687c5ef7541a3
   Yoga: 86fed2e4d425ee4c6eab3813ba1791101ee153c6
 
 PODFILE CHECKSUM: 79bb40f439bd18e788decd9c1a77ac2bfd937f2a
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.14.2
