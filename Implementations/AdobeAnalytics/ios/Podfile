@@ -56,5 +56,14 @@ target 'AdobeAnalytics' do
       :mac_catalyst_enabled => false
     )
     __apply_Xcode_12_5_M1_post_install_workaround(installer)
+    
+    # NOTE: Issue with aepsdk-react-native, workaround: https://github.com/adobe/aepsdk-react-native/issues/263
+    installer.pods_project.targets.each do |t|
+      if t.name.start_with?("AEP")
+        t.build_configurations.each do |bc|
+          bc.build_settings['OTHER_SWIFT_FLAGS'] = '$(inherited) -no-verify-emitted-module-interface'
+        end
+      end
+    end
   end
 end

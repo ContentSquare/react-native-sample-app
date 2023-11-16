@@ -1,11 +1,7 @@
 #import "AppDelegate.h"
 
 #import <React/RCTBundleURLProvider.h>
-#import <ACPIdentity.h>
-#import <ACPSignal.h>
-#import <ACPLifecycle.h>
-#import <ACPAnalytics.h>
-#import <ACPCore.h>
+#import <React/RCTLinkingManager.h>
 
 @implementation AppDelegate
 
@@ -16,17 +12,25 @@
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
   
-  [ACPCore setLogLevel:ACPMobileLogLevelVerbose];
-  [ACPCore configureWithAppId:@"<YOUR_APP_ID>"];
-  [ACPCore setWrapperType:ACPMobileWrapperTypeReactNative];
-  
-  [ACPIdentity registerExtension];
-  [ACPLifecycle registerExtension];
-  [ACPSignal registerExtension];
-  [ACPAnalytics registerExtension];
-  
-  [ACPCore start:nil];
+  [AEPMobileCore setLogLevel: AEPLogLevelDebug];
+  [AEPMobileCore configureWithAppId:@"<YOUR_APP_ID>"];
 
+  const UIApplicationState appState = application.applicationState;
+  
+  [AEPMobileCore registerExtensions: @[
+    AEPMobileLifecycle.class,
+    AEPMobileUserProfile.class,
+    AEPMobileIdentity.class,
+    AEPMobileLifecycle.class,
+    AEPMobileSignal.class,
+    AEPMobileEdgeIdentity.class,
+    AEPMobileEdge.class,
+    AEPMobileAssurance.class,
+  ] completion:^{
+    if (appState != UIApplicationStateBackground) {
+      [AEPMobileCore lifecycleStart:nil];
+    }
+  }];
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
@@ -46,6 +50,16 @@
 /// @return: `true` if the `concurrentRoot` feature is enabled. Otherwise, it returns `false`.
 - (BOOL)concurrentRootEnabled
 {
+  return true;
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+  //  return [RCTLinkingManager application:application openURL:url options:options];
+  // NOTE: https://github.com/adobe/aepsdk-react-native/tree/main/packages/assurance#initializing
+  [AEPMobileAssurance startSessionWithUrl:url];
   return true;
 }
 

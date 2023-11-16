@@ -1,12 +1,30 @@
 PODS:
-  - ACPAnalytics (2.5.4):
-    - ACPAnalytics/xcframeworks (= 2.5.4)
-    - ACPCore (>= 2.9.6)
-  - ACPAnalytics/xcframeworks (2.5.4):
-    - ACPCore (>= 2.9.6)
-  - ACPCore (2.9.7):
-    - ACPCore/main (= 2.9.7)
-  - ACPCore/main (2.9.7)
+  - AEPAssurance (4.0.0):
+    - AEPCore (>= 4.0.0)
+    - AEPServices (>= 4.0.0)
+  - AEPCore (4.1.0):
+    - AEPRulesEngine (>= 4.0.0)
+    - AEPServices (>= 4.1.0)
+  - AEPEdge (4.2.0):
+    - AEPCore (>= 4.1.0)
+    - AEPEdgeIdentity (>= 4.0.0)
+  - AEPEdgeBridge (4.1.0):
+    - AEPCore (>= 4.0.0)
+  - AEPEdgeConsent (4.0.0):
+    - AEPCore (>= 4.0.0)
+    - AEPEdge (>= 4.0.0)
+  - AEPEdgeIdentity (4.0.0):
+    - AEPCore (>= 4.0.0)
+  - AEPIdentity (4.1.0):
+    - AEPCore (>= 4.1.0)
+  - AEPLifecycle (4.1.0):
+    - AEPCore (>= 4.1.0)
+  - AEPRulesEngine (4.0.0)
+  - AEPServices (4.1.0)
+  - AEPSignal (4.1.0):
+    - AEPCore (>= 4.1.0)
+  - AEPUserProfile (4.0.0):
+    - AEPCore
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
   - ContentsquareBridgeModule (3.8.0):
@@ -112,11 +130,29 @@ PODS:
     - fmt (~> 6.2.1)
     - glog
     - libevent
-  - RCTACPAnalytics (2.0.1):
-    - ACPAnalytics
+  - RCTAEPAssurance (5.0.0):
+    - AEPAssurance (~> 4.0)
     - React
-  - RCTACPCore (2.0.2):
-    - ACPCore
+  - RCTAEPCore (5.0.1):
+    - AEPCore (~> 4.0)
+    - AEPIdentity (~> 4.0)
+    - AEPLifecycle (~> 4.0)
+    - AEPSignal (~> 4.0)
+    - React
+  - RCTAEPEdge (5.0.0):
+    - AEPEdge (~> 4.0)
+    - React
+  - RCTAEPEdgeBridge (5.0.0):
+    - AEPEdgeBridge (~> 4.0)
+    - React
+  - RCTAEPEdgeConsent (5.0.0):
+    - AEPEdgeConsent (~> 4.0)
+    - React
+  - RCTAEPEdgeIdentity (5.0.0):
+    - AEPEdgeIdentity (~> 4.0)
+    - React
+  - RCTAEPUserProfile (5.0.0):
+    - AEPUserProfile (~> 4.0)
     - React
   - RCTRequired (0.71.8)
   - RCTTypeSafety (0.71.8):
@@ -436,7 +472,7 @@ PODS:
     - React-jsi (= 0.71.8)
     - React-logger (= 0.71.8)
     - React-perflogger (= 0.71.8)
-  - RNCAsyncStorage (1.12.1):
+  - RNCAsyncStorage (1.19.5):
     - React-Core
   - SocketRocket (0.6.1)
   - SwiftProtobuf (1.25.1)
@@ -476,8 +512,13 @@ DEPENDENCIES:
   - libevent (~> 2.1.12)
   - OpenSSL-Universal (= 1.1.1100)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
-  - "RCTACPAnalytics (from `../node_modules/@adobe/react-native-acpanalytics`)"
-  - "RCTACPCore (from `../node_modules/@adobe/react-native-acpcore`)"
+  - "RCTAEPAssurance (from `../node_modules/@adobe/react-native-aepassurance`)"
+  - "RCTAEPCore (from `../node_modules/@adobe/react-native-aepcore`)"
+  - "RCTAEPEdge (from `../node_modules/@adobe/react-native-aepedge`)"
+  - "RCTAEPEdgeBridge (from `../node_modules/@adobe/react-native-aepedgebridge`)"
+  - "RCTAEPEdgeConsent (from `../node_modules/@adobe/react-native-aepedgeconsent`)"
+  - "RCTAEPEdgeIdentity (from `../node_modules/@adobe/react-native-aepedgeidentity`)"
+  - "RCTAEPUserProfile (from `../node_modules/@adobe/react-native-aepuserprofile`)"
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
   - React (from `../node_modules/react-native/`)
@@ -506,13 +547,23 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
+  - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
-    - ACPAnalytics
-    - ACPCore
+    - AEPAssurance
+    - AEPCore
+    - AEPEdge
+    - AEPEdgeBridge
+    - AEPEdgeConsent
+    - AEPEdgeIdentity
+    - AEPIdentity
+    - AEPLifecycle
+    - AEPRulesEngine
+    - AEPServices
+    - AEPSignal
+    - AEPUserProfile
     - CocoaAsyncSocket
     - CS_ErrorAnalysis_STATIC
     - CS_iOS_SDK_STATIC
@@ -550,10 +601,20 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec"
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
-  RCTACPAnalytics:
-    :path: "../node_modules/@adobe/react-native-acpanalytics"
-  RCTACPCore:
-    :path: "../node_modules/@adobe/react-native-acpcore"
+  RCTAEPAssurance:
+    :path: "../node_modules/@adobe/react-native-aepassurance"
+  RCTAEPCore:
+    :path: "../node_modules/@adobe/react-native-aepcore"
+  RCTAEPEdge:
+    :path: "../node_modules/@adobe/react-native-aepedge"
+  RCTAEPEdgeBridge:
+    :path: "../node_modules/@adobe/react-native-aepedgebridge"
+  RCTAEPEdgeConsent:
+    :path: "../node_modules/@adobe/react-native-aepedgeconsent"
+  RCTAEPEdgeIdentity:
+    :path: "../node_modules/@adobe/react-native-aepedgeidentity"
+  RCTAEPUserProfile:
+    :path: "../node_modules/@adobe/react-native-aepuserprofile"
   RCTRequired:
     :path: "../node_modules/react-native/Libraries/RCTRequired"
   RCTTypeSafety:
@@ -607,13 +668,23 @@ EXTERNAL SOURCES:
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
   RNCAsyncStorage:
-    :path: "../node_modules/@react-native-community/async-storage"
+    :path: "../node_modules/@react-native-async-storage/async-storage"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  ACPAnalytics: 6b94de281850b4aff02882ec7091e89c811c7d87
-  ACPCore: 4328e8e8327e93f0c70ee44ae4cd2e0882302489
+  AEPAssurance: 4fa3138ddd7308c1f9923570f4d2b0b8526a916f
+  AEPCore: 20fb832a7467b25ca4aca186c0a5a1e3c0c6abc3
+  AEPEdge: c31a1c31d8466f964efeb9a4f94eebc52a0b55a5
+  AEPEdgeBridge: b10ee57eb1a7d8282ef79d980d11acebf6a9c411
+  AEPEdgeConsent: 54c1b6a30a3d646e3d4bc4bae1713755422b471e
+  AEPEdgeIdentity: c2396b9119abd6eb530ea11efc58ec019b163bd4
+  AEPIdentity: 88671626d6043a488896ee7d71483a8bcec80739
+  AEPLifecycle: 97693ea99ef9deb818b726a4e429ef96abb1353e
+  AEPRulesEngine: 458450a34922823286ead045a0c2bd8c27e224c6
+  AEPServices: d94555679870311d2f1391c5d7a5de590fd1f3c0
+  AEPSignal: 9152e68bae462276f57ac63666e879cc7ff7c302
+  AEPUserProfile: 5c1d90014627cacff99efb193ce9acd287905661
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   ContentsquareBridgeModule: 4a1eef11d1b7771ba6e0f6a57ad69c1b92a1475d
@@ -638,8 +709,13 @@ SPEC CHECKSUMS:
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   PLCrashReporter: 5d2d3967afe0efad61b3048d617e2199a5d1b787
   RCT-Folly: 424b8c9a7a0b9ab2886ffe9c3b041ef628fd4fb1
-  RCTACPAnalytics: 729589e9b359d77c2b45a2d129d08dec8c72a8a5
-  RCTACPCore: 8cb93b24fcedd3eec3a69df72b74c2c7110d95f1
+  RCTAEPAssurance: 690918bca2bca158bf807c6d41053624eca981e6
+  RCTAEPCore: 9b2faad034280d77239ef975c675debb52660d27
+  RCTAEPEdge: 207126072a6467736e8fba6553152acb59c13dd3
+  RCTAEPEdgeBridge: ac3a4318f76f881b6a44f748d894d72bcc721230
+  RCTAEPEdgeConsent: dcbae4045ec6dd10291b34206d6b24fc472610f3
+  RCTAEPEdgeIdentity: 2127c9b4875b59c6acd4c1852f6a9bd1e0e44f19
+  RCTAEPUserProfile: 7c5f172fa05273e81161f6ee4b10e635374bacae
   RCTRequired: 8af6a32dfc2b65ec82193c2dee6e1011ff22ac2a
   RCTTypeSafety: bee9dd161c175896c680d47ef1d9eaacf2b587f4
   React: d850475db9ba8006a8b875d79e1e0d6ac8a0f8b6
@@ -666,12 +742,12 @@ SPEC CHECKSUMS:
   React-RCTVibration: 43ffd976a25f6057a7cf95ea3648ba4e00287f89
   React-runtimeexecutor: 7c51ae9d4b3e9608a2366e39ccaa606aa551b9ed
   ReactCommon: 85c98ab0a509e70bf5ee5d9715cf68dbf495b84c
-  RNCAsyncStorage: b03032fdbdb725bea0bd9e5ec5a7272865ae7398
+  RNCAsyncStorage: f2974eca860c16a3e56eea5771fda8d12e2d2057
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   SwiftProtobuf: 69f02cd54fb03201c5e6bf8b76f687c5ef7541a3
   Yoga: 065f0b74dba4832d6e328238de46eb72c5de9556
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: ae4c2d8c53b09e2df103e40a9bdd7d9a332d31db
+PODFILE CHECKSUM: 6018301c9171e5761367d6746c95585b224875f5
 
 COCOAPODS: 1.14.2

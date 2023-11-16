@@ -1,10 +1,11 @@
-import { ACPCore } from '@adobe/react-native-acpcore';
+import { Edge, ExperienceEvent } from '@adobe/react-native-aepedge';
 import Contentsquare from '@contentsquare/react-native-bridge';
-import AsyncStorage from '@react-native-community/async-storage';
+import { Platform } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export async function updateCsMatchingKey() {
   const csMatchingKeyRecord = await AsyncStorage.getItem(
-    'csMatchingKey_creation_ts'
+    'csMatchingKey_creation_ts',
   );
   if (!csMatchingKeyRecord) {
     await submitNewCsMatchingKey();
@@ -26,14 +27,27 @@ async function submitNewCsMatchingKey() {
     csMatchingKey: csMatchingKeyValue,
     timestamp: Date.now(),
   };
+
+  console.debug({
+    csMatchingKey: csMatchingKeyValue,
+  });
+
   await AsyncStorage.setItem(
     'csMatchingKey_creation_ts',
-    JSON.stringify(newCsMatchingKeyRecord)
+    JSON.stringify(newCsMatchingKeyRecord),
   );
 
   // Submit the matching key to Contentsquare and Adobe
   Contentsquare.sendDynamicVar('csMatchingKey', csMatchingKeyValue);
-  ACPCore.trackState('csMatchingKey_state', {
-    csMatchingKey: csMatchingKeyValue,
-  });
+  const xdmData = { eventType: 'csMatchingKey_state' };
+  const data = { csMatchingKey: csMatchingKeyValue };
+  const experienceEvent = new ExperienceEvent(xdmData, data);
+
+  console.log('experienceEvent = ' + JSON.stringify(experienceEvent));
+  // send ExperienceEvent with promise
+  Edge.sendEvent(experienceEvent).then(eventHandles =>
+    console.log(
+      'Edge.sendEvent returned eventHandles = ' + JSON.stringify(eventHandles),
+    ),
+  );
 }
