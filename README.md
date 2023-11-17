@@ -16,3 +16,5 @@
 ## 📚 Docs
 
 If you wish to learn more about the Contentsquare React Native Bridge, you can find its documentation [here](https://docs.contentsquare.com/react-native/).
+
+Find how to contribute [here](./CONTRIBUTING.md).
