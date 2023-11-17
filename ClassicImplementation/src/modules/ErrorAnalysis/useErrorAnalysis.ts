@@ -1,6 +1,6 @@
 import { ErrorAnalysis } from '@contentsquare/react-native-bridge';
 
-export const URL = 'https://httpstat.us';
+export const URL = 'https://httpstatus-dev.eu-west-1.csq.fr';
 
 export const useErrorAnalysis = () => {
 
