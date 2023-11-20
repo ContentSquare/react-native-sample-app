@@ -11,17 +11,19 @@ Please follow this guidelines to start contributing to this project.
 
 # Branch naming convention
 
-The branch name should include the category, the Jira ticket number and a short description using "-" as separator
+The branch name should include the category, the Jira ticket number and a short description using "-" as separator.
 
-Use the following format: {category}/{Jira tickket number}-{short description}
+Use the following format: {category}/{Jira tickket number}-{short description}.
+
+Follow conventional commit categories for branch naming:
 
 | Category  | Meaning                                             |
 |-----------|-----------------------------------------------------|
-| hotfix    | for quickly fixing critical issues                  |
-| bugfix    | for fixing a bug                                    |
-| feature   | for adding, removing or modifying a feature         |
+| fix       | for fixing a bug                                    |
+| feat      | for adding, removing or modifying a feature         |
 | test      | for experimenting something which is not an issue   |
 | wip       | for a work in progress                              |
+| docs      | for documentation changes                           |
 
 **Example:** feature/RN-123-new-sdk
 
