@@ -13,7 +13,7 @@ Please follow this guidelines to start contributing to this project.
 
 The branch name should include the category, the Jira ticket number and a short description using "-" as separator.
 
-Use the following format: {category}/{Jira tickket number}-{short description}.
+Use the following format: {category}/{Jira ticket number}-{short description}.
 
 Follow conventional commit categories for branch naming:
 
@@ -22,7 +22,7 @@ Follow conventional commit categories for branch naming:
 | fix       | for fixing a bug                                    |
 | feat      | for adding, removing or modifying a feature         |
 | test      | for experimenting something which is not an issue   |
-| wip       | for a work in progress                              |
+| chore     | for changes that are not src or tests files         |
 | docs      | for documentation changes                           |
 
 **Example:** feature/RN-123-new-sdk
