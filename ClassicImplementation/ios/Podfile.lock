@@ -1,13 +1,13 @@
 PODS:
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
-  - ContentsquareBridgeModule (3.8.0):
-    - CS_ErrorAnalysis_STATIC (= 4.25.2)
-    - CS_iOS_SDK_STATIC (= 4.25.2)
+  - ContentsquareBridgeModule (3.9.0):
+    - CS_ErrorAnalysis_STATIC (= 4.27.0)
+    - CS_iOS_SDK_STATIC (= 4.27.0)
     - React
-  - CS_ErrorAnalysis_STATIC (4.25.2):
+  - CS_ErrorAnalysis_STATIC (4.27.0):
     - PLCrashReporter (~> 1.0)
-  - CS_iOS_SDK_STATIC (4.25.2):
+  - CS_iOS_SDK_STATIC (4.27.0):
     - SwiftProtobuf (~> 1.0)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.71.8)
@@ -440,7 +440,7 @@ PODS:
     - React-Core
     - React-RCTImage
   - SocketRocket (0.6.1)
-  - SwiftProtobuf (1.25.1)
+  - SwiftProtobuf (1.25.2)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -621,9 +621,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
-  ContentsquareBridgeModule: 4a1eef11d1b7771ba6e0f6a57ad69c1b92a1475d
-  CS_ErrorAnalysis_STATIC: 113209860cd64b4bd5c4405d1901a3a16ed068ad
-  CS_iOS_SDK_STATIC: 3cb8870825ddab77fdbe7d25eb5cb29188c012db
+  ContentsquareBridgeModule: 16a8eebf1c284c4ac0f2dd0b0ecd9060d5995202
+  CS_ErrorAnalysis_STATIC: edd005ffc1af1f9a983ad0e7c1dd091077067e6f
+  CS_iOS_SDK_STATIC: 9171fa91b4ee5c5d58ca43c8b5b0290f5356313c
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   FBLazyVector: f637f31eacba90d4fdeff3fa41608b8f361c173b
   FBReactNativeSpec: 0d9a4f4de7ab614c49e98c00aedfd3bfbda33d59
@@ -676,10 +676,10 @@ SPEC CHECKSUMS:
   RNCClipboard: 41d8d918092ae8e676f18adada19104fa3e68495
   RNScreens: ea4cd3a853063cda19a4e3c28d2e52180c80f4eb
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
-  SwiftProtobuf: 69f02cd54fb03201c5e6bf8b76f687c5ef7541a3
+  SwiftProtobuf: 407a385e97fd206c4fbe880cc84123989167e0d1
   Yoga: 065f0b74dba4832d6e328238de46eb72c5de9556
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
 PODFILE CHECKSUM: 480c6e12b43259494addde607249351b2ccfc198
 
-COCOAPODS: 1.14.2
+COCOAPODS: 1.12.1
