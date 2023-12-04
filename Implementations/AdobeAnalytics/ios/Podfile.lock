@@ -1,11 +1,11 @@
 PODS:
-  - AEPAssurance (4.0.0):
+  - AEPAssurance (4.1.0):
     - AEPCore (>= 4.0.0)
     - AEPServices (>= 4.0.0)
-  - AEPCore (4.1.0):
+  - AEPCore (4.2.0):
     - AEPRulesEngine (>= 4.0.0)
-    - AEPServices (>= 4.1.0)
-  - AEPEdge (4.2.0):
+    - AEPServices (>= 4.2.0)
+  - AEPEdge (4.3.0):
     - AEPCore (>= 4.1.0)
     - AEPEdgeIdentity (>= 4.0.0)
   - AEPEdgeBridge (4.1.0):
@@ -15,25 +15,25 @@ PODS:
     - AEPEdge (>= 4.0.0)
   - AEPEdgeIdentity (4.0.0):
     - AEPCore (>= 4.0.0)
-  - AEPIdentity (4.1.0):
-    - AEPCore (>= 4.1.0)
-  - AEPLifecycle (4.1.0):
-    - AEPCore (>= 4.1.0)
+  - AEPIdentity (4.2.0):
+    - AEPCore (>= 4.2.0)
+  - AEPLifecycle (4.2.0):
+    - AEPCore (>= 4.2.0)
   - AEPRulesEngine (4.0.0)
-  - AEPServices (4.1.0)
-  - AEPSignal (4.1.0):
-    - AEPCore (>= 4.1.0)
+  - AEPServices (4.2.0)
+  - AEPSignal (4.2.0):
+    - AEPCore (>= 4.2.0)
   - AEPUserProfile (4.0.0):
     - AEPCore
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
-  - ContentsquareBridgeModule (3.8.0):
-    - CS_ErrorAnalysis_STATIC (= 4.25.2)
-    - CS_iOS_SDK_STATIC (= 4.25.2)
+  - ContentsquareBridgeModule (3.9.0):
+    - CS_ErrorAnalysis_STATIC (= 4.27.0)
+    - CS_iOS_SDK_STATIC (= 4.27.0)
     - React
-  - CS_ErrorAnalysis_STATIC (4.25.2):
+  - CS_ErrorAnalysis_STATIC (4.27.0):
     - PLCrashReporter (~> 1.0)
-  - CS_iOS_SDK_STATIC (4.25.2):
+  - CS_iOS_SDK_STATIC (4.27.0):
     - SwiftProtobuf (~> 1.0)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.71.8)
@@ -475,7 +475,7 @@ PODS:
   - RNCAsyncStorage (1.19.5):
     - React-Core
   - SocketRocket (0.6.1)
-  - SwiftProtobuf (1.25.1)
+  - SwiftProtobuf (1.25.2)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -673,23 +673,23 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  AEPAssurance: 4fa3138ddd7308c1f9923570f4d2b0b8526a916f
-  AEPCore: 20fb832a7467b25ca4aca186c0a5a1e3c0c6abc3
-  AEPEdge: c31a1c31d8466f964efeb9a4f94eebc52a0b55a5
+  AEPAssurance: ee78c45752b29696f280854cfc4d4f8d11babad8
+  AEPCore: f80654e62b9cb776ae74df44dd24c82febc4d3fa
+  AEPEdge: 301fb849383fca513c1046fe90bac0bcd1f8e404
   AEPEdgeBridge: b10ee57eb1a7d8282ef79d980d11acebf6a9c411
   AEPEdgeConsent: 54c1b6a30a3d646e3d4bc4bae1713755422b471e
   AEPEdgeIdentity: c2396b9119abd6eb530ea11efc58ec019b163bd4
-  AEPIdentity: 88671626d6043a488896ee7d71483a8bcec80739
-  AEPLifecycle: 97693ea99ef9deb818b726a4e429ef96abb1353e
+  AEPIdentity: 350893792bed309edbfd3a9938ada8e30b615e25
+  AEPLifecycle: 0b5d9de839e71b04b0cd1e3b6b323924b0bc3048
   AEPRulesEngine: 458450a34922823286ead045a0c2bd8c27e224c6
-  AEPServices: d94555679870311d2f1391c5d7a5de590fd1f3c0
-  AEPSignal: 9152e68bae462276f57ac63666e879cc7ff7c302
+  AEPServices: 842c0f94e960754ce2ac50535d78349827c52c83
+  AEPSignal: eb8b9d7370dcf95650c20946868b3e982c65415e
   AEPUserProfile: 5c1d90014627cacff99efb193ce9acd287905661
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
-  ContentsquareBridgeModule: 4a1eef11d1b7771ba6e0f6a57ad69c1b92a1475d
-  CS_ErrorAnalysis_STATIC: 113209860cd64b4bd5c4405d1901a3a16ed068ad
-  CS_iOS_SDK_STATIC: 3cb8870825ddab77fdbe7d25eb5cb29188c012db
+  ContentsquareBridgeModule: 16a8eebf1c284c4ac0f2dd0b0ecd9060d5995202
+  CS_ErrorAnalysis_STATIC: edd005ffc1af1f9a983ad0e7c1dd091077067e6f
+  CS_iOS_SDK_STATIC: 9171fa91b4ee5c5d58ca43c8b5b0290f5356313c
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   FBLazyVector: f637f31eacba90d4fdeff3fa41608b8f361c173b
   FBReactNativeSpec: 0d9a4f4de7ab614c49e98c00aedfd3bfbda33d59
@@ -744,7 +744,7 @@ SPEC CHECKSUMS:
   ReactCommon: 85c98ab0a509e70bf5ee5d9715cf68dbf495b84c
   RNCAsyncStorage: f2974eca860c16a3e56eea5771fda8d12e2d2057
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
-  SwiftProtobuf: 69f02cd54fb03201c5e6bf8b76f687c5ef7541a3
+  SwiftProtobuf: 407a385e97fd206c4fbe880cc84123989167e0d1
   Yoga: 065f0b74dba4832d6e328238de46eb72c5de9556
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
