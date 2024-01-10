@@ -1,6 +1,6 @@
 PODS:
   - boost (1.76.0)
-  - ContentsquareBridgeModule (3.9.0):
+  - ContentsquareBridgeModule (4.0.1):
     - CS_ErrorAnalysis_STATIC (= 4.27.0)
     - CS_iOS_SDK_STATIC (= 4.27.0)
     - React
@@ -579,7 +579,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
-  ContentsquareBridgeModule: 16a8eebf1c284c4ac0f2dd0b0ecd9060d5995202
+  ContentsquareBridgeModule: dc8425d10e35e65398add92e54ffdb8848a8a27d
   CS_ErrorAnalysis_STATIC: edd005ffc1af1f9a983ad0e7c1dd091077067e6f
   CS_iOS_SDK_STATIC: 9171fa91b4ee5c5d58ca43c8b5b0290f5356313c
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
@@ -632,6 +632,6 @@ SPEC CHECKSUMS:
   SwiftProtobuf: 407a385e97fd206c4fbe880cc84123989167e0d1
   Yoga: 86fed2e4d425ee4c6eab3813ba1791101ee153c6
 
-PODFILE CHECKSUM: 79bb40f439bd18e788decd9c1a77ac2bfd937f2a
+PODFILE CHECKSUM: e0cb117c643f0bf13a5e01ab6954a493727f071a
 
-COCOAPODS: 1.13.0
+COCOAPODS: 1.14.3
