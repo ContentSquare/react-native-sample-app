@@ -27,14 +27,13 @@ PODS:
     - AEPCore
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
-  - ContentsquareBridgeModule (4.0.1):
-    - CS_ErrorAnalysis_STATIC (= 4.27.0)
-    - CS_iOS_SDK_STATIC (= 4.27.0)
+  - ContentsquareBridgeModule (4.3.0):
+    - CS_iOS_SDK_STATIC (= 4.30.1)
     - React
-  - CS_ErrorAnalysis_STATIC (4.27.0):
-    - PLCrashReporter (~> 1.0)
-  - CS_iOS_SDK_STATIC (4.27.0):
+  - CS_iOS_SDK_STATIC (4.30.1):
+    - CSCrashReporter (= 0.0.3)
     - SwiftProtobuf (~> 1.0)
+  - CSCrashReporter (0.0.3)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.71.8)
   - FBReactNativeSpec (0.71.8):
@@ -112,7 +111,6 @@ PODS:
   - hermes-engine/Pre-built (0.71.8)
   - libevent (2.1.12)
   - OpenSSL-Universal (1.1.1100)
-  - PLCrashReporter (1.11.1)
   - RCT-Folly (2021.07.22.00):
     - boost
     - DoubleConversion
@@ -565,8 +563,8 @@ SPEC REPOS:
     - AEPSignal
     - AEPUserProfile
     - CocoaAsyncSocket
-    - CS_ErrorAnalysis_STATIC
     - CS_iOS_SDK_STATIC
+    - CSCrashReporter
     - Flipper
     - Flipper-Boost-iOSX
     - Flipper-DoubleConversion
@@ -579,7 +577,6 @@ SPEC REPOS:
     - fmt
     - libevent
     - OpenSSL-Universal
-    - PLCrashReporter
     - SocketRocket
     - SwiftProtobuf
     - YogaKit
@@ -687,9 +684,9 @@ SPEC CHECKSUMS:
   AEPUserProfile: 5c1d90014627cacff99efb193ce9acd287905661
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
-  ContentsquareBridgeModule: dc8425d10e35e65398add92e54ffdb8848a8a27d
-  CS_ErrorAnalysis_STATIC: edd005ffc1af1f9a983ad0e7c1dd091077067e6f
-  CS_iOS_SDK_STATIC: 9171fa91b4ee5c5d58ca43c8b5b0290f5356313c
+  ContentsquareBridgeModule: e3a794e410a2bf21c9df8700bc2fd39e2b99ef22
+  CS_iOS_SDK_STATIC: 3d4135a77520a3f78df5bf9e9ca72db843c232db
+  CSCrashReporter: 49f3987cdf6d1553ebda9f8591c25f13f7517bca
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   FBLazyVector: f637f31eacba90d4fdeff3fa41608b8f361c173b
   FBReactNativeSpec: 0d9a4f4de7ab614c49e98c00aedfd3bfbda33d59
@@ -707,7 +704,6 @@ SPEC CHECKSUMS:
   hermes-engine: 47986d26692ae75ee7a17ab049caee8864f855de
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
-  PLCrashReporter: 5d2d3967afe0efad61b3048d617e2199a5d1b787
   RCT-Folly: 424b8c9a7a0b9ab2886ffe9c3b041ef628fd4fb1
   RCTAEPAssurance: 690918bca2bca158bf807c6d41053624eca981e6
   RCTAEPCore: 9b2faad034280d77239ef975c675debb52660d27
