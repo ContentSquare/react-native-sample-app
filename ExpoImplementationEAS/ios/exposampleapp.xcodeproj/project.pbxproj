@@ -149,6 +149,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
+				CCE62AB61A162796989D2738 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,12 +249,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-exposampleapp/Pods-exposampleapp-resources.sh",
 				"${PODS_ROOT}/CS_iOS_SDK_STATIC/Resources/ContentsquareBundle.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/CS_iOS_SDK_STATIC/CS_iOS_SDK_STATIC.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/EXConstants.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ContentsquareBundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CS_iOS_SDK_STATIC.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXConstants.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
@@ -280,6 +283,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-exposampleapp/expo-configure-project.sh\"\n";
+		};
+		CCE62AB61A162796989D2738 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-exposampleapp/Pods-exposampleapp-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/CSCrashReporter/CSCrashReporter.framework/CSCrashReporter",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSCrashReporter.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-exposampleapp/Pods-exposampleapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
