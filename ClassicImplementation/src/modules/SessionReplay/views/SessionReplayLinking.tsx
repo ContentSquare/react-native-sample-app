@@ -1,33 +1,34 @@
-
 import Contentsquare from '@contentsquare/react-native-bridge';
 import Clipboard from '@react-native-community/clipboard';
-import React, { useState } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from 'react';
+import { Alert, StyleSheet, Text, View } from 'react-native';
 import { colors, gridUnit } from '../../../constants';
 
 export const SessionReplayLinking = () => {
-  const [SRLinkDescription, setSRLinkDescription] = useState('Click on the button to retrieve the current Session Replay link');
+  useEffect(() => {
+    const sessionReplayLinkSubscriber = Contentsquare.onSessionReplayLinkChange(
+      link => {
+        Alert.alert(`New link copied to the clipboard ${link}`);
 
-  const getCurrentSessionReplayLink = async () => {
+        Clipboard.setString(link);
+      }
+    );
 
-    const link = await Contentsquare.getCurrentSessionReplayLink()
-
-    if (link) {
-      setSRLinkDescription(`The current SessionReplay link is:\n${link}`)
-      Clipboard.setString(link)
-    } else {
-      setSRLinkDescription('No link found')
-    }
-  }
+    return () => {
+      if (sessionReplayLinkSubscriber) {
+        sessionReplayLinkSubscriber.remove();
+      }
+    };
+  }, []);
 
   return (
-  <View style={styles.container}>
-    <Text style={styles.title}>{SRLinkDescription}</Text>
-    <Button
-      title={"Get Current Session Replay Link"}
-      onPress={getCurrentSessionReplayLink}
-    />
-  </View>
+    <View style={styles.container}>
+      <Text style={styles.title}>
+        To test onSessionReplayLinkChange send the app to background and wait
+        for some time for session replay to be updated. Once you open the app
+        again you should see the link in your clipboard automatically.
+      </Text>
+    </View>
   );
 };
 
