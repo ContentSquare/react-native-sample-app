@@ -27,13 +27,13 @@ PODS:
     - AEPCore
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
-  - ContentsquareBridgeModule (4.3.0):
-    - CS_iOS_SDK_STATIC (= 4.30.1)
+  - ContentsquareBridgeModule (4.6.0):
+    - CS_iOS_SDK_STATIC (= 4.33.1)
     - React
-  - CS_iOS_SDK_STATIC (4.30.1):
-    - CSCrashReporter (= 0.0.3)
+  - CS_iOS_SDK_STATIC (4.33.1):
+    - CSCrashReporter (= 1.0.0)
     - SwiftProtobuf (~> 1.0)
-  - CSCrashReporter (0.0.3)
+  - CSCrashReporter (1.0.0)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.71.8)
   - FBReactNativeSpec (0.71.8):
@@ -473,7 +473,7 @@ PODS:
   - RNCAsyncStorage (1.19.5):
     - React-Core
   - SocketRocket (0.6.1)
-  - SwiftProtobuf (1.25.2)
+  - SwiftProtobuf (1.26.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -684,9 +684,9 @@ SPEC CHECKSUMS:
   AEPUserProfile: 5c1d90014627cacff99efb193ce9acd287905661
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
-  ContentsquareBridgeModule: e3a794e410a2bf21c9df8700bc2fd39e2b99ef22
-  CS_iOS_SDK_STATIC: 3d4135a77520a3f78df5bf9e9ca72db843c232db
-  CSCrashReporter: 49f3987cdf6d1553ebda9f8591c25f13f7517bca
+  ContentsquareBridgeModule: 22f78d2b75b2b979dc6111f1f13a116125eb8956
+  CS_iOS_SDK_STATIC: a915324f5302431a6b233926e477cb6807df5171
+  CSCrashReporter: 1494c8b8c805d0b3cdb62f2b044f2606a7d4a391
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   FBLazyVector: f637f31eacba90d4fdeff3fa41608b8f361c173b
   FBReactNativeSpec: 0d9a4f4de7ab614c49e98c00aedfd3bfbda33d59
@@ -740,10 +740,10 @@ SPEC CHECKSUMS:
   ReactCommon: 85c98ab0a509e70bf5ee5d9715cf68dbf495b84c
   RNCAsyncStorage: f2974eca860c16a3e56eea5771fda8d12e2d2057
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
-  SwiftProtobuf: 407a385e97fd206c4fbe880cc84123989167e0d1
+  SwiftProtobuf: 5e8349171e7c2f88f5b9e683cb3cb79d1dc780b3
   Yoga: 065f0b74dba4832d6e328238de46eb72c5de9556
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
 PODFILE CHECKSUM: 6018301c9171e5761367d6746c95585b224875f5
 
-COCOAPODS: 1.14.2
+COCOAPODS: 1.14.3
