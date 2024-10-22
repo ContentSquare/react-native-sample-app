@@ -1,5 +1,5 @@
 import Contentsquare from '@contentsquare/react-native-bridge';
-import Clipboard from '@react-native-community/clipboard';
+import Clipboard from '@react-native-clipboard/clipboard';
 import React, { useEffect } from 'react';
 import { Alert, StyleSheet, Text, View } from 'react-native';
 import { colors, gridUnit } from '../../../constants';
