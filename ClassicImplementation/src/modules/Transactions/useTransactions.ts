@@ -65,19 +65,11 @@ export const useTransactions = () => {
   // If the currency passed doesn't match our supported currencies, the SDK will send
   // a currency value of "-1". It will be processed as the default currency of the project.
   const onValidateButtonPress = (isIdentified: boolean) => {
-    if (typeof currency === 'string') {
-      Contentsquare.sendTransactionWithStringCurrency(
-        getTotal(),
-        currency,
-        isIdentified ? `transaction#${transactionNumber}` : undefined
-      );
-    } else {
-      Contentsquare.sendTransaction(
-        getTotal(),
-        currency,
-        isIdentified ? `transaction#${transactionNumber}` : undefined
-      );
-    }
+    Contentsquare.sendTransaction(
+      getTotal(),
+      currency,
+      isIdentified ? `transaction#${transactionNumber}` : undefined
+    );
     if (isIdentified) {
       setTransactionNumber(transactionNumber + 1);
     }
