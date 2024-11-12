@@ -14,7 +14,6 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
     "ios": {
       "bundleIdentifier": "com.contentsquare.sampleapp.reactnative.oldarch",
       "supportsTablet": true
@@ -29,6 +28,9 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["./config-plugins/withAndroidNamespace","@contentsquare/react-native-bridge"]
+    "plugins": [
+      "./config-plugins/withAndroidNamespace",
+      "@contentsquare/react-native-bridge"
+    ]
   }
 }
