@@ -26,10 +26,10 @@ PODS:
   - AEPUserProfile (4.0.1):
     - AEPCore (< 5.0.0, >= 4.0.0)
   - boost (1.84.0)
-  - ContentsquareBridgeModule (4.10.1):
-    - CS_iOS_SDK_STATIC (= 4.37.1)
+  - ContentsquareBridgeModule (4.11.0):
+    - CS_iOS_SDK_STATIC (= 4.38.1)
     - React
-  - CS_iOS_SDK_STATIC (4.37.1):
+  - CS_iOS_SDK_STATIC (4.38.1):
     - CSCrashReporter (= 1.0.0)
     - SwiftProtobuf (<= 1.26.0)
   - CSCrashReporter (1.0.0)
@@ -1813,13 +1813,13 @@ SPEC CHECKSUMS:
   AEPSignal: 990c1e4b4db804dbf8c857cd11e876e16c812cce
   AEPUserProfile: 05e838305f6a0c32f5892e6c1bd799d9c669adfd
   boost: 4cb898d0bf20404aab1850c656dcea009429d6c1
-  ContentsquareBridgeModule: 9b2a40537f2e84bd217b08f2ae05d4b2b74df54a
-  CS_iOS_SDK_STATIC: cffc719d71530229ebc56c5e64fb00ab20abcb6d
+  ContentsquareBridgeModule: 5a3eea29036f39cc2db2eab72c837ce4cbddd3f4
+  CS_iOS_SDK_STATIC: 0c96b57cf70a33478d649c23223bc72711e8a629
   CSCrashReporter: 1494c8b8c805d0b3cdb62f2b044f2606a7d4a391
-  DoubleConversion: 76ab83afb40bddeeee456813d9c04f67f78771b5
+  DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   FBLazyVector: 430e10366de01d1e3d57374500b1b150fe482e6d
   fmt: 4c2741a687cc09f0634a2e2c72a838b99f1ff120
-  glog: 69ef571f3de08433d766d614c73a9838a06bf7eb
+  glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
   hermes-engine: ea92f60f37dba025e293cbe4b4a548fd26b610a0
   RCT-Folly: 4464f4d875961fce86008d45f4ecf6cef6de0740
   RCTAEPAssurance: 690918bca2bca158bf807c6d41053624eca981e6
