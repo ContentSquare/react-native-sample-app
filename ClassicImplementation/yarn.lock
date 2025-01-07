@@ -1113,7 +1113,7 @@
 
 "@contentsquare/cli@file:../contentsquare-cli-v0.1.0.tgz":
   version "0.1.0"
-  resolved "file:../contentsquare-cli-v0.1.0.tgz#dd76dc059cca0ea8561d8db32f51c1840ee8c02b"
+  resolved "file:../contentsquare-cli-v0.1.0.tgz#a508a890d15dae6c5edc0ddfd32a34672d81b58d"
   dependencies:
     axios "^0.21.1"
     commander "^7.2.0"
