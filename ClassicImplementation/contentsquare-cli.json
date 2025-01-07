@@ -1,0 +1,14 @@
+{
+  "android": {
+    "clientId": "[ANDROID CLIENT ID]",
+    "clientSecret": "[ANDROID CLIENT SECRET]",
+    "projectId": 31856,
+    "sourcemapPath": "./android/app/build/generated/sourcemaps/react/release/index.android.bundle.map"
+  },
+  "ios": {
+    "clientId": "[IOS CLIENT ID]",
+    "clientSecret": "[IOS CLIENT SECRET]",
+    "projectId": 31840,
+    "sourcemapPath": "./ios/main.jsbundle.map"
+  }
+}
