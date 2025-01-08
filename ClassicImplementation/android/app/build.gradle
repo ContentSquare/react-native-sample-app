@@ -5,7 +5,6 @@ apply plugin: "com.contentsquare.error.analysis.network"
 apply plugin: "com.contentsquare.error.analysis.crash"
 apply from: "../../node_modules/@contentsquare/cli/scripts/contentsquare.gradle"
 
-
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
