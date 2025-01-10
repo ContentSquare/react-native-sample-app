@@ -65,3 +65,4 @@ buck-out/
 .expo/
 web-build/
 dist/
+**/contentsquare-sourcemap-info.json
