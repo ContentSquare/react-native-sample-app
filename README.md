@@ -1,6 +1,6 @@
 # 🎉 Welcome to the Contentsquare React Native Bridge sample apps
 
-<img src="ReadmeAssets/cs_banner.png" height="100%" width="100%"> <br />
+<img src="ReadmeAssets/react-native-banner.png" height="100%" width="100%"> <br />
 
 ### Here you will find sample applications that will show you how to use the Contentsquare Bridge for React Native and integrate it in your app.
 
@@ -11,8 +11,8 @@
 
 ## Integration with 3rd party services
 
-- **[AdobeAnalytics](https://github.com/ContentSquare/react-native-sample-app/tree/main/Implementations/AdobeAnalytics)** - a React Native sample app that is built with the classic React Native architecture. Showcases how to implement the Contentsquare bridge in your app and intergare it with [AdobeAnalytics](https://github.com/adobe/react-native-acpanalytics). If you wish to learn more on how to use Adobe Analytics with Contentsquare React Native Bridge check documentation [here](https://docs.contentsquare.com/react-native/#use-adobe-analytics).
+- **[AdobeAnalytics](https://github.com/ContentSquare/react-native-sample-app/tree/main/Implementations/AdobeAnalytics)** - a React Native sample app that is built with the classic React Native architecture. Showcases how to implement the Contentsquare bridge in your app and intergare it with [AdobeAnalytics](https://github.com/adobe/react-native-acpanalytics). If you wish to learn more on how to use Adobe Analytics with Contentsquare React Native Bridge check documentation [here](https://docs.contentsquare.com/en/react-native/use-adobe-analytics/).
 
 ## 📚 Docs
 
-If you wish to learn more about the Contentsquare React Native Bridge, you can find its documentation [here](https://docs.contentsquare.com/react-native/).
+If you wish to learn more about the Contentsquare React Native Bridge, you can find its documentation [here](https://docs.contentsquare.com/en/react-native/).
