@@ -26,13 +26,14 @@ PODS:
   - AEPUserProfile (4.0.1):
     - AEPCore (< 5.0.0, >= 4.0.0)
   - boost (1.84.0)
-  - ContentsquareBridgeModule (4.11.0):
-    - CS_iOS_SDK_STATIC (= 4.38.1)
+  - ContentsquareBridgeModule (4.16.0):
+    - CS_iOS_SDK_STATIC (= 4.41.3)
     - React
-  - CS_iOS_SDK_STATIC (4.38.1):
-    - CSCrashReporter (= 1.0.0)
-    - SwiftProtobuf (<= 1.26.0)
-  - CSCrashReporter (1.0.0)
+  - CS_iOS_SDK_STATIC (4.41.3):
+    - CSCrashReporter (= 1.0.1)
+    - CSSwiftProtobuf (= 1.28.2)
+  - CSCrashReporter (1.0.1)
+  - CSSwiftProtobuf (1.28.2)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.75.4)
   - fmt (9.1.0)
@@ -1557,7 +1558,6 @@ PODS:
   - RNCAsyncStorage (1.24.0):
     - React-Core
   - SocketRocket (0.7.0)
-  - SwiftProtobuf (1.26.0)
   - Yoga (0.0.0)
 
 DEPENDENCIES:
@@ -1651,8 +1651,8 @@ SPEC REPOS:
     - AEPUserProfile
     - CS_iOS_SDK_STATIC
     - CSCrashReporter
+    - CSSwiftProtobuf
     - SocketRocket
-    - SwiftProtobuf
 
 EXTERNAL SOURCES:
   boost:
@@ -1813,13 +1813,14 @@ SPEC CHECKSUMS:
   AEPSignal: 990c1e4b4db804dbf8c857cd11e876e16c812cce
   AEPUserProfile: 05e838305f6a0c32f5892e6c1bd799d9c669adfd
   boost: 4cb898d0bf20404aab1850c656dcea009429d6c1
-  ContentsquareBridgeModule: 5a3eea29036f39cc2db2eab72c837ce4cbddd3f4
-  CS_iOS_SDK_STATIC: 0c96b57cf70a33478d649c23223bc72711e8a629
-  CSCrashReporter: 1494c8b8c805d0b3cdb62f2b044f2606a7d4a391
-  DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
+  ContentsquareBridgeModule: 41e07f80b6b1353aa2e3e7ce0c3f8eced1f5b37e
+  CS_iOS_SDK_STATIC: d78598e5045543db0086e660cd184ad85cc4b9e7
+  CSCrashReporter: bcd93ebf9abaf6e3d8ee4494ab0d630b6750d338
+  CSSwiftProtobuf: beced9eecd504dbc1ef9b09e537c06300aed6631
+  DoubleConversion: 76ab83afb40bddeeee456813d9c04f67f78771b5
   FBLazyVector: 430e10366de01d1e3d57374500b1b150fe482e6d
   fmt: 4c2741a687cc09f0634a2e2c72a838b99f1ff120
-  glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
+  glog: 69ef571f3de08433d766d614c73a9838a06bf7eb
   hermes-engine: ea92f60f37dba025e293cbe4b4a548fd26b610a0
   RCT-Folly: 4464f4d875961fce86008d45f4ecf6cef6de0740
   RCTAEPAssurance: 690918bca2bca158bf807c6d41053624eca981e6
@@ -1885,9 +1886,8 @@ SPEC CHECKSUMS:
   ReactCommon: 6a952e50c2a4b694731d7682aaa6c79bc156e4ad
   RNCAsyncStorage: ec53e44dc3e75b44aa2a9f37618a49c3bc080a7a
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
-  SwiftProtobuf: 5e8349171e7c2f88f5b9e683cb3cb79d1dc780b3
   Yoga: aa3df615739504eebb91925fc9c58b4922ea9a08
 
 PODFILE CHECKSUM: 8521ff7ab4916d8018964483ef82140708aa61ae
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2
