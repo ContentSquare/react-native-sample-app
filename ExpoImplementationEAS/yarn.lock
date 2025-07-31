@@ -1457,13 +1457,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@contentsquare/react-native-bridge@npm:^4.16.0":
-  version: 4.16.0
-  resolution: "@contentsquare/react-native-bridge@npm:4.16.0"
+"@contentsquare/react-native-bridge@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@contentsquare/react-native-bridge@npm:5.0.0"
   peerDependencies:
-    react: ">=16.8.3"
-    react-native: ">=0.65 <=0.79"
-  checksum: 10c0/2f43a91047543ba6ce216b5d56231e0e076f7c2157d45dc4b9dbec090a08dbf15539de752bb7fcadf3e5511eeb1bac8d62a2077b135294eba7f448858032ed39
+    react: ">=18.2.0"
+    react-native: ">=0.71 <=0.80"
+  checksum: 10c0/37d3209d00c4848346c6febee53b05e60abff2420cd69837f7e73a03639a43a8ab8da1d89162b603df825fa0714f1c6aa06f82b0de071e8055d2c848a24d10d1
   languageName: node
   linkType: hard
 
@@ -4549,7 +4549,7 @@ __metadata:
   resolution: "expo-sample-app@workspace:."
   dependencies:
     "@babel/core": "npm:^7.23.2"
-    "@contentsquare/react-native-bridge": "npm:^4.16.0"
+    "@contentsquare/react-native-bridge": "npm:^5.0.0"
     "@types/react": "npm:~18.2.14"
     "@types/react-native": "npm:~0.67.6"
     expo: "npm:51.0.28"
