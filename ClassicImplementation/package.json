@@ -29,7 +29,7 @@
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
     "@babel/runtime": "^7.23.2",
-    "@contentsquare/cli": "file:../contentsquare-cli-v0.1.0.tgz",
+    "@contentsquare/cli": "file:../contentsquare-cli-v0.1.2.tgz",
     "@react-native/babel-preset": "0.75.4",
     "@react-native/eslint-config": "0.75.4",
     "@react-native/metro-config": "0.75.4",
