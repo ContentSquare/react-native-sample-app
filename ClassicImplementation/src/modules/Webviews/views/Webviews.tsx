@@ -1,33 +1,18 @@
-import { CSWebView } from '@contentsquare/react-native-bridge';
+import {CSWebView} from '@contentsquare/react-native-bridge';
 import React from 'react';
-import { View } from 'react-native';
-import { WebView } from 'react-native-webview';
+import {View} from 'react-native';
+import {WebView} from 'react-native-webview';
 
 export const Webviews = () => {
   return (
-    <View>
+    <View style={{flex: 1}}>
       <CSWebView>
-        {/* Implementation 1: Webview as a child */}
         <WebView
           source={{
-            uri: 'test.com',
+            uri: 'https://docs.contentsquare.com/en/react-native/', // Replace with your WebView project URL
           }}
         />
       </CSWebView>
-      {/* Legacy implementation: render prop for webview */}
-      <CSWebView
-        url="test.com" // put your url here
-        renderWebView={(onLayout, webViewUrl) => {
-          return (
-            <WebView
-              onLayout={onLayout}
-              source={{
-                uri: webViewUrl,
-              }}
-            />
-          );
-        }}
-      />
     </View>
   );
 };
