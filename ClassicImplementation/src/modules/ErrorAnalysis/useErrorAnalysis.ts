@@ -1,6 +1,6 @@
 import { ErrorAnalysis } from '@contentsquare/react-native-bridge';
 
-export const URL = 'https://httpstatus-mgmt.eu-west-1.csq.fr';
+export const URL = 'https://httpstatus-mgmt.eu-west-1.csq.io';
 
 export const useErrorAnalysis = () => {
 
@@ -8,7 +8,7 @@ export const useErrorAnalysis = () => {
     ErrorAnalysis.setURLMaskingPatterns(patterns);
   }
 
-  const makeRequest = async(method: string, url: string) => {
+  const makeRequest = async (method: string, url: string) => {
     const data = {
       title: 'Error Analysis - testing API Errors',
     };
@@ -24,7 +24,7 @@ export const useErrorAnalysis = () => {
     try {
       const response = await fetch(url, requestOptions);
       if (!response.ok)
-      console.log(`This is an HTTP error: ${response.status}`);
+        console.log(`This is an HTTP error: ${response.status}`);
     } catch (error: any) {
       console.error('Error:', error);
     }
