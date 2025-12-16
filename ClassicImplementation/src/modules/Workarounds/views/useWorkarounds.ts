@@ -1,5 +1,5 @@
-import { Screens } from '../../../app/navigation/Screens';
-import { ScreenConfig } from '../../../shared/views/NavigationList/NavigationList';
+import {Screens} from '../../../app/navigation/Screens';
+import {ScreenConfig} from '../../../shared/views/NavigationList/NavigationList';
 
 export const useWorkarounds = () => {
   const screensConfig: ScreenConfig[] = [
@@ -9,5 +9,5 @@ export const useWorkarounds = () => {
     },
   ];
 
-  return { screensConfig };
+  return {screensConfig};
 };

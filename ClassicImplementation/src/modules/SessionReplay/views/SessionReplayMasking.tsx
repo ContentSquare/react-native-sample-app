@@ -1,20 +1,20 @@
-import { CSMask } from '@contentsquare/react-native-bridge';
-import React, { useState } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
-import { colors, gridUnit } from '../../../constants';
+import {CSQMask} from '@contentsquare/react-native-bridge';
+import React, {useState} from 'react';
+import {Button, StyleSheet, Text, View} from 'react-native';
+import {colors, gridUnit} from '../../../constants';
 
 export const SessionReplayMasking = () => {
   const [shouldMaskContent, setShouldMaskContent] = useState(false);
 
   return (
     <View style={styles.container}>
-      <CSMask isMasking={shouldMaskContent}>
+      <CSQMask isSessionReplayMasked={shouldMaskContent}>
         <Text style={styles.title}>Buy my amazing merch!</Text>
         <Text>
           Hurry up! This offer won't be available tomorrow. Only $99.98 to get
           hands on a wonderful brandnew life changing item
         </Text>
-      </CSMask>
+      </CSQMask>
       <Button
         title={shouldMaskContent ? 'Unmask content' : 'Mask content'}
         onPress={() => {

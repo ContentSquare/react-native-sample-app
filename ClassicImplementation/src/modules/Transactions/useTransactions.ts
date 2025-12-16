@@ -1,5 +1,5 @@
-import Contentsquare, { Currency } from '@contentsquare/react-native-bridge';
-import { useState } from 'react';
+import {CSQ, Currency} from '@contentsquare/react-native-bridge';
+import {useState} from 'react';
 import {
   currencyByCurrencyCode,
   getCurrencyByCurrencyString,
@@ -17,8 +17,8 @@ export const ITEM_2_DEFAULT_PRICE = 3;
 // If the currency passed doesn't match our supported currencies, the SDK will send
 // a currency value of "-1". It will be processed as the default currency of the project.
 export const CURRENCIES = [
-  { label: currencyByCurrencyCode[Currency.EUR], value: Currency.EUR },
-  { label: currencyByCurrencyCode[Currency.USD], value: 'Usd' },
+  {label: currencyByCurrencyCode[Currency.EUR], value: Currency.EUR},
+  {label: currencyByCurrencyCode[Currency.USD], value: 'Usd'},
 ];
 
 export const EUR_TO_USD_CONVERT_RATE = 0.97;
@@ -43,8 +43,8 @@ export const useTransactions = () => {
         cart.map(itemPrice =>
           convertEurToUsd(ITEM_1_DEFAULT_PRICE) === itemPrice
             ? ITEM_1_DEFAULT_PRICE
-            : ITEM_2_DEFAULT_PRICE
-        )
+            : ITEM_2_DEFAULT_PRICE,
+        ),
       );
     }
   };
@@ -65,10 +65,10 @@ export const useTransactions = () => {
   // If the currency passed doesn't match our supported currencies, the SDK will send
   // a currency value of "-1". It will be processed as the default currency of the project.
   const onValidateButtonPress = (isIdentified: boolean) => {
-    Contentsquare.sendTransaction(
+    CSQ.trackTransaction(
       getTotal(),
       currency,
-      isIdentified ? `transaction#${transactionNumber}` : undefined
+      isIdentified ? `transaction#${transactionNumber}` : undefined,
     );
     if (isIdentified) {
       setTransactionNumber(transactionNumber + 1);

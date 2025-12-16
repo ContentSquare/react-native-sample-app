@@ -1,14 +1,15 @@
-import React, { FunctionComponent } from 'react';
-import { Button, StyleSheet, View } from 'react-native';
-import { usePrivacy } from './usePrivacy';
+import React, {FunctionComponent} from 'react';
+import {Button, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {colors, gridUnit} from '../../../constants';
+import {usePrivacy} from './usePrivacy';
 
 export const Privacy: FunctionComponent = () => {
   const {
     showPrivacyManager,
     stopTracking,
     resumeTracking,
-    forgetUser,
     showUserId,
+    metadata,
   } = usePrivacy();
 
   return (
@@ -16,8 +17,13 @@ export const Privacy: FunctionComponent = () => {
       <Button title={'Show privacy preferences'} onPress={showPrivacyManager} />
       <Button title={'Stop tracking user'} onPress={stopTracking} />
       <Button title={'Resume tracking user'} onPress={resumeTracking} />
-      <Button title={'Forget user'} onPress={forgetUser} />
       <Button title={'Display user ID'} onPress={showUserId} />
+      {metadata && (
+        <ScrollView style={styles.metadataContainer}>
+          <Text style={styles.metadataTitle}>Metadata:</Text>
+          <Text style={styles.metadataText}>{metadata}</Text>
+        </ScrollView>
+      )}
     </View>
   );
 };
@@ -25,5 +31,22 @@ export const Privacy: FunctionComponent = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  metadataContainer: {
+    marginTop: 2 * gridUnit,
+    padding: 2 * gridUnit,
+    backgroundColor: colors.white,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#ccc',
+  },
+  metadataTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: gridUnit,
+  },
+  metadataText: {
+    fontSize: 14,
+    fontFamily: 'monospace',
   },
 });
