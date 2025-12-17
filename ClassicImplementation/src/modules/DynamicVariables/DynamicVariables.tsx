@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
-import { colors, gridUnit } from '../../constants';
-import { useDynamicVariables } from './useDynamicVariables';
+import {Button, StyleSheet, Text, View} from 'react-native';
+import {colors, gridUnit} from '../../constants';
+import {useDynamicVariables} from './useDynamicVariables';
 
 export const DynamicVariables: React.FunctionComponent = () => {
-  const { onSendButtonPress, onErrorCallback } = useDynamicVariables();
+  const {onSendButtonPress, onErrorCallback} = useDynamicVariables();
 
   return (
     <View style={styles.container}>

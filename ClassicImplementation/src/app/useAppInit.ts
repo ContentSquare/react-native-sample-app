@@ -1,22 +1,22 @@
-import Contentsquare from '@contentsquare/react-native-bridge';
-import { useEffect, useState } from 'react';
-import { Linking } from 'react-native';
+import {CSQ} from '@contentsquare/react-native-bridge';
+import {useEffect, useState} from 'react';
+import {Linking} from 'react-native';
 
 export const useAppInit = () => {
-  const handleOpenURL = (event: { url: string }) => {
-    Contentsquare.handleUrl(event.url);
+  const handleOpenURL = (event: {url: string}) => {
+    CSQ.handleUrl(event.url);
   };
 
   const [isLoadingComplete, setLoadingComplete] = useState(false);
 
-  // Contentsquare in-app link listener, see documentation https://docs.contentsquare.com/react-native/#1-call-the-react-native-api
+  // CSQ in-app link listener, see documentation https://docs.contentsquare.com/react-native/#1-call-the-react-native-api
   useEffect(() => {
     const loadResourcesAndDataAsync = async () => {
       try {
         Linking.getInitialURL()
           .then(url => {
             if (url) {
-              handleOpenURL({ url });
+              handleOpenURL({url});
             }
           })
           .catch(err => {
@@ -33,5 +33,5 @@ export const useAppInit = () => {
     loadResourcesAndDataAsync();
   }, []);
 
-  return { isLoadingComplete };
+  return {isLoadingComplete};
 };

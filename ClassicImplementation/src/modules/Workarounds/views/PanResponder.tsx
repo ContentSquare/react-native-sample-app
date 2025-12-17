@@ -1,10 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, {useRef, useState} from 'react';
 import {
   View,
   StyleSheet,
   PanResponder as PanResponderComponent,
 } from 'react-native';
-import Contentsquare from '@contentsquare/react-native-bridge';
+import {CSQ} from '@contentsquare/react-native-bridge';
 
 export const PanResponder = () => {
   var _previousLeft: number = 20;
@@ -25,7 +25,7 @@ export const PanResponder = () => {
 
       onPanResponderGrant: () => {
         // stop the Contentsquare tracking when the pan gesture starts
-        Contentsquare.stopTracking();
+        CSQ.stop();
         // The gesture has started. Show visual feedback so the user knows
         // what is happening!
         // gestureState.d{x,y} will be set to zero now
@@ -41,7 +41,7 @@ export const PanResponder = () => {
       onPanResponderTerminationRequest: () => true,
       onPanResponderRelease: (_, gestureState) => {
         // resume tracking as the gesture ends
-        Contentsquare.resumeTracking();
+        CSQ.resumeTracking();
         // The user has released all touches while this view is the
         // responder. This typically means a gesture has succeeded
         setIsPressed(false);
@@ -60,7 +60,7 @@ export const PanResponder = () => {
         // responder. Returns true by default. Is currently only supported on android.
         return true;
       },
-    })
+    }),
   ).current;
 
   return (
@@ -70,7 +70,7 @@ export const PanResponder = () => {
         style={[
           styles.circle,
           {
-            transform: [{ translateX: left }, { translateY: top }],
+            transform: [{translateX: left}, {translateY: top}],
             backgroundColor: isPressed ? 'blue' : 'green',
           },
         ]}

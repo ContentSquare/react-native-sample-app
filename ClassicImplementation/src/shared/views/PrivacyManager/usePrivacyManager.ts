@@ -1,10 +1,10 @@
-import Contentsquare from '@contentsquare/react-native-bridge';
+import {CSQ} from '@contentsquare/react-native-bridge';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useEffect, useState } from 'react';
-import { usePrivacyManagerModal } from './usePrivacyManagerModal';
+import {useEffect, useState} from 'react';
+import {usePrivacyManagerModal} from './usePrivacyManagerModal';
 
 export const usePrivacyManager = () => {
-  const { isPrivacyManagerVisible, setIsPrivacyManagerVisible } =
+  const {isPrivacyManagerVisible, setIsPrivacyManagerVisible} =
     usePrivacyManagerModal();
 
   const [isContentSquareActive, setIsContentSquareActive] = useState(false);
@@ -26,7 +26,8 @@ export const usePrivacyManager = () => {
 
     // Here we register the user consent for tracking
     // the others SDK (if any) should also be activated
-    Contentsquare.optIn();
+    CSQ.start();
+    CSQ.optIn();
     AsyncStorage.setItem('PRIVACY_CONSENT', 'true');
     setIsPrivacyManagerVisible(false);
   };
@@ -36,16 +37,17 @@ export const usePrivacyManager = () => {
 
     // Here we register the user refusing tracking
     // the others SDK (if any) should also be deactivated
-    Contentsquare.optOut();
+    CSQ.optOut();
     AsyncStorage.setItem('PRIVACY_CONSENT', 'false');
     setIsPrivacyManagerVisible(false);
   };
 
   const onSubmit = () => {
     if (isContentSquareActive) {
-      Contentsquare.optIn();
+      CSQ.start();
+      CSQ.optIn();
     } else {
-      Contentsquare.optOut();
+      CSQ.optOut();
     }
     AsyncStorage.setItem('PRIVACY_CONSENT', isContentSquareActive.toString());
     setIsPrivacyManagerVisible(false);

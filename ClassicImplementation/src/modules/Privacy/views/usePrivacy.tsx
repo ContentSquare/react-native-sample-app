@@ -1,14 +1,14 @@
-import Contentsquare from '@contentsquare/react-native-bridge';
+import {CSQ} from '@contentsquare/react-native-bridge';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useEffect } from 'react';
-import { Alert } from 'react-native';
-import { usePrivacyManagerModal } from '../../../shared/views/PrivacyManager/usePrivacyManagerModal';
+import {useEffect, useState} from 'react';
+import {usePrivacyManagerModal} from '../../../shared/views/PrivacyManager/usePrivacyManagerModal';
 
 export const usePrivacy = () => {
-  const { setIsPrivacyManagerVisible } = usePrivacyManagerModal();
+  const {setIsPrivacyManagerVisible} = usePrivacyManagerModal();
+  const [metadata, setMetadata] = useState<string | null>(null);
 
   useEffect(() => {
-    Contentsquare.send('Privacy');
+    CSQ.trackScreenview('Privacy');
   }, []);
 
   const showPrivacyManager = () => {
@@ -21,20 +21,10 @@ export const usePrivacy = () => {
    * For this reason we also support pausing and resuming the complete tracking mechanism.
    */
   const stopTracking = () => {
-    Contentsquare.stopTracking();
+    CSQ.stop();
   };
   const resumeTracking = () => {
-    Contentsquare.resumeTracking();
-  };
-
-  /**
-   * Permanently breaking the link between the collected data and actual user.
-   * If the user is opted in, next time the user starts the app,
-   * the SDK will re-start its collection mechanisms as if this was the first ever run for a new user, under a new user ID.
-   */
-  const forgetUser = () => {
-    Contentsquare.forgetMe();
-    AsyncStorage.removeItem('PRIVACY_CONSENT');
+    CSQ.resumeTracking();
   };
 
   /**
@@ -42,8 +32,8 @@ export const usePrivacy = () => {
    * You are able to get an ID only if the user is not Opted-out.
    */
   const showUserId = () => {
-    Contentsquare.getUserId((userId: string) => {
-      Alert.alert('Contentsquare user ID', userId);
+    CSQ.onMetadataChange(payload => {
+      setMetadata(JSON.stringify(payload, null, 2));
     });
   };
 
@@ -51,7 +41,7 @@ export const usePrivacy = () => {
     showPrivacyManager,
     stopTracking,
     resumeTracking,
-    forgetUser,
     showUserId,
+    metadata,
   };
 };

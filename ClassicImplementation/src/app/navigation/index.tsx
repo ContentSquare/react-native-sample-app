@@ -4,33 +4,33 @@
  *
  */
 
-import Contentsquare from '@contentsquare/react-native-bridge';
+import {CSQ} from '@contentsquare/react-native-bridge';
 import {
   NavigationContainer,
   useNavigationContainerRef,
 } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import React, { useRef } from 'react';
-import { CustomVariables } from '../../modules/CustomVariables/views/CustomVariables';
-import { DynamicVariables } from '../../modules/DynamicVariables/DynamicVariables';
-import { ErrorAnalysis } from '../../modules/ErrorAnalysis/ErrorAnalysis';
-import { Home } from '../../modules/Home/views/Home';
-import { Privacy } from '../../modules/Privacy/views/Privacy';
-import { BasicScreenView } from '../../modules/ScreenViews/views/BasicScreenView';
-import { ModalScreenView } from '../../modules/ScreenViews/views/ModalScreenView';
-import { PageTabView } from '../../modules/ScreenViews/views/PageTabView';
-import { PagedScrollView } from '../../modules/ScreenViews/views/PagedScrollView';
-import { ScreenViews } from '../../modules/ScreenViews/views/ScreenViews';
-import { SessionReplayLinking } from '../../modules/SessionReplay/views/SessionReplayLinking';
-import { SessionReplayMasking } from '../../modules/SessionReplay/views/SessionReplayMasking';
-import { SessionReplayViews } from '../../modules/SessionReplay/views/SessionReplayViews';
-import { Transactions } from '../../modules/Transactions/Transactions';
-import { Webviews } from '../../modules/Webviews/views/Webviews';
-import { PanResponder } from '../../modules/Workarounds/views/PanResponder';
-import { Workarounds } from '../../modules/Workarounds/views/Workarounds';
-import { PrivacyManager } from '../../shared/views/PrivacyManager/PrivacyManager';
-import { Screens } from './Screens';
-import { RootStackParamList } from './types';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import React, {useRef} from 'react';
+import {CustomVariables} from '../../modules/CustomVariables/views/CustomVariables';
+import {DynamicVariables} from '../../modules/DynamicVariables/DynamicVariables';
+import {ErrorAnalysis} from '../../modules/ErrorAnalysis/ErrorAnalysis';
+import {Home} from '../../modules/Home/views/Home';
+import {Privacy} from '../../modules/Privacy/views/Privacy';
+import {BasicScreenView} from '../../modules/ScreenViews/views/BasicScreenView';
+import {ModalScreenView} from '../../modules/ScreenViews/views/ModalScreenView';
+import {PageTabView} from '../../modules/ScreenViews/views/PageTabView';
+import {PagedScrollView} from '../../modules/ScreenViews/views/PagedScrollView';
+import {ScreenViews} from '../../modules/ScreenViews/views/ScreenViews';
+import {SessionReplayLinking} from '../../modules/SessionReplay/views/SessionReplayLinking';
+import {SessionReplayMasking} from '../../modules/SessionReplay/views/SessionReplayMasking';
+import {SessionReplayViews} from '../../modules/SessionReplay/views/SessionReplayViews';
+import {Transactions} from '../../modules/Transactions/Transactions';
+import {Webviews} from '../../modules/Webviews/views/Webviews';
+import {PanResponder} from '../../modules/Workarounds/views/PanResponder';
+import {Workarounds} from '../../modules/Workarounds/views/Workarounds';
+import {PrivacyManager} from '../../shared/views/PrivacyManager/PrivacyManager';
+import {Screens} from './Screens';
+import {RootStackParamList} from './types';
 
 // This associates the screen name sent to Contentsquare to the screen name defined in the code
 const screenEventByScreenName: Record<string, string> = {
@@ -51,7 +51,7 @@ export const Navigation = () => {
         // Getting initial route name from navigation and sending a screen view event with Contentsquare SDK
         const currentRouteName = navigationRef.getCurrentRoute()?.name;
         if (currentRouteName && screenEventByScreenName[currentRouteName]) {
-          Contentsquare.send(screenEventByScreenName[currentRouteName]);
+          CSQ.trackScreenview(screenEventByScreenName[currentRouteName]);
         }
       }}
       onStateChange={() => {
@@ -59,10 +59,9 @@ export const Navigation = () => {
         const currentRouteName = navigationRef.getCurrentRoute()?.name;
         routeNameRef.current = currentRouteName;
         if (currentRouteName && screenEventByScreenName[currentRouteName]) {
-          Contentsquare.send(screenEventByScreenName[currentRouteName]);
+          CSQ.trackScreenview(screenEventByScreenName[currentRouteName]);
         }
-      }}
-    >
+      }}>
       <RootNavigator />
       <PrivacyManager />
     </NavigationContainer>
@@ -81,87 +80,87 @@ const RootNavigator = () => {
       <Stack.Screen
         name={Screens.HOME}
         component={Home}
-        options={{ title: 'Showcases' }}
+        options={{title: 'Showcases'}}
       />
       <Stack.Screen
         name={Screens.SCREEN_VIEWS}
         component={ScreenViews}
-        options={{ title: 'Screen views' }}
+        options={{title: 'Screen views'}}
       />
       <Stack.Screen
         name={Screens.PRIVACY}
         component={Privacy}
-        options={{ title: 'Privacy' }}
+        options={{title: 'Privacy'}}
       />
       <Stack.Screen
         name={Screens.BASIC_SCREEN_VIEW}
         component={BasicScreenView}
-        options={{ title: 'Basic screen views' }}
+        options={{title: 'Basic screen views'}}
       />
       <Stack.Screen
         name={Screens.PAGED_SCROLL_VIEW}
         component={PagedScrollView}
-        options={{ title: 'Paged scroll view' }}
+        options={{title: 'Paged scroll view'}}
       />
       <Stack.Screen
         name={Screens.MODAL_SCREEN_VIEW}
         component={ModalScreenView}
-        options={{ title: 'Modal presenter' }}
+        options={{title: 'Modal presenter'}}
       />
       <Stack.Screen
         name={Screens.PAGE_TAB_VIEW}
         component={PageTabView}
-        options={{ title: 'Tab view' }}
+        options={{title: 'Tab view'}}
       />
       <Stack.Screen
         name={Screens.DYNAMIC_VARIABLES}
         component={DynamicVariables}
-        options={{ title: 'Dynamic variables' }}
+        options={{title: 'Dynamic variables'}}
       />
       <Stack.Screen
         name={Screens.TRANSACTIONS}
         component={Transactions}
-        options={{ title: 'Transaction' }}
+        options={{title: 'Transaction'}}
       />
       <Stack.Screen
         name={Screens.WORKAROUNDS}
         component={Workarounds}
-        options={{ title: 'Workarounds' }}
+        options={{title: 'Workarounds'}}
       />
       <Stack.Screen
         name={Screens.PAN_RESPONDER}
         component={PanResponder}
-        options={{ title: 'Pan Responder' }}
+        options={{title: 'Pan Responder'}}
       />
       <Stack.Screen
         name={Screens.WEBVIEWS}
         component={Webviews}
-        options={{ title: 'Webviews' }}
+        options={{title: 'Webviews'}}
       />
       <Stack.Screen
         name={Screens.SESSION_REPLAY_VIEWS}
         component={SessionReplayViews}
-        options={{ title: 'Session replay' }}
+        options={{title: 'Session replay'}}
       />
       <Stack.Screen
         name={Screens.SESSION_REPLAY_MASKING}
         component={SessionReplayMasking}
-        options={{ title: 'Session replay masking' }}
+        options={{title: 'Session replay masking'}}
       />
       <Stack.Screen
         name={Screens.SESSION_REPLAY_LINKING}
         component={SessionReplayLinking}
-        options={{ title: 'Session replay linking' }}
+        options={{title: 'Session replay linking'}}
       />
       <Stack.Screen
         name={Screens.CUSTOM_VARIABLES}
         component={CustomVariables}
-        options={{ title: 'Custom variables' }}
+        options={{title: 'Custom variables'}}
       />
       <Stack.Screen
         name={Screens.ERROR_ANALYSIS}
         component={ErrorAnalysis}
-        options={{ title: 'Error Analysis' }}
+        options={{title: 'Error Analysis'}}
       />
     </Stack.Navigator>
   );

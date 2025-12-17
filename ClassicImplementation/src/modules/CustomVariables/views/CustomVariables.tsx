@@ -1,13 +1,13 @@
-import Contentsquare, { CustomVar } from '@contentsquare/react-native-bridge';
-import React, { useState } from 'react';
-import { Button, StyleSheet, TextInput, View } from 'react-native';
-import { colors, gridUnit } from '../../../constants';
+import {CSQ, CustomVar} from '@contentsquare/react-native-bridge';
+import React, {useState} from 'react';
+import {Button, StyleSheet, TextInput, View} from 'react-native';
+import {colors, gridUnit} from '../../../constants';
 
 const numberOfCustomVariables = 3;
 
 export const CustomVariables = () => {
   const [variablesToSend, setVariablesToSend] = useState<string[]>(
-    Array.from(''.repeat(numberOfCustomVariables))
+    Array(numberOfCustomVariables).fill(''),
   );
 
   return (
@@ -30,14 +30,23 @@ export const CustomVariables = () => {
       <Button
         title={'Send'}
         onPress={() => {
-          const customVariables: CustomVar[] = variablesToSend.map(
-            (value, index) => ({
+          // Find the last non-empty variable index
+          const lastNonEmptyIndex = variablesToSend.reduce(
+            (lastIndex, value, index) =>
+              value.trim() !== '' ? index : lastIndex,
+            -1,
+          );
+
+          // Only include variables up to the last non-empty one
+          const customVariables: CustomVar[] = variablesToSend
+            .slice(0, lastNonEmptyIndex + 1)
+            .map((value, index) => ({
               index,
               key: `CustomVariable${index}`,
-              value,
-            })
-          );
-          Contentsquare.send('CustomVariablesScreen', customVariables);
+              value: value.trim() === '' ? 'cs-empty' : value,
+            }));
+
+          CSQ.trackScreenview('CustomVariablesScreen', customVariables);
         }}
       />
     </View>
