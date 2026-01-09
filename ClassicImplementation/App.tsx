@@ -9,22 +9,30 @@
  */
 
 import React from 'react';
-import { Navigation } from './src/app/navigation';
-import { useAppInit } from './src/app/useAppInit';
-import { PrivacyManagerProvider } from './src/shared/views/PrivacyManager/usePrivacyManagerModal';
+import {StatusBar, useColorScheme} from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {Navigation} from './src/app/navigation';
+import {useAppInit} from './src/app/useAppInit';
+import {PrivacyManagerProvider} from './src/shared/views/PrivacyManager/usePrivacyManagerModal';
 
 const App = () => {
-  const { isLoadingComplete } = useAppInit();
+  const isDarkMode = useColorScheme() === 'dark';
+  const {isLoadingComplete} = useAppInit();
 
   if (!isLoadingComplete) {
     return null;
-  } else {
-    return (
+  }
+
+  return (
+    <SafeAreaProvider>
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <PrivacyManagerProvider>
         <Navigation />
       </PrivacyManagerProvider>
-    );
-  }
+    </SafeAreaProvider>
+  );
 };
 
 export default App;
+
+/////////
