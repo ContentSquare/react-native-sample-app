@@ -1,7 +1,7 @@
-import {CSQ, CustomVar} from '@contentsquare/react-native-bridge';
-import React, {useState} from 'react';
-import {Button, StyleSheet, TextInput, View} from 'react-native';
-import {colors, gridUnit} from '../../../constants';
+import { CustomVar } from '@contentsquare/react-native-bridge';
+import React, { useState } from 'react';
+import { Button, StyleSheet, TextInput, View } from 'react-native';
+import { colors, gridUnit } from '../../../constants';
 
 const numberOfCustomVariables = 3;
 
@@ -46,7 +46,7 @@ export const CustomVariables = () => {
               value: value.trim() === '' ? 'cs-empty' : value,
             }));
 
-          CSQ.trackScreenview('CustomVariablesScreen', customVariables);
+          //CSQ.trackScreenview('CustomVariablesScreen', customVariables);
         }}
       />
     </View>

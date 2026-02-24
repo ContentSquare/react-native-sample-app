@@ -1,7 +1,6 @@
-import {CSQ} from '@contentsquare/react-native-bridge';
-import React, {useEffect, useState} from 'react';
-import {Dimensions, ScrollView, StyleSheet, Text, View} from 'react-native';
-import {colors, gridUnit} from '../../../constants';
+import React, { useEffect, useState } from 'react';
+import { Dimensions, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { colors, gridUnit } from '../../../constants';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -10,10 +9,12 @@ export const PagedScrollView: React.FunctionComponent = () => {
 
   useEffect(() => {
     // Sends screen view event when scrolling to one of the pages in the ScrollView
-    CSQ.trackScreenview(`Scroll page ${pageNumber}`);
+    //CSQ.trackScreenview(`Scroll page ${pageNumber}`);
   }, [pageNumber]);
 
-  const PageContent: React.FunctionComponent<{number: number}> = ({number}) => (
+  const PageContent: React.FunctionComponent<{ number: number }> = ({
+    number,
+  }) => (
     <View style={styles.pageContainer}>
       <Text style={[styles.text, styles.pageNumberText]}>{number}</Text>
       <Text style={styles.text}>

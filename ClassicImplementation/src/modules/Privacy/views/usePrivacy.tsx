@@ -1,14 +1,13 @@
-import {CSQ} from '@contentsquare/react-native-bridge';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import {useEffect, useState} from 'react';
-import {usePrivacyManagerModal} from '../../../shared/views/PrivacyManager/usePrivacyManagerModal';
+import { CSQ } from '@contentsquare/react-native-bridge';
+import { useEffect, useState } from 'react';
+import { usePrivacyManagerModal } from '../../../shared/views/PrivacyManager/usePrivacyManagerModal';
 
 export const usePrivacy = () => {
-  const {setIsPrivacyManagerVisible} = usePrivacyManagerModal();
+  const { setIsPrivacyManagerVisible } = usePrivacyManagerModal();
   const [metadata, setMetadata] = useState<string | null>(null);
 
   useEffect(() => {
-    CSQ.trackScreenview('Privacy');
+    //CSQ.trackScreenview('Privacy');
   }, []);
 
   const showPrivacyManager = () => {

@@ -1,10 +1,10 @@
-import {CSQ} from '@contentsquare/react-native-bridge';
+import { CSQ, LogLevel } from '@contentsquare/react-native-bridge';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {useEffect, useState} from 'react';
-import {usePrivacyManagerModal} from './usePrivacyManagerModal';
+import { useEffect, useState } from 'react';
+import { usePrivacyManagerModal } from './usePrivacyManagerModal';
 
 export const usePrivacyManager = () => {
-  const {isPrivacyManagerVisible, setIsPrivacyManagerVisible} =
+  const { isPrivacyManagerVisible, setIsPrivacyManagerVisible } =
     usePrivacyManagerModal();
 
   const [isContentSquareActive, setIsContentSquareActive] = useState(false);
@@ -26,8 +26,12 @@ export const usePrivacyManager = () => {
 
     // Here we register the user consent for tracking
     // the others SDK (if any) should also be activated
+    CSQ.configureProductAnalytics('2628368288', {
+      enableRNAutocapture: true,
+    });
     CSQ.start();
     CSQ.optIn();
+    CSQ.setLogLevel(LogLevel.Debug);
     AsyncStorage.setItem('PRIVACY_CONSENT', 'true');
     setIsPrivacyManagerVisible(false);
   };

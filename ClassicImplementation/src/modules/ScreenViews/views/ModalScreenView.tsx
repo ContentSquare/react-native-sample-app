@@ -1,7 +1,6 @@
-import {CSQ} from '@contentsquare/react-native-bridge';
-import React, {useEffect, useState} from 'react';
-import {Button, Modal, StyleSheet, Text, View} from 'react-native';
-import {colors, gridUnit} from '../../../constants';
+import React, { useEffect, useState } from 'react';
+import { Button, Modal, StyleSheet, Text, View } from 'react-native';
+import { colors, gridUnit } from '../../../constants';
 
 export const ModalScreenView: React.FunctionComponent = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -9,7 +8,7 @@ export const ModalScreenView: React.FunctionComponent = () => {
   useEffect(() => {
     // As react native modals are not new screens, we need to send events manually on modal show/dismiss
     // On every modal visibility switch, we send an event with whether the "background" page or the modal name
-    CSQ.trackScreenview(isModalVisible ? 'Modal' : 'Modal presenter');
+    //CSQ.trackScreenview(isModalVisible ? 'Modal' : 'Modal presenter');
   }, [isModalVisible]);
 
   return (

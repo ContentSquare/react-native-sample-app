@@ -9,9 +9,13 @@
  */
 
 import React from 'react';
+import { enableScreens } from 'react-native-screens';
 import { Navigation } from './src/app/navigation';
 import { useAppInit } from './src/app/useAppInit';
 import { PrivacyManagerProvider } from './src/shared/views/PrivacyManager/usePrivacyManagerModal';
+
+// Enable native screens for better performance with React Navigation v7
+enableScreens(true);
 
 const App = () => {
   const { isLoadingComplete } = useAppInit();
