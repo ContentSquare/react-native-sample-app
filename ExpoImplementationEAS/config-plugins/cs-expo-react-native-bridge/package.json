@@ -29,7 +29,7 @@
   ],
   "dependencies": {
     "@babel/preset-env": "^7.19.4",
-    "@expo/config-plugins": "^4.1.0",
+    "@expo/config-plugins": "^9.1.0",
     "babel-jest": "^29.2.2",
     "jest": "^29.2.2",
     "ts-jest": "^29.0.3"
