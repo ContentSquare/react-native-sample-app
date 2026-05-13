@@ -8,16 +8,15 @@
  * @format
  */
 
-import React from 'react';
-import {StatusBar, useColorScheme} from 'react-native';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {Navigation} from './src/app/navigation';
-import {useAppInit} from './src/app/useAppInit';
-import {PrivacyManagerProvider} from './src/shared/views/PrivacyManager/usePrivacyManagerModal';
+import { StatusBar, useColorScheme } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Navigation } from './src/app/navigation';
+import { useAppInit } from './src/app/useAppInit';
+import { PrivacyManagerProvider } from './src/shared/views/PrivacyManager/usePrivacyManagerModal';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
-  const {isLoadingComplete} = useAppInit();
+  const { isLoadingComplete } = useAppInit();
 
   if (!isLoadingComplete) {
     return null;
@@ -34,5 +33,3 @@ const App = () => {
 };
 
 export default App;
-
-/////////
