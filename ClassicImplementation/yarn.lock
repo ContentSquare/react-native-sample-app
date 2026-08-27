@@ -1528,27 +1528,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@contentsquare/react-native-autocapture@npm:^0.0.3":
-  version: 0.0.3
-  resolution: "@contentsquare/react-native-autocapture@npm:0.0.3"
+"@contentsquare/react-native-autocapture@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@contentsquare/react-native-autocapture@npm:0.0.4"
   dependencies:
     hoist-non-react-statics: "npm:^3.3.2"
   peerDependencies:
     react-native: "*"
-  checksum: 10c0/21f207796f4bbdcde21cb6e79a5eedd155c0afd65d213abf9c02d859eb8a9be28d8ac261c04910c3568e792fcf333d108086d67a89f26240f10954c6148af6d5
+  checksum: 10c0/cea2429d00cd8f0ec6d3eee2eed6d5d038e24fca1857e6eccb4dc190473ee3de1e3ce740e0348cbb7f5171d4d8dcc3e3845a387bcc246fb2c0d0f5c8824b3518
   languageName: node
   linkType: hard
 
-"@contentsquare/react-native-bridge@npm:6.3.0":
-  version: 6.3.0
-  resolution: "@contentsquare/react-native-bridge@npm:6.3.0"
+"@contentsquare/react-native-bridge@npm:6.5.1":
+  version: 6.5.1
+  resolution: "@contentsquare/react-native-bridge@npm:6.5.1"
   dependencies:
-    "@contentsquare/react-native-autocapture": "npm:^0.0.3"
+    "@contentsquare/react-native-autocapture": "npm:^0.0.4"
     "@heap/heap-javascript-bridge-support": "npm:^0.6.0"
   peerDependencies:
+    expo-constants: ">=15.0.0"
     react: ">=18.2.0"
     react-native: ">=0.71"
-  checksum: 10c0/5dc3824b608fd16ff6617c6b0b63039e5e5d42906cf31bc55d65c9aed4fe61e183c4d31a5fccaba95b3ff76fbf8eb696f64930acbdb3b992e975412e64ceb4c7
+  peerDependenciesMeta:
+    expo-constants:
+      optional: true
+  checksum: 10c0/cfe459da3c1798df0865eda2296f740d551fbbc63ceacae2124ccc18eeb06bbb114d10c5f0054f485959138ee0c9a065d39d02c4d475f9521ae7b53ba1e752d9
   languageName: node
   linkType: hard
 
@@ -3057,7 +3061,7 @@ __metadata:
     "@babel/preset-env": "npm:^7.25.3"
     "@babel/runtime": "npm:^7.25.0"
     "@contentsquare/cli": "file:../contentsquare-cli-v0.1.2.tgz"
-    "@contentsquare/react-native-bridge": "npm:6.3.0"
+    "@contentsquare/react-native-bridge": "npm:6.5.1"
     "@react-native-async-storage/async-storage": "npm:^2.2.0"
     "@react-native-clipboard/clipboard": "npm:^1.16.3"
     "@react-native-community/cli": "npm:20.1.0"
